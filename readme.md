@@ -7,3 +7,5 @@ paginas similares
  - https://naturalisimas.com/
  - https://www.schmaltzybros.com/
 
+Integrantes: 
+Jose Nardulli
