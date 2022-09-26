@@ -7,6 +7,7 @@ paginas similares
  - https://naturalisimas.com/
  - https://www.schmaltzybros.com/
 
-Integrantes: 
-Jose Nardulli
-Victoria Aquino
+#### Integrantes: 
+- Jose Nardulli
+- Victoria Aquino
+- Ariel Limes
