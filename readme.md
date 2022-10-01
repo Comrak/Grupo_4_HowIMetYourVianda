@@ -16,10 +16,13 @@ paginas similares
 - Luis Maria Abdala Cancelli
 
 ### Descripcion del Servicio
-- Definicion del Negocio
-- Alcance
-- Tipo de Clientes
-- Zona de Influencia
-- Tipo de Servicios
-
-!!!! FLORENCIA !!!!!!!  :-)
+- Definición del Negocio:
+Ventas de viandas saludables que se entregan en un domicilio a diario. Llegan refrigeradas en bandejas aptas para microondas. Se toman pedidos dentro del radio de Capital Federal.
+- Alcance:
+Programación de dietas especiales proteicas, para celíacos y otros.
+- Tipo de Clientes:
+Apuntamos a toda aquella personas que haya optado por una dieta saludable, equilibrada o restringida, para su propio consumo o familiar,pero a causa de su rutina no tiene tiempo para la elaboración de dichos alimentos. Queremos crear un modelo de negocio basado en clientes frecuentes por lo que se les dará un usuario y contraseña, ya que también es importante mantener un volumen de producción.
+- Zona de Influencia:
+Capital Federal
+- Tipo de Servicios:
+Preparación y entrega de viandas para almuerzos y cenas. 
