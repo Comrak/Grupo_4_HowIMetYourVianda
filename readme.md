@@ -10,9 +10,9 @@ paginas similares
 #### Integrantes: 
 - Jose Nardulli: Ingeniero en Sistemas developer de backend semi senior, me gustan las empanadas.
 - Victoria Aquino: Licenciada en Administración de RRHH, de Capital Federal.
-- Ariel Limes
-- Florencia Montaño: Adminitrativa, futura Lic. en Mkg. 
-- Martin Altuna
+- Ariel Limes: Ex Contador, Data Scientist, de Capital Federal. (Vivan las Empanadas !!!!!)
+- Florencia Montaño
+- Martin Altuna: Estudiante de Arquitectura en la UNLP, de La Plata.
 - Luis Maria Abdala Cancelli
 
 ### Descripcion del Servicio
