@@ -11,7 +11,7 @@ paginas similares
 - Jose Nardulli: Ingeniero en Sistemas developer de backend semi senior, me gustan las empanadas
 - Victoria Aquino: Licenciada en Administración de RRHH, de Capital Federal.
 - Ariel Limes: Ex Contador, Data Scientist, de Capital Federal. (Vivan las Empanadas !!!!!)
-- Florencia Montaño: Adminitrativa, futura Lic. en Mkg.
+- Florencia Montaño: Adminitrativa, Docente, futura Lic. en Mkg.
 - Luis Maria Abdala Cancelli: Gastronomico, de Tucumán (Los porteños no saben de empanadas)
 - Martin Altuna: Estudiante de Arquitectura en la UNLP, de La Plata.
 
