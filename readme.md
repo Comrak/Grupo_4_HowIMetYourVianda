@@ -9,7 +9,7 @@ paginas similares
 
 #### Integrantes: 
 - Jose Nardulli
-- Victoria Aquino
+- Victoria Aquino: Licenciada en Administración de RRHH, de Capital Federal.
 - Ariel Limes
 - Florencia Montaño
 - Martin Altuna
