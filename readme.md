@@ -8,7 +8,7 @@ paginas similares
  - https://www.schmaltzybros.com/
 
 #### Integrantes: 
-- Jose Nardulli: Ingeniero en Sistemas developer de backend semi senior, me gustan las empanadas. probando un bkp del repo
+- Jose Nardulli: Ingeniero en Sistemas developer de backend semi senior, me gustan las empanadas
 - Victoria Aquino: Licenciada en Administración de RRHH, de Capital Federal.
 - Ariel Limes: Ex Contador, Data Scientist, de Capital Federal. (Vivan las Empanadas !!!!!)
 - Florencia Montaño
