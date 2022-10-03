@@ -11,7 +11,7 @@ paginas similares
 - Jose Nardulli: Ingeniero en Sistemas developer de backend semi senior, me gustan las empanadas.
 - Victoria Aquino: Licenciada en Administración de RRHH, de Capital Federal.
 - Ariel Limes
-- Florencia Montaño
+- Florencia Montaño: Adminitrativa, futura Lic. en Mkg. 
 - Martin Altuna
 - Luis Maria Abdala Cancelli
 
