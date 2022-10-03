@@ -13,7 +13,7 @@ paginas similares
 - Ariel Limes: Ex Contador, Data Scientist, de Capital Federal. (Vivan las Empanadas !!!!!)
 - Florencia Montaño
 - Martin Altuna
-- Luis Maria Abdala Cancelli
+- Luis Maria Abdala Cancelli: Gastronomico, de Tucumán (Los porteños no saben de empanadas)
 
 ### Descripcion del Servicio
 - Definición del Negocio:
