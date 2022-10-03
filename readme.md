@@ -12,8 +12,9 @@ paginas similares
 - Victoria Aquino: Licenciada en Administración de RRHH, de Capital Federal.
 - Ariel Limes: Ex Contador, Data Scientist, de Capital Federal. (Vivan las Empanadas !!!!!)
 - Florencia Montaño
-- Martin Altuna
 - Luis Maria Abdala Cancelli: Gastronomico, de Tucumán (Los porteños no saben de empanadas)
+- Martin Altuna: Estudiante de Arquitectura en la UNLP, de La Plata.
+
 
 ### Descripcion del Servicio
 - Definición del Negocio:
