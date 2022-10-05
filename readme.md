@@ -27,3 +27,6 @@ Apuntamos a toda aquella personas que haya optado por una dieta saludable, equil
 Capital Federal
 - Tipo de Servicios:
 Preparación y entrega de viandas para almuerzos y cenas. 
+
+Enlace al tablero de trabajo: 
+https://trello.com/b/iTwaThgF/howimetyourvianda
