@@ -2,11 +2,11 @@
 
 paginas similares
 
-*caserito viandas, <https://www.caseritoviandas.com/>  
-*viandas naturales, <https://www.viandasnaturales.com.ar/>  
-*hellos fresh, <https://www.hellofresh.com/>  
-*naturalisimas, <https://naturalisimas.com/>  
-*schmaltzybros, <https://www.schmaltzybros.com/>  
+* caserito viandas, <https://www.caseritoviandas.com/>  
+* viandas naturales, <https://www.viandasnaturales.com.ar/>  
+* hellos fresh, <https://www.hellofresh.com/>  
+* naturalisimas, <https://naturalisimas.com/>  
+* schmaltzybros, <https://www.schmaltzybros.com/>  
 
 ## Integrantes
 
