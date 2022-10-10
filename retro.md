@@ -17,3 +17,8 @@
 
 * Lo bueno: Con la práctica integradora podemos ver con claridad como trabajar con github.  
 * Lo malo: Desconocer como funcionan en detalle los tableros de trabajo.  
+
+### Luis Maria Abdala Cancelli
+
+* Lo bueno: Tuve problemas para realizar algunas cosas, por lo cual las tuve que hacer varias veces y así llegar a entender un poco mejor como trabajar con Git y GitHub.
+* Lo malo: Me cuesta mucho entender consignas, lo cual me genera mucha incertidumbre al momento de hacer las cosas porque no tengo ningún tipo de certeza o claridad.
