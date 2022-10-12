@@ -1,0 +1,253 @@
+/*
+    general settings 
+*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #ebebeb;
+}
+
+.search_bar{
+    width: 35%;
+}
+
+header{
+    background-color:gold;
+}
+
+footer{
+    text-align: center;
+}
+
+.footer-icon{
+    font-size: 30px;
+    color: #1259c3;
+    text-align: center;
+}
+
+.burger-menu{
+    text-align: center;
+    background-color: #1259c3;
+    color: white;
+    display: block;
+    font-size: 30px;
+    margin: 0 45% 0 45%;
+}
+
+.buy-text{
+    text-align: center;
+}
+
+.link-list-header{
+    list-style-type: none;  
+}
+.link-list-header a{
+    color: black;
+    text-decoration: none;
+}
+.header-icon{
+    margin-left: 5%;
+}
+
+/*
+    text sizes
+*/
+.copyleft-text{
+    font-size: x-small;
+}
+
+.text-body{
+    font-size: 12px;
+}
+
+.headlines{
+    font-size: 24px;
+}
+
+.prices{
+    font-size: 18px;
+}
+
+.discount,
+.description{
+    font-size: 16px;
+    font-weight: normal;
+}
+section.banner img{
+    width: 100%;
+}
+
+main{
+    width: 90%;
+    margin: 0 auto;
+}
+
+main section article{
+    background-color: #fff;    
+    margin: 10px 0px;
+}
+
+main section article img{
+    width: 100%;
+}
+
+main section article i,
+.discount{
+    color: #39b54a;
+}
+
+main section article i{
+    display: block; 
+    font-size: 16px; 
+    padding: 5px; 
+    width: 30px; 
+    height: 30px; 
+    border: 1px solid #39b54a; 
+    background-color: #FFF; 
+    border-radius: 50%; 
+    position: absolute;
+    right: 0px;
+    top: -30px;
+}
+
+.art_principal{
+    border-top: solid 1px #ebebeb;
+    padding: 15px;
+    background: white;
+
+}
+
+article div.articulos{
+    width: 100%;
+    border-top: 1px solid #ebebeb;
+    padding: 15px;
+}
+
+.navbar ul{
+    display: none;
+}
+
+.buy_icon{
+    position: relative;
+}
+@media (min-width: 361px){
+    /*exclusivo mobile*/
+    main section article .description{
+        display: block;
+    }
+
+    main section article{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+    
+    .header-icon{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .header-icon .logo{
+        width: calc(50% - 15px);
+    }
+    .header-icon .logo img{
+        width: calc(100% - 15px)!important;
+    }
+    .header-icon .search_bardiv{
+        width: calc(50% - 15px);
+    }
+    .header-icon .search_bardiv .search_bar{
+        width: calc(80% - 15px);
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    /* exclusivo tablets: */
+
+    
+    .burger-menu{
+        display: none;
+    }
+    
+    
+    .header-icon{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .header-icon .logo{
+        width: calc(33% - 15px);
+    }
+    .header-icon .logo img{
+        width: calc(100% - 15px)!important;
+    }
+    .header-icon .search_bardiv{
+        width: calc(33% - 15px);
+    }
+    .header-icon .search_bardiv .search_bar{
+        width: calc(80% - 15px);
+    }
+    .buy-text{
+        width: calc(33% - 15px);
+    }
+    .navbar{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .navbar ul {
+        display: flex !important;
+    }
+    .navbar ul li{
+        display: flex;
+        width: 80%;;
+    }
+    .link-list-header{
+        width: 45%;
+    }
+    .login_list_header{
+        width: 45%;
+    }
+    .productos{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .productos article {
+        flex: 0 1 48%;
+    }
+    .art_principal{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .art_principal .buy_icon{
+        flex: 0 1 98%;
+    }
+    .art_principal .prices .discount{
+        flex: 0 1 48%;
+    }
+    .art_principal .description{
+        flex: 0 1 98%;
+    }
+  }
+  
+  @media only screen and (min-width: 768px) {
+    /* exclusivo desktop: */
+
+    .navbar ul {
+        display: inline;
+    }
+    .burger-menu{
+        display: none;
+    }
+    .productos article {
+        flex: 0 1 24%;
+    }
+  }
+
+
+.registerForm{
+    align-items: center;
+}
