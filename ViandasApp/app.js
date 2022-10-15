@@ -10,6 +10,6 @@ app.listen(numeroPuerto, ()=>{
 app.get('/', (req, res)=>{
     res.sendFile(path.resolve('views/home.html'))
 })
-app.get('/productDetails.html', (req, res)=>{
+app.get('/productDetails', (req, res)=>{
     res.sendFile(path.resolve('views/productDetails.html'))
 })
