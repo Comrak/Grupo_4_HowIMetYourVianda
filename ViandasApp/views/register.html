@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Formulario Registro</title>
+</head>
+<body>
+  <form action="/register" method="get">
+    <div class="form-register">
+      <h4>Registro</h4>
+	<label  for="fullName">Nombre y Apellido</label>
+  <input class="controls" type="text" name="fullName" id="fullName"  placeholder="Ingrese su Nombre y Apellido" >
+	<label for="birthDate">Fecha de Nacimiento</label>
+	<input class="controls" type="date" name="birthDate" id="birthDate"> 
+	<label for="email">Email</label>
+  <input class="controls" type="email" name="email" id="email" placeholder="Ingrese su Email">
+	<label for="celular">Celular</label>
+	<input class="controls" type="text" name="celular" id="celular" placeholder="Ingrese su Celular">
+  <label for="adress">Domicilio</label>
+	<input class="controls" type="text" name="adress" id="adress" placeholder="Ingrese su Domicilio">
+	<label for="password"> Contraseña </label>
+  <input class="controls" type="password" name="password" id="password" placeholder="Ingrese su Contraseña">
+	<label for="confirmPassword"> Confirmar Contraseña </label>
+	<input class="controls" type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirme su Contraseña">
+    <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
+    <input class="buttons" type="button" value="Enviar Datos">
+    <p><a href="#">¿Ya tengo Cuenta?</a></p>
+    </div>
+  </form>
+</body>

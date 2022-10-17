@@ -13,3 +13,7 @@ app.get('/', (req, res)=>{
 app.get('/productDetails', (req, res)=>{
     res.sendFile(path.resolve('views/productDetails.html'))
 })
+
+app.get('/register', (req, res)=>{
+    res.sendFile(path.resolve('views/register.html'))
+})
