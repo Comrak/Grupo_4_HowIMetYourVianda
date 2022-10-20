@@ -22,3 +22,7 @@
 
 * Lo bueno: Tuve problemas para realizar algunas cosas, por lo cual las tuve que hacer varias veces y así llegar a entender un poco mejor como trabajar con Git y GitHub.
 * Lo malo: Me cuesta mucho entender consignas, lo cual me genera mucha incertidumbre al momento de hacer las cosas porque no tengo ningún tipo de certeza o claridad.
+
+### Ariel Hernan Limes
+* Lo Bueno: Me gusto mucho la practica integradora, ya que nos ayudo a entender mejor como funciona github y como se trabaja en equipo.
+* Lo Malo: Me costo entender como funcionan los tableros de trabajo, ya que no se como asignar las tareas y como se debe hacer para que se vean reflejadas en el tablero. Trello nunca lo use pero logre manejarlo.
