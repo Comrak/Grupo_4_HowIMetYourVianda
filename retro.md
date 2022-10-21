@@ -26,3 +26,8 @@
 ### Ariel Hernan Limes
 * Lo Bueno: Me gusto mucho la practica integradora, ya que nos ayudo a entender mejor como funciona github y como se trabaja en equipo.
 * Lo Malo: Me costo entender como funcionan los tableros de trabajo, ya que no se como asignar las tareas y como se debe hacer para que se vean reflejadas en el tablero. Trello nunca lo use pero logre manejarlo.
+
+### Florencia Montaño 
+ 
+* Lo bueno: existe una buena dinámica y espíritu de colaboración, podemos visualizar, dividir y organizar las tareas.
+* Lo difícil: El material en pg no es claro.Si bien se entiende que hay muchos caminos para resolver algo para quienes recién estamos empezando se torna confuso.
