@@ -373,3 +373,8 @@ footer{
     padding-bottom: 2.5%;
     width: 100%;
 }
+/*Home*/
+
+.tipografiaTitle{
+    font-style: italic;
+}
