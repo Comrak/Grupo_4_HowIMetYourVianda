@@ -1,14 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Formulario Registro</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"
+        type="text/css" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Register</title>
 </head>
 <body>
-  <form action="/register" method="get">
+  <header>
+      <div class="header-icon">
+          <div class="logo">
+              <img width="45" height="90" src="img/homeIconNoBG.png" alt="Logo">
+          </div>
+          <div class="search_bardiv">
+              <input class='search_bar' type="text" placeholder="Buscar vianda...">
+              <br>
+              <button><i class="fas fa-search"></i></button>
+          </div>
+          <p class="buy-text"> Pide tus viandas favoritas directo a tu casa</p>
+      </div>
+      <nav class="navbar">
+
+          <ul class="link-list-header">
+              <li><a href="productDetails.html">Viandas<i class="fas fa-hamburger"></i></a></li>
+              <li><a href="login.html"> Ingresa <i class="fas fa-id-card"></i></a></li>
+              <li><a href="register"> Registrate <i class="fas fa-sign-in-alt"></i></a></li>
+              <li><a href="carrito.html"> Tu carrito <i class="fas fa-shopping-basket"></i></a></li>
+          </ul>
+          <div class="burger-menu">
+              <i class="fas fa-bars"></i>
+          </div>
+          <br>
+          <br>
+      </nav>
+  </header>
+<body>
+  <form action="/register" method="get" class="form">
     <div class="form-register">
       <h4>Registro</h4>
 	<label  for="fullName">Nombre y Apellido</label>
@@ -26,8 +60,25 @@
 	<label for="confirmPassword"> Confirmar Contraseña </label>
 	<input class="controls" type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirme su Contraseña">
     <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
-    <input class="buttons" type="button" value="Enviar Datos">
+    <button type="submit" class="button">Enviar</button>
     <p><a href="#">¿Ya tengo Cuenta?</a></p>
     </div>
   </form>
+</body>
+<footer>
+  <i class="fas fa-credit-card footer-icon"></i>
+  <h4>Pagá con tarjeta o en efectivo</h4>
+  <p class="text-body">puedes confiar en que para How i met your vianda tus datos son privados y no se lo
+      compartiremos a nadie, ademas de la responsabilidad sujeta a nuestra reputacion </p>
+  <i class="fas fa-gift footer-icon"></i>
+  <h4>Envío gratis desde $ 2.500</h4>
+  <p class="text-body">Si te registra a How a i met your vianda y pides un menu para la semana el envio viene de
+      nuestra parte</p>
+  <i class="fas fa-user-shield footer-icon"></i>
+  <h4>Calidad, de principio a fin</h4>
+  <p class="text-body">Garantizamos que te vas a enganchar con nuestras recetas y platillos (de hecho nos conviene
+      que te enganches)</p>
+  <p class="copyleft-text">Copyright © 1999-2020 How i met your vianda S.R.L. todos los derechos e izquierdos bien
+      puestos</p>
+</footer>
 </body>
