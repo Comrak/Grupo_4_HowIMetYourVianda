@@ -18,6 +18,7 @@ body{
 
 header{
     background-color:rgb(173, 245, 216);
+    height: 20vh;
 }
 
 footer{
@@ -313,3 +314,62 @@ article div.articulos{
 	text-align: center;
   }
 
+/*Home*/
+
+#contentItemCarrusel{
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.carrusel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.item_carrusel{
+    width: 100%;
+    height: 100%;
+}
+.foto_carrusel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.flechas{
+    font-size: 5vh;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2%;
+    
+}
+
+footer{
+    background-color: rgb(39, 39, 39);
+    color: white;
+
+}
+
+#footer_total{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+#footer_izquierda{
+    padding: 5%;
+    padding-bottom: 2.5%;
+    width: 100%;
+}
+#footer_derecha{
+    padding: 5%;
+    padding-bottom: 2.5%;
+    width: 100%;
+}

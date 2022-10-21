@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"
+            type="text/css" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/styles.css">
+        <title>HowI Met Your Vianda</title>
+    </head>
+<body>
+    <header>
+        <div class="header-icon">
+            <div class="logo">
+                <a href="/"><img width="45" height="90" src="img/homeIconNoBG.png" alt="Logo"></a>
+            </div>
+            <div class="search_bardiv">
+                <input class='search_bar' type="text" placeholder="Buscar vianda...">
+                <br>
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <p class="buy-text"> Pide tus viandas favoritas directo a tu casa</p>
+        </div>
+        <nav class="navbar">
+            <ul class="link-list-header">
+                <li><a href="productDetails">Viandas<i class="fas fa-hamburger"></i></a></li>
+                <li><a href="login.html"> Ingresa <i class="fas fa-id-card"></i></a></li>
+                <li><a href="register"> Registrate <i class="fas fa-sign-in-alt"></i></a></li>
+                <li><a href="carrito.html"> Tu carrito <i class="fas fa-shopping-basket"></i></a></li>
+            </ul>
+            <div class="burger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <br>
+            <br>
+        </nav>
+    </header>
+    <div id="contentItemCarrusel">
+        <div class="carrusel" id="tarjeta1">
+            <div class="item_carrusel" id="tarjeta1">
+                <img src="img/carne.jpg" class="foto_carrusel">
+            </div>
+            <div class="flechas">
+                <i class="fas fa-chevron-left"></i>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </div>
+        <div class="carrusel" id="tarjeta2">
+            <div class="item_carrusel" id="tarjeta2">
+                <img src="img/MilanesaNapo.jpg" class="foto_carrusel">
+            </div>
+            <div class="flechas">
+                <i class="fas fa-chevron-left"></i>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </div>
+    </div>
+    <main>
+        <section class="ult_visita">
+            <h4 class="headlines">Viandas del dia</h4>
+            <p>Frescas y exquisitas a la puerta de tu casa</p>
+            <div class="productos">
+                <article>
+                    <img width="240" height="240" src="img/lasagna.jpg" alt="Lasagna">
+                    <div class="art_principal">
+                        <div class="buy_icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <p class="prices">$500</p>
+                        <p class="discount"> La que no falla</p>
+                        <p class="description">En algunos lados le dicen lasagna en otros pasticho nosotros simplemente
+                            le decimos deliciosa</p>
+                    </div>
+                </article>
+
+                <article>
+                    <img width="240" height="240" src="img/carne.jpg" alt="plato carnivoro">
+                    <div class="art_principal">
+                        <div class="buy_icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <p class="prices">$700</p>
+                        <p class="discount">La pesadilla vegetariana</p>
+                        <p class="description">Quieres comerte un asado pero te falta el asador el carbon la carne y los
+                            amigos, bueno quizas no podamos ayudarte con la mayoria de esas cosas pero con este plato se
+                            te van a ir las ganas de carne</p>
+                    </div>
+                </article>
+
+                <article>
+                    <img width="240" height="240" src="img/MilanesaNapo.jpg" alt="Mila Napo">
+                    <div class="art_principal">
+                        <div class="buy_icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <p class="prices">$400</p>
+                        <p class="discount"> La vieja confiable</p>
+                        <p class="description">No sabes que pedir, bueno pidete una mila napo con papas no le fallo
+                            nunca a nadie y tampoco te va a fallar a ti</p>
+                    </div>
+                </article>
+
+                <article>
+                    <img width="240" height="240" src="img/pollo.jpg" alt="menu saludable">
+                    <div class="art_principal">
+                        <div class="buy_icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <p class="prices">$450</p>
+                        <p class="discount">El hoy "me cuido"</p>
+                        <p class="description">Te comiste 5 chuletones y dos litros de helado, bueno bajale a la culpa
+                            con este rico pollito a la plancha, quizas no bajes de peso pero te sentiras menos culpable
+                            y la culpa pesa un monton</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div id="footer_total">
+            <ul class="footer" id="footer_izquierda">
+                <li><a>Nosotros</a></li>
+                <li><a>Clientes</a></li>
+                <li><a>Preguntas frecuentes</a></li>
+                <li><a>Terminos y Condiciones</a></li>
+            </ul>
+            <ul class="footer" id="footer_derecha">
+                <li>Viandas</li>
+                <li>Para llevar</li>
+                <li>Para congelar</li>
+                <li>Pedidos</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
