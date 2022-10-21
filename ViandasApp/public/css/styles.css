@@ -312,4 +312,7 @@ article div.articulos{
 	font-size: 13px;
 	text-align: center;
   }
-
+/*Home*/
+.tipografiaTitle{
+    font-style: italic;
+}
