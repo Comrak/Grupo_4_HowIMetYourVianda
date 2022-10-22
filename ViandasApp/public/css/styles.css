@@ -423,10 +423,18 @@ article div.articulos{
 
 /*Home*/
 
+@media only screen and (max-width: 700px){
+    .foto_carrusel{
+        display: flex;
+        align-items: center;
+        width: 400px;
+    }
+}
 #contentItemCarrusel{
     width: 100%;
     height: 80vh;
     overflow: hidden;
+    background-color:#ebebeb;
 }
 
 .carrusel {
@@ -485,4 +493,11 @@ footer{
 
 .tipografiaTitle{
     font-style: italic;
+    color: #2fc260;
+}
+
+.centerText{
+    margin-left:  auto;
+    margin-right: auto;
+    text-align: center;
 }
