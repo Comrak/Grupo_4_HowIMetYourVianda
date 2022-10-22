@@ -28,17 +28,27 @@ body{
 /* ################# Section Header ##############*/
 
 .main-header{
+    padding: 20px;
+    position:relative;
+}
+
+.main-header::before{
+    content:'';
+    position:absolute;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
     background-image: url(../img/homeBanner.jpg);
     background-size: cover;
-    background-color: rgb(5 150 93);
-    padding: 20px;
-    background-blend-mode: lighten;
-  
+    opacity:0.35;
+
 }
+  
+
 
 ul li a {
     color: white;
-    
 }
 
 
@@ -109,11 +119,11 @@ ul li a {
 }
 
 .search-buttom{
-    width: 15%;
+    width: 25%;
 }
 
 .search-bar{
-width:45%;
+width:55%;
 }
 
 .logo{
@@ -257,6 +267,116 @@ article div.articulos{
     position: relative;
 }
 
+/* ################## Section Carrito de Compras ################# */
+
+.main-container{
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgb(207, 160, 160);
+    margin-top: 25px;
+}
+.main-form .form-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-form{
+    width: 100%;
+    padding: 20px;
+
+}
+
+.title{
+    display:flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+    border-top: solid 1px rgb(179, 162, 162);
+    border-bottom: solid 1px rgb(179, 162, 162);
+    padding:18px
+}
+
+.title h4{
+    width:35%;
+    font-style: oblique;
+}
+
+.food-selected{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 20px 0px;
+    border-top: solid 1px rgb(179, 162, 162);
+    border-bottom: solid 1px rgb(179, 162, 162);
+    padding:18px
+}
+.food-info{
+    padding: 10px;
+}
+
+
+
+.unit{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 12vh;
+}
+
+.unit p{
+    padding: 5px;
+}
+
+
+
+.bottom-subtotal,
+.bottom-deliveryCost,
+.bottom-total{
+display: flex;
+justify-content: space-between;
+margin: 15px 0px;
+border-top: solid 1px rgb(179, 162, 162);
+border-bottom: solid 1px rgb(179, 162, 162);
+padding: 18px;
+}
+
+.bottom-subtotal h4{
+    width:50%;
+    font-style: oblique;
+}
+.price{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 12vh;
+    margin: 10px 0px;
+}
+.price i{
+    margin-left:8px
+}
+.delivery{
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0px;
+}
+.envios{
+    margin-left: 10px;
+}
+
+#Address-delivery{
+    width: 100%;
+    height:5vw;
+}
+
+.total,
+.total-price{
+    font-size: 22px;
+}
+
+
+/* ################## END Section Carrito de Compras ################# */
+
 
 @media only screen and (min-width: 768px) {
     /* exclusivo tablets: */
@@ -378,6 +498,47 @@ article div.articulos{
     .art_principal .description{
         flex: 0 1 98%;
     }
+
+/* ################## Section Carrito de Compras ################# */
+
+    .food-selected{
+        flex-direction: row;
+    }
+    .food-selected img{
+    width: 35%;
+    }
+
+    .price{
+        position:absolute;
+        right: 10px;
+        bottom:10px;
+        margin:0px;
+    }
+
+    .unit{
+        position:absolute;
+        left: 10px;
+        bottom:10px;
+        margin:0px;
+    }
+
+
+    .food-info{
+        width: 65%;
+        position: relative;
+    }
+
+ 
+    #Address-delivery{
+        width: 50%;
+        height:3vw;
+    }
+
+
+
+
+
+/* ################## END Section Carrito de Compras ################# */
   }
   
   @media only screen and (min-width: 1200px) {
