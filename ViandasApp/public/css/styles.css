@@ -271,42 +271,42 @@ article div.articulos{
 	font-family: 'roboto';
 	color: black;
 	box-shadow: 7px 10px 10px 7px;
-  }
+}
+
+.form-register h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
   
-  .form-register h4 {
-	font-size: 22px;
-	margin-bottom: 20px;
-  }
-  
-  .controls {
-	width: 100%;
-	background: white;
-	padding: 10px;
-	border-radius: 4px;
-	margin-bottom: 10px;
-	border: 1px solid #1fc546;
-	font-family: 'roboto';
-	font-size: 15px;
-	color: black;
-  }
+.controls {
+    width: 100%;
+    background: white;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    border: 1px solid #1fc546;
+    font-family: 'roboto';
+    font-size: 15px;
+    color: black;
+}
   
 
-  .form-register p {
-	height: 20px;
-	text-align: center;
-	font-size: 13px;
-	line-height: 20px;
-  }
-  
-  .form-register a {
-	color: black;
-	text-decoration: none;
-  }
-  
-  .form-register a:hover {
-	color: white;
-	text-decoration: underline;
-  }
+.form-register p {
+    height: 20px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.form-register a {
+    color: black;
+    text-decoration: none;
+}
+
+.form-register a:hover {
+    color: white;
+    text-decoration: underline;
+}
 
 .button{
 	width: 100%;
@@ -325,6 +325,101 @@ article div.articulos{
 .button:hover{
     background-color: #cfee46;
 }
+
+
+
+
+/*LogIn*/
+
+.registerForm{
+    align-items: center;
+}
+
+.form{
+    padding: 20px 15px;
+    background-color: lightgray;
+    text-align: left;
+}
+
+.form-login {
+	position: relative;
+	width: 400px;
+	background: rgb(173, 245, 216);
+	padding: 30px;
+	margin: auto;
+	margin-top: 20px;
+	border-radius: 4px;
+	font-family: 'roboto';
+	color: black;
+	box-shadow: 7px 10px 10px 7px;
+}
+  
+.form-login h4 {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-google {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.controls {
+    width: 100%;
+    background: white;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    border: 1px solid #1fc546;
+    font-family: 'roboto';
+    font-size: 15px;
+    color: black;
+}
+
+.logoicon {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.form-login p {
+    height: 20px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.form-login a {
+    color: black;
+    text-decoration: none;
+}
+
+.form-login a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.button{
+	width: 100%;
+	background-color: #2fc260;
+	border:black;
+	padding: 7px 12px;
+	color: #1a1515;
+    border-radius: 5px;
+	margin: 5px;
+	font-size: 13px;
+	text-align: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    transition: all 450ms;
+}
+
+.button:hover{
+    background-color: #cfee46;
+}
+
+
 
 /*Home*/
 
