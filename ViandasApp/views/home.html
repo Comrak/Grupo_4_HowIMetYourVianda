@@ -5,80 +5,85 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"
-        type="text/css" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/9be5a7a60e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/styles.css">
     <title>Home</title>
 </head>
 
 <body>
-    <header>
-        <div class="header-icon">
-            <div class="logo">
-                <a href="/"><img width="45" height="90" src="img/homeIconNoBG.png" alt="Logo"></a>
+    <header class="main-header">
+        <div class="main-header-top-bar">
+            <div class="top-bar-container">
+                <img src="img/homeIconNoBG.png" class="logo" alt="Error">
+                <div class="search-bar">
+                    <input class="Buscador" type="text" placeholder="Cual Vianda Queres hoy?">
+                    <button class="search-buttom"><i class="fas fa-search"></i></button>
+                </div>
             </div>
-            <div class="search_bardiv">
-                <input class='search_bar' type="text" placeholder="Buscar vianda...">
-                <br>
-                <button><i class="fas fa-search"></i></button>
-            </div>
-            <p class="buy-text"> Pide tus viandas favoritas directo a tu casa</p>
+            <h2 class="copy-header">
+                <i class="fa-solid fa-bowl-food"></i>
+                <span class="text-entry"> Tus viandas favoritas directo a tu casa</span>
+            </h2>
         </div>
-        <nav class="navbar">
-            <ul class="link-list-header">
-                <li><a href="productDetails">Viandas<i class="fas fa-hamburger"></i></a></li>
-                <li><a href="login.html"> Ingresa <i class="fas fa-id-card"></i></a></li>
-                <li><a href="register"> Registrate <i class="fas fa-sign-in-alt"></i></a></li>
-                <li><a href="carrito.html"> Tu carrito <i class="fas fa-shopping-basket"></i></a></li>
+
+        <a href="#" class="hamburguer-button">
+            <i class="fa-solid fa-bars"></i>
+        </a>
+
+        <nav class="main-navbar">
+            <ul class="left-navbar">
+                <li> <a href="productDetails">Viandas</a></li>
+                <li> <a href="#">Zonas de Envio</a></li>
             </ul>
-            <div class="burger-menu">
-                <i class="fas fa-bars"></i>
-            </div>
-            <br>
-            <br>
+            <ul class="right-navbar">
+                <li> <a href="register">Crea Tu Cuenta</a> <i class="fas fa-user-circle"></i> </li>
+                <li> <a href="login.html">Ingresa</a> <i class="fas fa-sign-in-alt"></i> </li>
+                <li> <a href="carrito.html">Tu carrito</a> <i class="fas fa-shopping-basket"></i> </li>
+            </ul>
         </nav>
     </header>
-    <section class="banner">
+
+    <!-- <section class="banner">
         <img src="img/homeBanner.jpg" alt="Como conoci a tu vianda">
-    </section>
-    <div id="contentItemCarrusel">
-        <div class="carrusel" id="tarjeta1">
-            <div class="item_carrusel" id="tarjeta1">
-                <img src="img/carne.jpg" class="foto_carrusel">
+    </section> -->
+
+    <div class="carrusel-container">
+        <div id="contentItemCarrusel">
+            <div class="carrusel" id="tarjeta1">
+                <div class="item_carrusel" id="tarjeta1">
+                    <img src="img/carne.jpg" class="foto_carrusel">
+                </div>
+                <div class="flechas">
+                    <a href="#tarjeta4"><i class="fas fa-chevron-left"></i></a>
+                    <a href="#tarjeta2"><i class="fas fa-chevron-right"></i></a>
+                </div>
             </div>
-            <div class="flechas">
-                <a href="#tarjeta4"><i class="fas fa-chevron-left"></i></a>
-                <a href="#tarjeta2"><i class="fas fa-chevron-right"></i></a>
+            <div class="carrusel" id="tarjeta2">
+                <div class="item_carrusel" id="tarjeta2">
+                    <img src="img/MilanesaNapo.jpg" class="foto_carrusel">
+                </div>
+                <div class="flechas">
+                    <a href="#tarjeta1"><i class="fas fa-chevron-left"></i></a>
+                    <a href="#tarjeta3"><i class="fas fa-chevron-right"></i></a>
+                </div>
             </div>
-        </div>
-        <div class="carrusel" id="tarjeta2">
-            <div class="item_carrusel" id="tarjeta2">
-                <img src="img/MilanesaNapo.jpg" class="foto_carrusel">
+            <div class="carrusel" id="tarjeta3">
+                <div class="item_carrusel" id="tarjeta3">
+                    <img src="img/pollo.jpg" class="foto_carrusel">
+                </div>
+                <div class="flechas">
+                    <a href="#tarjeta2"><i class="fas fa-chevron-left"></i></a>
+                    <a href="#tarjeta4"><i class="fas fa-chevron-right"></i></a>
+                </div>
             </div>
-            <div class="flechas">
-                <a href="#tarjeta1"><i class="fas fa-chevron-left"></i></a>
-                <a href="#tarjeta3"><i class="fas fa-chevron-right"></i></a>
-            </div>
-        </div>
-        <div class="carrusel" id="tarjeta3">
-            <div class="item_carrusel" id="tarjeta3">
-                <img src="img/pollo.jpg" class="foto_carrusel">
-            </div>
-            <div class="flechas">
-                <a href="#tarjeta2"><i class="fas fa-chevron-left"></i></a>
-                <a href="#tarjeta4"><i class="fas fa-chevron-right"></i></a>
-            </div>
-        </div>
-        <div class="carrusel" id="tarjeta4">
-            <div class="item_carrusel" id="tarjeta4">
-                <img src="img/lasagna.jpg" class="foto_carrusel">
-            </div>
-            <div class="flechas">
-                <a href="#tarjeta3"><i class="fas fa-chevron-left"></i></a>
-                <a href="#tarjeta1"><i class="fas fa-chevron-right"></i></a>
+            <div class="carrusel" id="tarjeta4">
+                <div class="item_carrusel" id="tarjeta4">
+                    <img src="img/lasagna.jpg" class="foto_carrusel">
+                </div>
+                <div class="flechas">
+                    <a href="#tarjeta3"><i class="fas fa-chevron-left"></i></a>
+                    <a href="#tarjeta1"><i class="fas fa-chevron-right"></i></a>
+                </div>
             </div>
         </div>
     </div>
@@ -96,7 +101,8 @@
                         <p class="prices tipografiaTitle">La Que No Falla</p>
                         <br>
                         <p class="discount">$500</p>
-                        <p class="description">En algunos lados le dicen lasagna en otros pasticho nosotros simplemente
+                        <p class="description">En algunos lados le dicen lasagna en otros pasticho nosotros
+                            simplemente
                             le decimos deliciosa</p>
                     </div>
                 </article>
@@ -110,8 +116,10 @@
                         <p class="prices tipografiaTitle">La Pesadilla Vegetariana</p>
                         <br>
                         <p class="discount">$700</p>
-                        <p class="description">Quieres comerte un asado pero te falta el asador el carbon la carne y los
-                            amigos, bueno quizas no podamos ayudarte con la mayoria de esas cosas pero con este plato se
+                        <p class="description">Quieres comerte un asado pero te falta el asador el carbon la carne y
+                            los
+                            amigos, bueno quizas no podamos ayudarte con la mayoria de esas cosas pero con este
+                            plato se
                             te van a ir las ganas de carne</p>
                     </div>
                 </article>
@@ -139,33 +147,38 @@
                         <p class="prices tipografiaTitle">El Hoy "Me Cuido"</p>
                         <br>
                         <p class="discount">$450</p>
-                        <p class="description">Te comiste 5 chuletones y dos litros de helado, bueno bajale a la culpa
-                            con este rico pollito a la plancha, quizas no bajes de peso pero te sentiras menos culpable
+                        <p class="description">Te comiste 5 chuletones y dos litros de helado, bueno bajale a la
+                            culpa
+                            con este rico pollito a la plancha, quizas no bajes de peso pero te sentiras menos
+                            culpable
                             y la culpa pesa un monton</p>
                     </div>
                 </article>
             </div>
         </section>
-    </main>
+    </main> -->
     <footer>
         <i class="fas fa-credit-card footer-icon"></i>
         <h4>Pagá con tarjeta o en efectivo</h4>
         <br>
         <p class="text-body">puedes confiar en que para How i met your vianda tus datos son privados y no se lo
             compartiremos a nadie, ademas de la responsabilidad sujeta a nuestra reputacion </p>
-            <br>
+        <br>
         <i class="fas fa-gift footer-icon"></i>
         <h4>Envío gratis desde $ 2.500</h4>
         <br>
-        <p class="text-body">Si te registra a How a i met your vianda y pides un menu para la semana el envio viene de
+        <p class="text-body">Si te registra a How a i met your vianda y pides un menu para la semana el envio viene
+            de
             nuestra parte</p>
-            <br>
+        <br>
         <i class="fas fa-user-shield footer-icon"></i>
         <h4>Calidad, de principio a fin</h4>
         <br>
-        <p class="text-body">Garantizamos que te vas a enganchar con nuestras recetas y platillos (de hecho nos conviene
+        <p class="text-body">Garantizamos que te vas a enganchar con nuestras recetas y platillos (de hecho nos
+            conviene
             que te enganches)</p>
-        <p class="copyleft-text">Copyright © 1999-2020 How i met your vianda S.R.L. todos los derechos e izquierdos bien
+        <p class="copyleft-text">Copyright © 1999-2020 How i met your vianda S.R.L. todos los derechos e izquierdos
+            bien
             puestos</p>
     </footer>
 </body>
