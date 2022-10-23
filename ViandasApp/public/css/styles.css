@@ -767,3 +767,13 @@ footer{
 .tipografiaTitle{
     font-style: italic;
 }
+
+/* ##################  Section Carrito de Compras ################# */
+
+.main-container{
+    max-width: 65vw;
+}
+
+
+
+/* ################## END Section Carrito de Compras ################# */
