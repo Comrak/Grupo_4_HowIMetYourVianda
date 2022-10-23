@@ -15,35 +15,40 @@
 </head>
 
 <body>
-    <header>
-        <div class="header-icon">
-            <div class="logo">
-                <a href="/"><img width="45" height="90" src="img/homeIconNoBG.png" alt="Logo"></a>
+    <header class="main-header">
+        <div class="main-header-top-bar">
+            <div class="top-bar-container">
+                <img src="img/homeIconNoBG.png" class="logo" alt="Error">
+                <div class="search-bar">
+                    <input class="Buscador" type="text" placeholder="Cual Vianda Queres hoy?">
+                    <button class="search-buttom"><i class="fas fa-search"></i></button>
+                </div>
             </div>
-            <div class="search_bardiv">
-                <input class='search_bar' type="text" placeholder="Buscar vianda...">
-                <br>
-                <button><i class="fas fa-search"></i></button>
-            </div>
-            <p class="buy-text"> Pide tus viandas favoritas directo a tu casa</p>
+            <h2 class="copy-header">
+                <i class="fa-solid fa-bowl-food"></i>
+                <span class="text-entry"> Tus viandas favoritas directo a tu casa</span>
+            </h2>
         </div>
-        <nav class="navbar">
-            <ul class="link-list-header">
-                <li><a href="productDetails">Viandas<i class="fas fa-hamburger"></i></a></li>
-                <li><a href="login"> Ingresa <i class="fas fa-id-card"></i></a></li>
-                <li><a href="register"> Registrate <i class="fas fa-sign-in-alt"></i></a></li>
-                <li><a href="carrito.html"> Tu carrito <i class="fas fa-shopping-basket"></i></a></li>
+
+        <a href="#" class="hamburguer-button">
+            <i class="fa-solid fa-bars"></i>
+        </a>
+
+        <nav class="main-navbar">
+            <ul class="left-navbar">
+                <li> <a href="productDetails">Viandas</a></li>
+                <li> <a href="#">Zonas de Envio</a></li>
             </ul>
-            <div class="burger-menu">
-                <i class="fas fa-bars"></i>
-            </div>
-            <br>
-            <br>
+            <ul class="right-navbar">
+                <li> <a href="register">Crea Tu Cuenta</a> <i class="fas fa-user-circle"></i> </li>
+                <li> <a href="login">Ingresa</a> <i class="fas fa-sign-in-alt"></i> </li>
+                <li> <a href="carrito">Tu carrito</a> <i class="fas fa-shopping-basket"></i> </li>
+            </ul>
         </nav>
     </header>
-    <section class="banner">
+    <!-- <section class="banner">
         <img src="img/homeBanner2.jpg" alt="Como conoci a tu vianda">
-    </section>
+    </section> -->
 <center>
     <div id="contentItemCarrusel">
         <div class="carrusel" id="tarjeta1">

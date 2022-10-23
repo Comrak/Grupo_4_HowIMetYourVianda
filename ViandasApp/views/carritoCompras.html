@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9be5a7a60e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Home</title>
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="main-header-top-bar">
+            <div class="top-bar-container">
+                <img src="img/homeIconNoBG.png" class="logo" alt="Error">
+                <div class="search-bar">
+                    <input class="Buscador" type="text" placeholder="Cual Vianda Queres hoy?">
+                    <button class="search-buttom"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+            <h2 class="copy-header">
+                <i class="fa-solid fa-bowl-food"></i>
+                <span class="text-entry"> Tus viandas favoritas directo a tu casa</span>
+            </h2>
+        </div>
+
+        <a href="#" class="hamburguer-button">
+            <i class="fa-solid fa-bars"></i>
+        </a>
+
+        <nav class="main-navbar">
+            <ul class="left-navbar">
+                <li> <a href="productDetails">Viandas</a></li>
+                <li> <a href="#">Zonas de Envio</a></li>
+            </ul>
+            <ul class="right-navbar">
+                
+                <li> <a href="/">Cerrar Cuenta</a> <i class="fa-solid fa-right-from-bracket"></i> </li>
+                <li> <a href="carrito.html">Tu carrito</a> <i class="fas fa-shopping-basket"></i> </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-container">
+        <form action="/carritoPost" class="main-form" method="post">
+            <div class="form-header">
+                <h2 class="form-title">Carrito de Compras</h2>
+                <i class="fa-solid fa-square-xmark"></i>
+            </div>
+            <div class="product-detail">
+                <div class="title">
+                    <h4 class="product">PRODUCTO</h4>
+
+                </div>
+                <div class="food-selected">
+                    <img
+                        src="//d3ugyf2ht6aenh.cloudfront.net/stores/001/720/855/products/ttl_9421-21-6863c16af79cfb323816500425432068-320-0.jpg">
+                    <div class="food-info">
+                        <h4>Vianda de Pollo</h4>
+                        <p>Vianda de pollo con arroz y ensalada</p>
+
+                        <div class="price">
+                            <p>ARS 630.00</p><i class="fa-solid fa-trash-can"></i>
+                        </div>
+                        <div class="unit">
+                            <i class="fa-regular fa-square-minus"></i>
+                            <p>1 unidad</p>
+                            <i class="fa-regular fa-square-plus"></i>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="bottom-subtotal">
+                    <H4 class="subtotal">SUBTOTAL(Sin envio)</H4>
+                    <p class="subtotal-price">ARS 630.00</p>
+                </div>
+                <div class="medio-envios">
+                    <div class="delivery">
+                        <i class="fa-solid fa-truck"></i>
+                        <p class="envios">Seleccione Dirección Entrega</p>
+                    </div>
+                    <select name="Address-delivery" id="Address-delivery">
+                        <option value="dir1">Peru 364 , CABA</option>
+                        <option value="dir2">Av. Corrientes 1234 , CABA</option>
+                    </select>
+                </div>
+                <div class="bottom-deliveryCost">
+                    <H4 class="subtotal">Costo Envio</H4>
+                    <p class="subtotal-price">ARS 80.00</p>
+                </div>
+                <div class="bottom-total">
+                    <H4 class="total">Costo Total</H4>
+                    <h4     class="total-price">ARS 710.00</h4>
+                </div>
+            </div>
+            <div class="buttom-submit">
+                <button type="submit">Confirmar Compra</button>
+            </div>
+
+        </form>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+</body>

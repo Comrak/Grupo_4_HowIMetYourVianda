@@ -21,3 +21,11 @@ app.get('/register', (req, res)=>{
 app.get('/login', (req, res)=>{
     res.sendFile(path.resolve('views/login.html'))
 })
+
+app.get('/carrito', (req, res)=>{
+    res.sendFile(path.resolve('views/carritoCompras.html'))
+})
+
+app.post('/carritoPost', (req, res)=>{
+    res.sendFile(path.resolve('views/home.html'))
+})
