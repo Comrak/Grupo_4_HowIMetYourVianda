@@ -321,7 +321,7 @@ article div.articulos{
     display: flex;
     flex-direction: row;
     align-items: center;
-    max-width: 12vh;
+    /* max-width: 12vh; */
 }
 
 .unit p{
@@ -338,18 +338,20 @@ justify-content: space-between;
 margin: 15px 0px;
 border-top: solid 1px rgb(179, 162, 162);
 border-bottom: solid 1px rgb(179, 162, 162);
-padding: 18px;
+padding: 15px;
+align-items: center;
 }
 
 .bottom-subtotal h4{
-    width:50%;
+    width:65%;
+    font-size: 15px;
     font-style: oblique;
 }
 .price{
     display: flex;
     flex-direction: row;
     align-items: center;
-    max-width: 12vh;
+    /* max-width: 12vh; */
     margin: 10px 0px;
 }
 .price i{
@@ -371,10 +373,26 @@ padding: 18px;
 
 .total,
 .total-price{
-    font-size: 22px;
+    font-size: 18px;
 }
 
 
+.bottom-subtotal p{
+    font-size: 12px;
+}
+
+.buttom-submit{
+    width:45%;
+}
+.buttom-submit button{
+    font-weight: bold;
+    background-color: blue;
+    color: white;
+    border-radius: 10%;
+    height: 30px;
+    width: 160px;
+
+}
 /* ################## END Section Carrito de Compras ################# */
 
 
@@ -534,6 +552,13 @@ padding: 18px;
         height:3vw;
     }
 
+    .buttom-submit button{
+       
+     
+        height: 35px;
+        width: 225px;
+    
+    }
 
 
 
