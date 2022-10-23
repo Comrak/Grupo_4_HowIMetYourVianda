@@ -32,7 +32,7 @@ body{
     position:relative;
 }
 
-.main-header::before{
+/* .main-header::before{
     content:'';
     position:absolute;
     top:0px;
@@ -43,7 +43,7 @@ body{
     background-size: cover;
     opacity:0.35;
 
-}
+} */
   
 
 
@@ -130,21 +130,6 @@ width:55%;
     width: 29%;
     max-height: 110px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .search_bar{
     width: 35%;
@@ -267,6 +252,154 @@ article div.articulos{
     position: relative;
 }
 
+
+
+
+.registerForm{
+    align-items: center;
+}
+
+/*Register*/
+.form{
+    padding: 20px 15px;
+    background-color: lightgray;
+    text-align: left;
+}
+
+.form-register {
+	position: relative;
+	width: 400px;
+	background: rgb(173, 245, 216);
+	padding: 30px;
+	margin: auto;
+	margin-top: 20px;
+	border-radius: 4px;
+	font-family: 'roboto';
+	color: black;
+	box-shadow: 7px 10px 10px 7px;
+  }
+  
+  .form-register h4 {
+	font-size: 22px;
+	margin-bottom: 20px;
+  }
+  
+  .controls {
+	width: 100%;
+	background: white;
+	padding: 10px;
+	border-radius: 4px;
+	margin-bottom: 10px;
+	border: 1px solid #1fc546;
+	font-family: 'roboto';
+	font-size: 15px;
+	color: black;
+  }
+  
+
+  .form-register p {
+	height: 20px;
+	text-align: center;
+	font-size: 13px;
+	line-height: 20px;
+  }
+  
+  .form-register a {
+	color: black;
+	text-decoration: none;
+  }
+  
+  .form-register a:hover {
+	color: white;
+	text-decoration: underline;
+  }
+
+.button{
+	width: 100%;
+	background-color: #2fc260;
+	border:black;
+	padding: 7px 12px;
+	color: #1a1515;
+    border-radius: 5px;
+	margin: 5px;
+	font-size: 13px;
+	text-align: center;
+    margin-bottom: 20px;
+    transition: all 450ms;
+  } 
+
+.button:hover{
+    background-color: #cfee46;
+}
+
+/*Home*/
+
+.carrusel-container{
+    padding: 20px;
+}
+#contentItemCarrusel{
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.carrusel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.item_carrusel{
+    width: 100%;
+    height: 100%;
+}
+.foto_carrusel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.flechas{
+    color: rgb(255, 255, 255, 0.5);
+    font-size: 5vh;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2%;
+    text-decoration: none;
+}
+
+footer{
+    background-color: rgb(39, 39, 39);
+    color: white;
+
+}
+
+#footer_total{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+#footer_izquierda{
+    padding: 5%;
+    padding-bottom: 2.5%;
+    width: 100%;
+}
+#footer_derecha{
+    padding: 5%;
+    padding-bottom: 2.5%;
+    width: 100%;
+}
+/*Home*/
+
+.tipografiaTitle{
+    font-style: italic;
+}
 /* ################## Section Carrito de Compras ################# */
 
 .main-container{
@@ -394,6 +527,7 @@ align-items: center;
 
 }
 /* ################## END Section Carrito de Compras ################# */
+
 
 
 @media only screen and (min-width: 768px) {
@@ -561,8 +695,6 @@ align-items: center;
     }
 
 
-
-
 /* ################## END Section Carrito de Compras ################# */
   }
   
@@ -601,15 +733,6 @@ align-items: center;
         display: none;
     }
 
-
-
-
-
-
-
-
-
-
     .navbar ul {
         display: inline;
     }
@@ -619,6 +742,15 @@ align-items: center;
     .productos article {
         flex: 0 1 24%;
     }
+    /* ##################  Section Carrito de Compras ################# */
+
+    .main-container{
+        max-width: 65vw;
+    }
+
+
+
+    /* ################## END Section Carrito de Compras ################# */
   }
 
 
@@ -768,12 +900,3 @@ footer{
     font-style: italic;
 }
 
-/* ##################  Section Carrito de Compras ################# */
-
-.main-container{
-    max-width: 65vw;
-}
-
-
-
-/* ################## END Section Carrito de Compras ################# */
