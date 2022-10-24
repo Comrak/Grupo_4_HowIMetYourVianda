@@ -96,7 +96,8 @@ ul li a {
     padding: 0;
 }
 
-.main-navbar a, i{
+.main-navbar a, 
+.main-navbar i{
     text-decoration: none;
     color: white ;
     display:inline-block;
