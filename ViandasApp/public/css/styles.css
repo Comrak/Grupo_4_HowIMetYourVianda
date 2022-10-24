@@ -827,7 +827,7 @@ align-items: center;
 }
 
 /*Home*/
-
+/* 
 .carrusel-container{
     padding: 20px;
 }
@@ -865,7 +865,7 @@ align-items: center;
     justify-content: space-between;
     padding: 2%;
     text-decoration: none;
-}
+} */
 
 footer{
     background-color: rgb(39, 39, 39);
