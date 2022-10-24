@@ -258,11 +258,11 @@ article div.articulos{
 
 /*LogIn*/
 
-.registerForm{
+.registerForm {
     align-items: center;
 }
 
-.form{
+.form {
     padding: 20px 15px;
     background-color: lightgray;
     text-align: left;
