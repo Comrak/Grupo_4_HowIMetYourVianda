@@ -30,23 +30,15 @@ body{
 .main-header{
     padding: 20px;
     position:relative;
-    background-color: #39b54a;
-}
-
-/* .main-header::before{
-    content:'';
-    position:absolute;
-    top:0px;
-    left:0px;
-    right:0px;
-    bottom:0px;
+    background-color:#998c2a;
     background-image: url(../img/homeBanner2.jpg);
     background-size: cover;
-    background-repeat: no-repeat;
-    opacity:0.35;
+    background-blend-mode: multiply;
+}
 
-} 
-*/
+header h2 {
+    color: #fff;
+}
 
 
 ul li a {
@@ -104,9 +96,9 @@ ul li a {
     padding: 0;
 }
 
-.main-navbar a{
+.main-navbar a, i{
     text-decoration: none;
-    color: #222222 ;
+    color: white ;
     display:inline-block;
     padding: 5px 0;
     font-size: 17px;   
@@ -129,7 +121,7 @@ width:55%;
 }
 
 .logo{
-    width: 29%;
+    width: 23%;
     max-height: 110px;
 }
 
