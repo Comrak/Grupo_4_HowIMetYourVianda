@@ -871,9 +871,8 @@ footer{
 
     #contentItemCarrusel {
       
-        height: 52vh;
- 
-    }
+        height: 48vh;
+     }
 /* ################## Section Carrito de Compras ################# */
 
     .food-selected{
@@ -924,58 +923,58 @@ footer{
   @media only screen and (min-width: 1200px) {
     /* exclusivo desktop: */
 
-    .main-navbar li{
-        margin: 0 15px;
-    }
-    .main-navbar a{
-        font-size: 20px;
-    }
-    .copy-header{
-        max-width: none;
-        font-size: 25px;
-        text-align: right;
-    }   
+        .main-navbar li{
+            margin: 0 15px;
+        }
+        .main-navbar a{
+            font-size: 20px;
+        }
+        .copy-header{
+            max-width: none;
+            font-size: 25px;
+            text-align: right;
+        }   
 
 
-    .main-navbar {
-        margin-top: 10px;
-    }
+        .main-navbar {
+            margin-top: 10px;
+        }
 
 
-    .articulos {
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    }
+        .articulos {
+            box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        }
 
-    .Nav-Opciones,
-    .Nav-Login {
-        display: block;
-    }
+        .Nav-Opciones,
+        .Nav-Login {
+            display: block;
+        }
 
-    .burger-menu {
+        .burger-menu {
 
-        display: none;
-    }
+            display: none;
+        }
 
-    .navbar ul {
-        display: inline;
-    }
-    .burger-menu{
-        display: none;
-    }
-    .productos article {
-        flex: 0 1 24%;
-    }
+        .navbar ul {
+            display: inline;
+        }
+        .burger-menu{
+            display: none;
+        }
+        .productos article {
+            flex: 0 1 24%;
+        }
 
-    #contentItemCarrusel {
-      
-        height: 68vh;
- 
-    }
-    /* ##################  Section Carrito de Compras ################# */
+        #contentItemCarrusel {
+        
+            height: 64vh;
+    
+        }
+        /* ##################  Section Carrito de Compras ################# */
 
-    .main-container{
-        max-width: 65vw;
-    }
+        .main-container{
+            max-width: 65vw;
+        }
 
 
 
