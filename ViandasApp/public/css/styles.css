@@ -75,7 +75,7 @@ ul li a {
 
 
 .hamburguer-button{
-    background-color:  blue;
+    background-color: #39b54a;
     color: white;
     display: block;
     max-width: 50px;
@@ -137,13 +137,13 @@ footer{
 
 .footer-icon{
     font-size: 30px;
-    color: #1259c3;
+    color: #39b54a;
     text-align: center;
 }
 
 .burger-menu{
     text-align: center;
-    background-color: #1259c3;
+    background-color: #39b54a;
     color: white;
     display: block;
     font-size: 30px;
