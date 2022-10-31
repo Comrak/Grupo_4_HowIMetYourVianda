@@ -31,3 +31,13 @@
  
 * Lo bueno: existe una buena dinámica y espíritu de colaboración, podemos visualizar, dividir y organizar las tareas.
 * Lo difícil: El material en pg no es claro.Si bien se entiende que hay muchos caminos para resolver algo para quienes recién estamos empezando se torna confuso.
+
+## Sprint 2  
+
+### Jose Nardulli  
+
+* Comenzar a hacer: pedir mas detalles acerca de las consignas.
+* Hacer más: comunicarse mas con el equipo.
+* Continuar haciendo: organizar el tablero y permitir que cada integrante elijan las tareas con las que se sientan mas comodos.
+* Hacer menos: pensar que con una sola reunion semanal es suficiente.
+* Dejar de hacer: asumir que por que una tarea este tomada sera completada, hacer seguimiento constante de todos el equipo. 
