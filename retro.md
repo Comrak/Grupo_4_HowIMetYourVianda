@@ -41,3 +41,12 @@
 * Continuar haciendo: organizar el tablero y permitir que cada integrante elijan las tareas con las que se sientan mas comodos.
 * Hacer menos: pensar que con una sola reunion semanal es suficiente.
 * Dejar de hacer: asumir que por que una tarea este tomada sera completada, hacer seguimiento constante de todos el equipo. 
+
+
+### Victoria Aquino
+
+* Comenzar a hacer: Trabajar más con Trello y estar más atenta al detalle que pide cada Sprint.
+* Hacer más: Reuniones con el equipo, administrar mejor el tiempo de trabajo.
+* Continuar haciendo: Asignar las tareas de acuerdo a la selección de cada integrante y colaborar con las del resto.
+* Hacer menos: Demorar en detalles que no suman.
+* Dejar de hacer: Postergar la realización de las tareas.
