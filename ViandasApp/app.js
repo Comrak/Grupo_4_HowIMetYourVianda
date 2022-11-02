@@ -2,30 +2,16 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const PUBLICFOLDER = path.resolve('public')
+const routerMain = require('./routers/mainRouter');
+
 app.use(express.static(PUBLICFOLDER))
+
+app.set('view engine', 'ejs');
+
+
 const numeroPuerto = 3000;
 app.listen(numeroPuerto, ()=>{
     console.log('Servidor funcionando en el puerto ' + numeroPuerto);
 })
-app.get('/', (req, res)=>{
-    res.sendFile(path.resolve('views/home.html'))
-})
-app.get('/productDetails', (req, res)=>{
-    res.sendFile(path.resolve('views/productDetails.html'))
-})
 
-app.get('/register', (req, res)=>{
-    res.sendFile(path.resolve('views/register.html'))
-})
-
-app.get('/login', (req, res)=>{
-    res.sendFile(path.resolve('views/login.html'))
-})
-
-app.get('/carrito', (req, res)=>{
-    res.sendFile(path.resolve('views/carritoCompras.html'))
-})
-
-app.post('/carritoPost', (req, res)=>{
-    res.sendFile(path.resolve('views/home.html'))
-})
+app.use('/', routerMain);
