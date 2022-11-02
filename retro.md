@@ -58,3 +58,11 @@
 3. Continuar haciendo: Participando de las reuniones breves.
 4. Hacer menos: Tener miedo de cometer errores
 5. Dejar de hacer: Postergar tareas
+
+### Martin Altuna
+
+* Comenzar a hacer: Apegarse a las consignas del proyecto.
+* Hacer más: Comunicarse con el grupo.
+* Continuar haciendo: Realizar las tareas asignadas y ayudar al resto de integrantes cuando lo necesitan.
+* Hacer menos: Comenzar tareas sin planificar de que manera tienen que ser hechas.
+* Dejar de hacer: Procrastinar las tares.
