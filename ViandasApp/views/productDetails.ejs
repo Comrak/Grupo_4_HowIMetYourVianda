@@ -10,7 +10,7 @@
             <h4 class="headlines">Viandas del dia</h4>
             <p>Frescas y exquisitas a la puerta de tu casa</p>
             <div class="productos">
-                <article>
+                <!-- <article>
                     <img width="240" height="240" src="img/lasagna.jpg" alt="Lasagna">
                     <div class="art_principal">
                         <div class="buy_icon">
@@ -62,7 +62,15 @@
                             con este rico pollito a la plancha, quizas no bajes de peso pero te sentiras menos culpable
                             y la culpa pesa un monton</p>
                     </div>
-                </article>
+                </article> -->
+                    <ul>
+                        <% jsProductos.forEach(function(elemento) { %>
+                            <li>
+                                <strong><%= elemento.name %></strong>
+                                el precio es: <%= elemento.prices %>, y la descripcion es: <%= elemento.description %>
+                            </li>
+                        <% }); %>
+                    </ul>
             </div>
         </section>
     </main>

@@ -1,5 +1,7 @@
+const { json } = require('express');
 const path = require('path');
-
+//const jsonProductos = require('../models/productos.json')
+const jsProductos = require('../models/productos')
 // Create a new controller object
 const renderHome = (req, res) => {
         
@@ -11,8 +13,9 @@ const renderAbout = (req, res) => {
     return res.render('about')
 }
 
-const renderProductDetails = (req, res) => {
-    return res.render('productDetails')
+const renderProductDetails = (req, res,) => {
+    console.log('este es el producto' + jsProductos[0].name)
+    return res.render('productDetails',{jsProductos:jsProductos})
 }
  
 const renderRegister = (req, res) => {
