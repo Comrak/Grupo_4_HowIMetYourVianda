@@ -1,5 +1,6 @@
 <%- include('./partials/head')%>
-
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="scripts/productDetailsModals.js"></script>
 <body>
     <%- include('./partials/header')%>
     <!-- <section class="banner">
@@ -10,10 +11,10 @@
             <h4 class="headlines">Viandas del dia</h4>
             <p>Frescas y exquisitas a la puerta de tu casa</p>
             <div class="productos">
-                <!-- <article>
-                    <img width="240" height="240" src="img/lasagna.jpg" alt="Lasagna">
+                <article>
+                    <img width="240" height="240" src="img/lasagna.jpg" alt="Lasagna" id="La que no falla">
                     <div class="art_principal">
-                        <div class="buy_icon">
+                        <div class="buy_icon" id="buying">
                             <i class="fas fa-truck"></i>
                         </div>
                         <p class="prices">$500</p>
@@ -24,7 +25,7 @@
                 </article>
 
                 <article>
-                    <img width="240" height="240" src="img/carne.jpg" alt="plato carnivoro">
+                    <img width="240" height="240" src="img/carne.jpg" alt="plato carnivoro" id="La pesadilla vegetariana">
                     <div class="art_principal">
                         <div class="buy_icon">
                             <i class="fas fa-truck"></i>
@@ -38,7 +39,7 @@
                 </article>
 
                 <article>
-                    <img width="240" height="240" src="img/MilanesaNapo.jpg" alt="Mila Napo">
+                    <img width="240" height="240" src="img/MilanesaNapo.jpg" alt="Mila Napo" id="La vieja confiable">
                     <div class="art_principal">
                         <div class="buy_icon">
                             <i class="fas fa-truck"></i>
@@ -51,7 +52,7 @@
                 </article>
 
                 <article>
-                    <img width="240" height="240" src="img/pollo.jpg" alt="menu saludable">
+                    <img width="240" height="240" src="img/pollo.jpg" alt="menu saludable" id="El hoy 'me cuido'">
                     <div class="art_principal">
                         <div class="buy_icon">
                             <i class="fas fa-truck"></i>
@@ -62,15 +63,15 @@
                             con este rico pollito a la plancha, quizas no bajes de peso pero te sentiras menos culpable
                             y la culpa pesa un monton</p>
                     </div>
-                </article> -->
-                    <ul>
+                </article>
+                    <!-- <ul>
                         <% jsProductos.forEach(function(elemento) { %>
                             <li>
                                 <strong><%= elemento.name %></strong>
                                 el precio es: <%= elemento.prices %>, y la descripcion es: <%= elemento.description %>
                             </li>
                         <% }); %>
-                    </ul>
+                    </ul> -->
             </div>
         </section>
     </main>

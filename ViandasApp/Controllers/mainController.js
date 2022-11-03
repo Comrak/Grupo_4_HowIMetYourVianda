@@ -13,13 +13,29 @@ const renderAbout = (req, res) => {
     return res.render('about')
 }
 
-const renderProductDetails = (req, res,) => {
-    console.log('este es el producto' + jsProductos[0].name)
-    return res.render('productDetails',{jsProductos:jsProductos})
+const renderProductDetails = (req, res) => {
+    return res.render('products/productDetails')
+}
+// const renderProductDetails = (req, res,) => {
+//     console.log('este es el producto' + jsProductos[0].name)
+//     return res.render('productDetails',{jsProductos:jsProductos})
+// }
+ 
+
+const renderProductManagement = (req, res) => {
+    return res.render('products/productManagement')
+}
+
+const renderproductRegistration = (req, res) => {
+    return res.render('products/productRegistration')
 }
  
 const renderRegister = (req, res) => {
     return res.render('register')
+}
+
+const renderRegisterPost = (req, res) => {
+    return res.render('home')
 }
 
 const renderLogin = (req, res) => {
@@ -40,8 +56,11 @@ const renderCarritoPost = (req, res) => {
 module.exports = {  renderHome,
                     renderAbout,
                     renderProductDetails,
+                    renderProductManagement,
+                    renderproductRegistration,
                     renderRegister,
                     renderLogin,
                     renderCarrito,
-                    renderCarritoPost
+                    renderCarritoPost,
+                    renderRegisterPost
                 }       
