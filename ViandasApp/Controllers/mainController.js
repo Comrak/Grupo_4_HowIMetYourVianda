@@ -12,7 +12,15 @@ const renderAbout = (req, res) => {
 }
 
 const renderProductDetails = (req, res) => {
-    return res.render('productDetails')
+    return res.render('products/productDetails')
+}
+
+const renderProductManagement = (req, res) => {
+    return res.render('products/productManagement')
+}
+
+const renderproductRegistration = (req, res) => {
+    return res.render('products/productRegistration')
 }
  
 const renderRegister = (req, res) => {
@@ -37,6 +45,8 @@ const renderCarritoPost = (req, res) => {
 module.exports = {  renderHome,
                     renderAbout,
                     renderProductDetails,
+                    renderProductManagement,
+                    renderproductRegistration,
                     renderRegister,
                     renderLogin,
                     renderCarrito,
