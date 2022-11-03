@@ -1,142 +1,90 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> -->
-    <script src="https://kit.fontawesome.com/9be5a7a60e.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Home</title>
-</head>
-
-<body>
-    <header class="main-header">
-        <div class="main-header-top-bar">
-            <div class="top-bar-container">
-                <img src="img/homeIconNoBG.png" class="logo" alt="Error">
-                <div class="search-bar">
-                    <input class="Buscador" type="text" placeholder="Cual Vianda Queres hoy?">
-                    <button class="search-buttom"><i class="fas fa-search"></i></button>
-                </div>
-            </div>
-            <h2 class="copy-header">
-                <i class="fa-solid fa-bowl-food"></i>
-                <span class="text-entry"> Tus viandas favoritas directo a tu casa</span>
-            </h2>
-        </div>
-
-        <a href="#" class="hamburguer-button">
-            <i class="fa-solid fa-bars"></i>
-        </a>
-
-        <nav class="main-navbar">
-            <ul class="left-navbar">
-                <li> <a href="productDetails">Viandas</a></li>
-                <li> <a href="#">Zonas de Envio</a></li>
-            </ul>
-            <ul class="right-navbar">
-                <li> <a href="register">Crea Tu Cuenta</a> <i class="fas fa-user-circle"></i> </li>
-                <li> <a href="login">Ingresa</a> <i class="fas fa-sign-in-alt"></i> </li>
-                <li> <a href="carrito">Tu carrito</a> <i class="fas fa-shopping-basket"></i> </li>
-            </ul>
-        </nav>
-    </header>
+<%- include('./partials/head')%>
 
 
+    <body>
+        <%- include('./partials/header')%>
 
-    <div id="contentItemCarrusel">
-        <div class="carrusel" id="tarjeta1">
-            <div class="item_carrusel" id="tarjeta1">
-                <img src="img/Bienvenidos.png" class="foto_carrusel">
-            </div>
-            <div class="flechas">
-                <a href="#tarjeta4"><i class="fas fa-chevron-left"></i></a>
-                <a href="#tarjeta2"><i class="fas fa-chevron-right"></i></a>
-            </div>
-        </div>
-        <div class="carrusel" id="tarjeta2">
-            <div class="item_carrusel" id="tarjeta2">
-                <img src="img/Cocineros.jpg" class="foto_carrusel">
-            </div>
-            <div class="flechas">
-                <a href="#tarjeta1"><i class="fas fa-chevron-left"></i></a>
-                <a href="#tarjeta3"><i class="fas fa-chevron-right"></i></a>
-            </div>
-        </div>
-        <div class="carrusel" id="tarjeta3">
-            <div class="item_carrusel" id="tarjeta3">
-                <img src="img/TrabajadorComiendo.jpg" class="foto_carrusel">
-            </div>
-            <div class="flechas">
-                <a href="#tarjeta2"><i class="fas fa-chevron-left"></i></a>
-                <a href="#tarjeta4"><i class="fas fa-chevron-right"></i></a>
-            </div>
-        </div>
-        <div class="carrusel" id="tarjeta4">
-            <div class="item_carrusel" id="tarjeta4">
-                <img src="img/lasagna.jpg" class="foto_carrusel">
-            </div>
-            <div class="flechas">
-                <a href="#tarjeta3"><i class="fas fa-chevron-left"></i></a>
-                <a href="#tarjeta1"><i class="fas fa-chevron-right"></i></a>
-            </div>
-        </div>
-    </div>
 
-    <main>
-        <section class="ult_visita">
-            <div class="productos">
-                <article>
-                    <img width="240" height="240" src="img/quienesSomos.png" alt="Quienes Somos">
-                    <div class="art_principal">
-                        <p class="prices tipografiaTitle centerText">¿Quienes Somos?</p>
-                        <br>
-                        <p class="description centerText"> Somos un emprendimiento que apunta a toda aquellas personas que hayan optado por una dieta saludable, equilibrada o restringida, para su propio consumo o familiar,pero a causa de su rutina no tiene tiempo para la elaboración de dichos alimentos. Buscamos solucionar tus problemas de tiempo de la manera mas rica posible.</p>
+            <main class="main-body">
+                <section class="carrusel">
+                    <div id="contentItemCarrusel">
+                        <div class="carrusel" id="tarjeta1">
+                            <div class="item_carrusel" id="tarjeta1">
+                                <img src="img/Bienvenidos.png" class="foto_carrusel">
+                            </div>
+                            <div class="flechas">
+                                <a href="#tarjeta4"><i class="fas fa-chevron-left"></i></a>
+                                <a href="#tarjeta2"><i class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="carrusel" id="tarjeta2">
+                            <div class="item_carrusel" id="tarjeta2">
+                                <img src="img/Cocineros.jpg" class="foto_carrusel">
+                            </div>
+                            <div class="flechas">
+                                <a href="#tarjeta1"><i class="fas fa-chevron-left"></i></a>
+                                <a href="#tarjeta3"><i class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="carrusel" id="tarjeta3">
+                            <div class="item_carrusel" id="tarjeta3">
+                                <img src="img/TrabajadorComiendo.jpg" class="foto_carrusel">
+                            </div>
+                            <div class="flechas">
+                                <a href="#tarjeta2"><i class="fas fa-chevron-left"></i></a>
+                                <a href="#tarjeta4"><i class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="carrusel" id="tarjeta4">
+                            <div class="item_carrusel" id="tarjeta4">
+                                <img src="img/lasagna.jpg" class="foto_carrusel">
+                            </div>
+                            <div class="flechas">
+                                <a href="#tarjeta3"><i class="fas fa-chevron-left"></i></a>
+                                <a href="#tarjeta1"><i class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </div>
                     </div>
-                </article>
+                </section>
 
-                <article>
-                    <img width="240" height="240" src="img/enviosCiudad.jpg" alt="Envios">
-                    <div class="art_principal">
-                        <p class="prices tipografiaTitle centerText">¿Cual es nuestro Alcance?</p>
-                        <br>
-                        <p class="description centerText"> Nuestros envios son hechos unicamente por Capital Federal. ¿Te encontras fuera de alcance? De igual manera, ¡Siempre podes pasar a buscar tu vianda!</p>
-                    </div>
-                </article>
+                <section class="ult_visita">
+                    <div class="productos">
+                        <article>
+                            <img width="240" height="240" src="img/quienesSomos.png" alt="Quienes Somos">
+                            <div class="art_principal">
+                                <p class="prices tipografiaTitle centerText">¿Quienes Somos?</p>
+                                <br>
+                                <p class="description centerText"> Somos un emprendimiento que apunta a toda aquellas
+                                    personas que hayan optado por una dieta saludable, equilibrada o restringida, para
+                                    su propio consumo o familiar,pero a causa de su rutina no tiene tiempo para la
+                                    elaboración de dichos alimentos. Buscamos solucionar tus problemas de tiempo de la
+                                    manera mas rica posible.</p>
+                            </div>
+                        </article>
 
-                <article>
-                    <img width="240" height="240" src="img/comoCocinar.jpg" alt="Cocinar">
-                    <div class="art_principal">
-                        <p class="prices tipografiaTitle centerText">¿Le falta algo a mi comida?</p>
-                        <br>
-                        <p class="description centerText">En cuanto llega tu vianda, sugerimos meterla en el microondas 1 minuto aproximadamente y ya estas listo para disfrutar de tu comida favorita ¿Debo de sacar la comida del envase? No te preocupes, el envase viene con una bandeja que esta diseñado para microondas.</p>
+                        <article>
+                            <img width="240" height="240" src="img/enviosCiudad.jpg" alt="Envios">
+                            <div class="art_principal">
+                                <p class="prices tipografiaTitle centerText">¿Cual es nuestro Alcance?</p>
+                                <br>
+                                <p class="description centerText"> Nuestros envios son hechos unicamente por Capital
+                                    Federal. ¿Te encontras fuera de alcance? De igual manera, ¡Siempre podes pasar a
+                                    buscar tu vianda!</p>
+                            </div>
+                        </article>
+
+                        <article>
+                            <img width="240" height="240" src="img/comoCocinar.jpg" alt="Cocinar">
+                            <div class="art_principal">
+                                <p class="prices tipografiaTitle centerText">¿Le falta algo a mi comida?</p>
+                                <br>
+                                <p class="description centerText">En cuanto llega tu vianda, sugerimos meterla en el
+                                    microondas 1 minuto aproximadamente y ya estas listo para disfrutar de tu comida
+                                    favorita ¿Debo de sacar la comida del envase? No te preocupes, el envase viene con
+                                    una bandeja que esta diseñado para microondas.</p>
+                            </div>
+                        </article>
                     </div>
-                </article>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <i class="fas fa-credit-card footer-icon"></i>
-        <h4>Pagá con tarjeta o en efectivo</h4>
-        <br>
-        <p class="text-body">puedes confiar en que para How i met your vianda tus datos son privados y no se lo
-            compartiremos a nadie, ademas de la responsabilidad sujeta a nuestra reputacion </p>
-            <br>
-        <i class="fas fa-gift footer-icon"></i>
-        <h4>Envío gratis desde $ 2.500</h4>
-        <br>
-        <p class="text-body">Si te registra a How a i met your vianda y pides un menu para la semana el envio viene de
-            nuestra parte</p>
-            <br>
-        <i class="fas fa-user-shield footer-icon"></i>
-        <h4>Calidad, de principio a fin</h4>
-        <br>
-        <p class="text-body">Garantizamos que te vas a enganchar con nuestras recetas y platillos (de hecho nos conviene
-            que te enganches)</p>
-        <p class="copyleft-text">Copyright © 1999-2020 How i met your vianda S.R.L. todos los derechos e izquierdos bien
-            puestos</p>
-    </footer>
-</body>
+                </section>
+            </main>
+            <%- include('./partials/footer')%>

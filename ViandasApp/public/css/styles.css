@@ -29,11 +29,18 @@ body{
 
 .main-header{
     padding: 20px;
-    position:relative;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 200;
     background-color:#998c2a;
     background-image: url(../img/homeBanner2.jpg);
     background-size: cover;
     background-blend-mode: multiply;
+}
+
+.main-body{
+    padding-top: 190px;
 }
 
 header h2 {
