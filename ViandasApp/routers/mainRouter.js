@@ -8,6 +8,7 @@ router.get('/about', mainController.renderAbout);
 router.get('/productDetails', mainController.renderProductDetails);
 router.get('/productManagement', mainController.renderProductManagement);
 router.get('/register', mainController.renderRegister);
+router.post('/register', mainController.renderRegisterPost);
 router.get('/login', mainController.renderLogin);
 router.get('/carrito', mainController.renderCarrito);
 router.post('/carritoPost', mainController.renderCarritoPost);

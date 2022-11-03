@@ -27,6 +27,10 @@ const renderRegister = (req, res) => {
     return res.render('register')
 }
 
+const renderRegisterPost = (req, res) => {
+    return res.render('home')
+}
+
 const renderLogin = (req, res) => {
     return res.render('login')
 }
@@ -50,5 +54,6 @@ module.exports = {  renderHome,
                     renderRegister,
                     renderLogin,
                     renderCarrito,
-                    renderCarritoPost
+                    renderCarritoPost,
+                    renderRegisterPost
                 }       
