@@ -21,7 +21,7 @@
     box-sizing: border-box;
 }
 body{
-    font-family: 'Roboto', sans-serif;logo
+    font-family: 'Roboto', sans-serif;
     background-color: #ebebeb;
 }
 
@@ -132,9 +132,13 @@ ul li a {
 width:55%;
 }
 
-.logo{
+.logo-wrapper{
     width: 23%;
     max-height: 110px;
+}
+
+.logo{
+    width: 55%;
 }
 
 .search_bar{
