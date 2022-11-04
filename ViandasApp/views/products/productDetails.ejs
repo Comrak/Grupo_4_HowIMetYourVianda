@@ -13,7 +13,7 @@
             <div class="productos">
                         <% jsProductos.forEach(function(elemento) { %>
                             <article>
-                                <img width="240" height="240" src= "<%= elemento.imagen %>" >
+                                <img width="240" height="240" src= "<%= elemento.imagen %>" id="<%= elemento.name%>">
                                 <div class="art_principal">
                                     <div class="buy_icon">
                                         <i class="fas fa-truck"></i>

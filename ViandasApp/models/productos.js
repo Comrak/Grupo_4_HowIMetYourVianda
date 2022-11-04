@@ -26,6 +26,13 @@ let productos = [
         prices: 450,
         name: "El hoy 'me cuido'",
         description: "Te comiste 5 chuletones y dos litros de helado, bueno bajale a la culpa con este rico pollito a la plancha, quizas no bajes de peso pero te sentiras menos culpable y la culpa pesa un monton"
+    },
+    {
+        id: 5,
+        imagen: "img/pizza.jpg",
+        prices: 800,
+        name: "Zappi Burrata",
+        description: "Este estilo de pizza se llama 'Burra'ta pero no te dejes engañar probarla sera la mejor idea que has tenido en la vida"
     }
 ]
 
