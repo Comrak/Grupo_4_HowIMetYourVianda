@@ -40,7 +40,11 @@ body{
 }
 
 .main-body{
-    padding-top: 190px;
+    margin-top: 205px;
+}
+
+.main-register{
+    margin-top: 180px;
 }
 
 header h2 {
@@ -128,9 +132,13 @@ ul li a {
 width:55%;
 }
 
-.logo{
+.logo-wrapper{
     width: 23%;
     max-height: 110px;
+}
+
+.logo{
+    width: 55%;
 }
 
 .search_bar{
