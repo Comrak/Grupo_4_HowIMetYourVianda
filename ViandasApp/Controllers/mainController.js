@@ -13,13 +13,12 @@ const renderAbout = (req, res) => {
     return res.render('about')
 }
 
-const renderProductDetails = (req, res) => {
+/*const renderProductDetails = (req, res) => {
     return res.render('products/productDetails')
-}
-// const renderProductDetails = (req, res,) => {
-//     console.log('este es el producto' + jsProductos[0].name)
-//     return res.render('productDetails',{jsProductos:jsProductos})
-// }
+}*/
+const renderProductDetails = (req, res,) => {
+     return res.render('products/productDetails',{jsProductos:jsProductos})
+ }
  
 
 const renderProductManagement = (req, res) => {
