@@ -40,7 +40,7 @@ body{
 }
 
 .main-body{
-    margin-top: 205px;
+    margin-top: 230px;
 }
 
 .main-register{
@@ -684,18 +684,7 @@ align-items: center;
 	font-size: 22px;
 	margin-bottom: 20px;
   }
-  
-  .controls {
-	width: 100%;
-	background: white;
-	padding: 10px;
-	border-radius: 4px;
-	margin-bottom: 10px;
-	border: 1px solid #1fc546;
-	font-family: 'roboto';
-	font-size: 15px;
-	color: black;
-  }
+
   
 
   .form-register p {
@@ -763,6 +752,53 @@ footer{
     font-style: italic;
 }
 
+/* ################## Section Manejo de Productos ################# */
+
+.form .label-input{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0px;
+    /* border-top: solid 1px rgb(179, 162, 162);
+    border-bottom: solid 1px rgb(179, 162, 162); */
+    padding:2px
+}
+
+.label-input label{
+    width: 40%;
+}
+.form #img{
+    width: 55%;
+  
+}
+
+.form .select-options{
+    width: 55%;
+}
+
+.controls {
+	width: 55%;
+	background: white;
+	padding: 10px;
+	border-radius: 4px;
+	margin-bottom: 10px;
+	border: 1px solid #1fc546;
+	font-family: 'roboto';
+	font-size: 15px;
+	color: black;
+  }
+
+
+.flex-column{
+    display: flex !important;
+    flex-direction: column;
+    justify-content: left !important;
+    align-items: center !important;
+}
+/* ################## END Section Manejo de Productos ################# */
+
+
+
 @media only screen and (min-width: 768px) {
     /* exclusivo tablets: */
 
@@ -773,6 +809,12 @@ footer{
         align-items: center;
        
     }
+
+    .main-body{
+        margin-top: 160px;
+    }
+
+
     .top-bar-container {
         display: flex;
         align-items: center;
@@ -950,6 +992,9 @@ footer{
             text-align: right;
         }   
 
+        .main-body{
+            margin-top: 205px;
+        }
 
         .main-navbar {
             margin-top: 10px;
@@ -1010,8 +1055,7 @@ footer{
 
 .form-register {
 	position: relative;
-	width: 400px;
-	background: rgb(173, 245, 216);
+	width: 400px;;
 	padding: 30px;
 	margin: auto;
 	margin-top: 20px;
@@ -1026,17 +1070,7 @@ footer{
 	margin-bottom: 20px;
   }
   
-  .controls {
-	width: 100%;
-	background: white;
-	padding: 10px;
-	border-radius: 4px;
-	margin-bottom: 10px;
-	border: 1px solid #1fc546;
-	font-family: 'roboto';
-	font-size: 15px;
-	color: black;
-  }
+ 
   
 
   .form-register p {
