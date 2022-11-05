@@ -33,6 +33,7 @@ body{
     top: 0;
     width: 100%;
     z-index: 200;
+ 
     background-color:#998c2a;
     background-image: url(../img/homeBanner2.jpg);
     background-size: cover;
@@ -40,11 +41,11 @@ body{
 }
 
 .main-body{
-    margin-top: 230px;
+    margin-top: 240px;
 }
 
 .main-register{
-    margin-top: 180px;
+    margin-top: 205px;
 }
 
 header h2 {
@@ -277,30 +278,31 @@ article div.articulos{
     align-items: center;
 }
 
+/* register */
 .form {
+    display: flex;
     padding: 20px 15px;
-    background-color: lightgray;
+    /* background-color: lightgray; */
     text-align: left;
 }
 
-.form-login {
+.form-login , .form-register{
 	position: relative;
 	width: 400px;
-	background: rgb(173, 245, 216);
-	padding: 30px;
+    background-color: #ebebeb;
+	padding: 12px;
 	margin: auto;
 	margin-top: 20px;
-	border-radius: 4px;
+	border-radius: 8px;
 	margin-bottom: 10px;
-	border: 1px solid #1fc546;
 	font-family: 'roboto';
 	font-size: 15px;
 	color: black;
-    box-shadow: 7px 10px 10px 7px;
+    box-shadow: 7px 10px 10px 7px #b3905d;;
   }
 	
 
-.form-login h4 {
+.form-login h4, .form-register h4 {
     font-size: 22px;
     text-align: center;
     margin-bottom: 20px;
@@ -384,13 +386,13 @@ text-decoration: underline;
 
 
 /*Register*/
-.form{
+/* .form{
     padding: 20px 15px;
     background-color: lightgray;
     text-align: left;
-}
+} */
 
-.form-register {
+/* .form-register {
 	position: relative;
 	width: 400px;
 	background: rgb(173, 245, 216);
@@ -401,7 +403,7 @@ text-decoration: underline;
 	font-family: 'roboto';
 	color: black;
 	box-shadow: 7px 10px 10px 7px;
-  }
+  } */
   
   .form-register h4 {
 	font-size: 22px;
@@ -535,7 +537,7 @@ footer{
     justify-content: center;
     align-items: center;
     box-shadow: 0px 0px 10px rgb(207, 160, 160);
-    margin-top: 25px;
+    /* margin-top: 25px; */
 }
 .main-form .form-header{
     display: flex;
@@ -661,13 +663,13 @@ align-items: center;
 }
 
 /*Register*/
-.form{
+/* .form{
     padding: 20px 15px;
     background-color: lightgray;
     text-align: left;
-}
+} */
 
-.form-register {
+/* .form-register {
 	position: relative;
 	width: 400px;
 	background: rgb(173, 245, 216);
@@ -678,7 +680,7 @@ align-items: center;
 	font-family: 'roboto';
 	color: black;
 	box-shadow: 7px 10px 10px 7px;
-  }
+  } */
   
   .form-register h4 {
 	font-size: 22px;
@@ -784,7 +786,7 @@ footer{
 	margin-bottom: 10px;
 	border: 1px solid #1fc546;
 	font-family: 'roboto';
-	font-size: 15px;
+	font-size: 12px;
 	color: black;
   }
 
@@ -811,8 +813,9 @@ footer{
     }
 
     .main-body{
-        margin-top: 160px;
+        margin-top: 145px;
     }
+ 
 
 
     .top-bar-container {
@@ -999,6 +1002,9 @@ footer{
         .main-navbar {
             margin-top: 10px;
         }
+        .main-body{
+            margin-top: 200px;
+        }
 
 
         .articulos {
@@ -1047,12 +1053,12 @@ footer{
 }
 
 /*Register*/
-.form{
+/* .form{
     padding: 20px 15px;
     background-color: lightgray;
     text-align: left;
-}
-
+} */
+/* 
 .form-register {
 	position: relative;
 	width: 400px;;
@@ -1063,7 +1069,7 @@ footer{
 	font-family: 'roboto';
 	color: black;
 	box-shadow: 7px 10px 10px 7px;
-  }
+  } */
   
   .form-register h4 {
 	font-size: 22px;
