@@ -1,24 +1,39 @@
 <%- include('./partials/head')%>
-<body>
-    <!-- <header class="main-header">
-        <div class="main-header-top-bar">
-            <div class="top-bar-container">
-                <img src="img/homeIconNoBG.png" class="logo" alt="Error">
-                <div class="search-bar">
-                    <input class="Buscador" type="text" placeholder="Cual Vianda Queres hoy?">
-                    <button class="search-buttom"><i class="fas fa-search"></i></button>
-                </div>
-            </div>
-            <h2 class="copy-header">
-                <i class="fa-solid fa-bowl-food"></i>
-                <span class="text-entry"> Tus viandas favoritas directo a tu casa</span>
-            </h2>
-        </div>
 
-        <a href="#" class="hamburguer-button">
-            <i class="fa-solid fa-bars"></i>
-        </a>
-
+    <body>
+        <%- include('./partials/header')%>
+            <main class="main-body">
+                <main class="main-register">
+                    <form action="/login" method="get" class="form">
+                        <div class="form-login">
+                            <h4>Ingreso</h4>
+                            <div class="label-input">
+                                <label for="email">Usuario</label>
+                                <input class="controls" type="email" name="userEmail" id="userEmail"
+                                    placeholder="Ingrese su Usuario">
+                            </div>
+                            <div class="label-input">
+                                <label for="password"> Contraseña </label>
+                                <input class="controls" type="password" name="userPassword" id="userPassword"
+                                    placeholder="Ingrese su Contraseña">
+                            </div>
+                            <p><a href="#">Olvidaste tu contraseña?</a></p>
+                            <br>
+                            <p><input type="checkbox" name="rememberMe" value="Recordar usuario">
+                                <label>Recordar usuario</label>
+                            </p>
+                            <button type="submit" class="button">Ingresar</button>
+                            <p><a href="#">Aun no tengo una cuenta</a></p>
+                            <div class="login-google">
+                                <h4>Ingresá con</h4>
+                                <div class="logoicon">
+                                    <a href="#"><img width="45" height="45" src="img/facebook.png"
+                                            alt="Facebook Logo"></a>
+                                    <a href="#"><img width="45" height="45" src="img/buscar.png" alt="Google Logo"></a>
+                                </div>
+                            </div>
+                        </div>
+                        
         <nav class="main-navbar">
             <ul class="left-navbar">
                 <li> <a href="productDetails">Viandas</a></li>
@@ -65,6 +80,8 @@
         </div>
     </div>
 
-  </form>
-</body>
-<%- include('./partials/footer')%>
+                    </form>
+                </main>
+            </main>
+    </body>
+    <%- include('./partials/footer')%>

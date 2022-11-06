@@ -66,3 +66,18 @@
 * Continuar haciendo: Realizar las tareas asignadas y ayudar al resto de integrantes cuando lo necesitan.
 * Hacer menos: Comenzar tareas sin planificar de que manera tienen que ser hechas.
 * Dejar de hacer: Procrastinar las tares.
+
+### Luis Maria Abdala Cancelli
+* Comenzar a Hacer: Tomar iniciativa en la toma de trabajo.
+* Hacer más: Participar activamente.
+* Continuar haciendo: Acotando lo que pueda, tratando de ayudar aunque crea que no pueda.
+* Hacer menos: Quedarme en "El molde".
+* Dejar de Hacer: Posponer momentos de avance por el trabajo.
+
+### Ariel Limes
+
+* Comenzar a hacer: Conectarnos mas seguido con el equipo. y asignar mejor las tareas. Tener una vision mas global para planificar mejor las asignaciones
+* Hacer más: Reuniones con el equipo, administrar mejor el tiempo de trabajo.
+* Continuar haciendo: Buscar coordinar las tareas y cooperar con el resto de integrantes cuando lo necesitan.
+* Hacer menos: Intentar agregar funcy things que no son necesarias.. lo principal es que funcione. despues podemos agregarle cosas extras.
+* Dejar de hacer: Postergar la realización de las tareas que usualmente no nos gustan por aquellas en las que nos senitmos mas comodos.

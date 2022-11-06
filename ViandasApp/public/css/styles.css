@@ -33,6 +33,7 @@ body{
     top: 0;
     width: 100%;
     z-index: 200;
+ 
     background-color:#998c2a;
     background-image: url(../img/homeBanner2.jpg);
     background-size: cover;
@@ -40,8 +41,12 @@ body{
 }
 
 .main-body{
-    padding-top: 190px;
+    margin-top: 240px;
 }
+
+/* .main-register{
+    margin-top: 205px;
+} */
 
 header h2 {
     color: #fff;
@@ -128,9 +133,13 @@ ul li a {
 width:55%;
 }
 
-.logo{
+.logo-wrapper{
     width: 23%;
     max-height: 110px;
+}
+
+.logo{
+    width: 55%;
 }
 
 .search_bar{
@@ -269,30 +278,31 @@ article div.articulos{
     align-items: center;
 }
 
+/* register */
 .form {
+    display: flex;
     padding: 20px 15px;
-    background-color: lightgray;
+    /* background-color: lightgray; */
     text-align: left;
 }
 
-.form-login {
+.form-login , .form-register{
 	position: relative;
 	width: 400px;
-	background: rgb(173, 245, 216);
-	padding: 30px;
+    background-color: #ebebeb;
+	padding: 12px;
 	margin: auto;
 	margin-top: 20px;
-	border-radius: 4px;
+	border-radius: 8px;
 	margin-bottom: 10px;
-	border: 1px solid #1fc546;
 	font-family: 'roboto';
 	font-size: 15px;
 	color: black;
-    box-shadow: 7px 10px 10px 7px;
+    box-shadow: 7px 10px 10px 7px #b3905d;;
   }
 	
 
-.form-login h4 {
+.form-login h4, .form-register h4 {
     font-size: 22px;
     text-align: center;
     margin-bottom: 20px;
@@ -376,13 +386,13 @@ text-decoration: underline;
 
 
 /*Register*/
-.form{
+/* .form{
     padding: 20px 15px;
     background-color: lightgray;
     text-align: left;
-}
+} */
 
-.form-register {
+/* .form-register {
 	position: relative;
 	width: 400px;
 	background: rgb(173, 245, 216);
@@ -393,7 +403,7 @@ text-decoration: underline;
 	font-family: 'roboto';
 	color: black;
 	box-shadow: 7px 10px 10px 7px;
-  }
+  } */
   
   .form-register h4 {
 	font-size: 22px;
@@ -527,7 +537,7 @@ footer{
     justify-content: center;
     align-items: center;
     box-shadow: 0px 0px 10px rgb(207, 160, 160);
-    margin-top: 25px;
+    /* margin-top: 25px; */
 }
 .main-form .form-header{
     display: flex;
@@ -653,13 +663,13 @@ align-items: center;
 }
 
 /*Register*/
-.form{
+/* .form{
     padding: 20px 15px;
     background-color: lightgray;
     text-align: left;
-}
+} */
 
-.form-register {
+/* .form-register {
 	position: relative;
 	width: 400px;
 	background: rgb(173, 245, 216);
@@ -670,24 +680,13 @@ align-items: center;
 	font-family: 'roboto';
 	color: black;
 	box-shadow: 7px 10px 10px 7px;
-  }
+  } */
   
   .form-register h4 {
 	font-size: 22px;
 	margin-bottom: 20px;
   }
-  
-  .controls {
-	width: 100%;
-	background: white;
-	padding: 10px;
-	border-radius: 4px;
-	margin-bottom: 10px;
-	border: 1px solid #1fc546;
-	font-family: 'roboto';
-	font-size: 15px;
-	color: black;
-  }
+
   
 
   .form-register p {
@@ -755,6 +754,53 @@ footer{
     font-style: italic;
 }
 
+/* ################## Section Manejo de Productos ################# */
+
+.form .label-input{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0px;
+    /* border-top: solid 1px rgb(179, 162, 162);
+    border-bottom: solid 1px rgb(179, 162, 162); */
+    padding:2px
+}
+
+.label-input label{
+    width: 40%;
+}
+.form #img{
+    width: 55%;
+  
+}
+
+.form .select-options{
+    width: 55%;
+}
+
+.controls {
+	width: 55%;
+	background: white;
+	padding: 10px;
+	border-radius: 4px;
+	margin-bottom: 10px;
+	border: 1px solid #1fc546;
+	font-family: 'roboto';
+	font-size: 12px;
+	color: black;
+  }
+
+
+.flex-column{
+    display: flex !important;
+    flex-direction: column;
+    justify-content: left !important;
+    align-items: center !important;
+}
+/* ################## END Section Manejo de Productos ################# */
+
+
+
 @media only screen and (min-width: 768px) {
     /* exclusivo tablets: */
 
@@ -765,6 +811,14 @@ footer{
         align-items: center;
        
     }
+
+    .main-body{
+        margin-top: 135px;
+      
+    }
+ 
+
+
     .top-bar-container {
         display: flex;
         align-items: center;
@@ -942,10 +996,15 @@ footer{
             text-align: right;
         }   
 
+        .main-body{
+            margin-top: 200px;
+            margin-bottom: 15px;
+        }
 
         .main-navbar {
             margin-top: 10px;
         }
+  
 
 
         .articulos {
@@ -994,16 +1053,15 @@ footer{
 }
 
 /*Register*/
-.form{
+/* .form{
     padding: 20px 15px;
     background-color: lightgray;
     text-align: left;
-}
-
+} */
+/* 
 .form-register {
 	position: relative;
-	width: 400px;
-	background: rgb(173, 245, 216);
+	width: 400px;;
 	padding: 30px;
 	margin: auto;
 	margin-top: 20px;
@@ -1011,24 +1069,14 @@ footer{
 	font-family: 'roboto';
 	color: black;
 	box-shadow: 7px 10px 10px 7px;
-  }
+  } */
   
   .form-register h4 {
 	font-size: 22px;
 	margin-bottom: 20px;
   }
   
-  .controls {
-	width: 100%;
-	background: white;
-	padding: 10px;
-	border-radius: 4px;
-	margin-bottom: 10px;
-	border: 1px solid #1fc546;
-	font-family: 'roboto';
-	font-size: 15px;
-	color: black;
-  }
+ 
   
 
   .form-register p {
