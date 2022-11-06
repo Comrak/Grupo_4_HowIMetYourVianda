@@ -73,3 +73,11 @@
 * Continuar haciendo: Acotando lo que pueda, tratando de ayudar aunque crea que no pueda.
 * Hacer menos: Quedarme en "El molde".
 * Dejar de Hacer: Posponer momentos de avance por el trabajo.
+
+### Ariel Limes
+
+* Comenzar a hacer: Conectarnos mas seguido con el equipo. y asignar mejor las tareas. Tener una vision mas global para planificar mejor las asignaciones
+* Hacer más: Reuniones con el equipo, administrar mejor el tiempo de trabajo.
+* Continuar haciendo: Buscar coordinar las tareas y cooperar con el resto de integrantes cuando lo necesitan.
+* Hacer menos: Intentar agregar funcy things que no son necesarias.. lo principal es que funcione. despues podemos agregarle cosas extras.
+* Dejar de hacer: Postergar la realización de las tareas que usualmente no nos gustan por aquellas en las que nos senitmos mas comodos.
