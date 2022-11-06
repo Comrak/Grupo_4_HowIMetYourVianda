@@ -20,7 +20,6 @@ const renderProductDetails = (req, res,) => {
      return res.render('products/productDetails',{jsProductos:jsProductos})
  }
  
-
 const renderProductManagement = (req, res) => {
     return res.render('products/productManagement')
 }
