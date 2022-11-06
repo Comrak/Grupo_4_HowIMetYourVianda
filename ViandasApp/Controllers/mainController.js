@@ -5,8 +5,8 @@ const jsProductos = require('../models/productos')
 // Create a new controller object
 const renderHome = (req, res) => {
         
-    // return res.sendFile(path.resolve('views/home.html'))
-    return res.render('home')
+// return res.sendFile(path.resolve('views/home.html'))
+return res.render('home')
 }
 
 const renderAbout = (req, res) => {
