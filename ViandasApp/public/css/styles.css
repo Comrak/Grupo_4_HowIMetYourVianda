@@ -44,9 +44,9 @@ body{
     margin-top: 240px;
 }
 
-.main-register{
+/* .main-register{
     margin-top: 205px;
-}
+} */
 
 header h2 {
     color: #fff;
@@ -813,7 +813,8 @@ footer{
     }
 
     .main-body{
-        margin-top: 145px;
+        margin-top: 135px;
+      
     }
  
 
@@ -996,15 +997,14 @@ footer{
         }   
 
         .main-body{
-            margin-top: 205px;
+            margin-top: 200px;
+            margin-bottom: 15px;
         }
 
         .main-navbar {
             margin-top: 10px;
         }
-        .main-body{
-            margin-top: 200px;
-        }
+  
 
 
         .articulos {
