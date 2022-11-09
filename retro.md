@@ -53,11 +53,11 @@
 
 ### Montaño Florencia
 
-1. Comenzar a hacer: Tomar las tareas lo más pronto posible. 
-2. Hacer más: Pedir ayuda, o preguntar si alguien necesita ayuda (aunque sea solo por apoyo moral).
-3. Continuar haciendo: Participando de las reuniones breves.
-4. Hacer menos: Tener miedo de cometer errores
-5. Dejar de hacer: Postergar tareas
+* Comenzar a hacer: Tomar las tareas lo más pronto posible. 
+* Hacer más: Pedir ayuda, o preguntar si alguien necesita ayuda (aunque sea solo por apoyo moral).
+* Continuar haciendo: Participando de las reuniones breves.
+* Hacer menos: Tener miedo de cometer errores
+* Dejar de hacer: Postergar tareas
 
 ### Martin Altuna
 
@@ -81,3 +81,52 @@
 * Continuar haciendo: Buscar coordinar las tareas y cooperar con el resto de integrantes cuando lo necesitan.
 * Hacer menos: Intentar agregar funcy things que no son necesarias.. lo principal es que funcione. despues podemos agregarle cosas extras.
 * Dejar de hacer: Postergar la realización de las tareas que usualmente no nos gustan por aquellas en las que nos senitmos mas comodos.
+
+## Sprint 3  
+
+### Jose Nardulli  
+
+* Comenzar a hacer: Weekly meetings
+* Hacer más: Incluir mas al equipo en los desarrollos dinamicos para asegurar que todos entendamos el rumbo del proyecto y lo que se ha hecho
+* Continuar haciendo: Gestionar el repositorio de forma segura para evitar la perdida de datos
+* Hacer menos: Tomar las tareas incompletas de algunos miembros para hacerla por mi cuenta y sin dar aviso al miembro per se
+* Dejar de hacer: merge a un dia antes de la entrega
+
+### Victoria Aquino
+
+* Comenzar a hacer: 
+* Hacer más: Reunion
+* Continuar haciendo:
+* Hacer menos: Demor
+* Dejar de hacer: Po
+
+### Montaño Florencia
+
+* Comenzar a hacer:
+* Hacer más:  
+* Continuar haciendo:
+* Hacer menos: 
+* Dejar de hacer: 
+
+### Martin Altuna
+
+* Comenzar a hacer: 
+* Hacer más: 
+* Continuar haciendo:
+* Hacer menos: 
+* Dejar de hacer: 
+
+### Luis Maria Abdala
+* Comenzar a Hacer: 
+* Hacer más: 
+* Continuar haciendo:
+* Hacer menos: 
+* Dejar de Hacer: 
+
+### Ariel Limes
+
+* Comenzar a hacer: 
+* Hacer más: 
+* Continuar haciendo:
+* Hacer menos:
+* Dejar de hacer: 
