@@ -97,16 +97,16 @@
 * Comenzar a hacer: 
 * Hacer más: Reunion
 * Continuar haciendo:
-* Hacer menos: Demor
-* Dejar de hacer: Po
+* Hacer menos: 
+* Dejar de hacer: 
 
 ### Montaño Florencia
 
-* Comenzar a hacer:
-* Hacer más:  
-* Continuar haciendo:
-* Hacer menos: 
-* Dejar de hacer: 
+* Comenzar a hacer: Empezar mis tareas mas temprano (jejeje, Si! Ya empece!)
+* Hacer más: Una tarea a la vez. Una vez completada paso a la siguiente.  
+* Continuar haciendo: Seguir intentando, aunque tenga que volver atras mas commits de los que logro dejar.
+* Hacer menos: Frustrarme cuando no me sale. 
+* Dejar de hacer: Bloquearme cuando no entiendo algo, o algo no sale como esperaba.
 
 ### Martin Altuna
 
