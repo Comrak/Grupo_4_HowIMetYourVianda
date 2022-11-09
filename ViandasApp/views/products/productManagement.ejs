@@ -1,39 +1,36 @@
 <%- include('../partials/head')%>
 
-
+<script src="../../scripts/createProductValidation.js"></script>
   <body>
     <%- include('../partials/header')%>
       <main class="main-body">
-        <form action="/productRegistration" method="post" class="form">
+        <form action="/products" method="post" class="form" enctype="multipart/form-data">
 
           <div class="form-register">
             <h4>Manejo de Productos</h4>
             <div class="label-input">
-              <label for="Action">Accion a realizar</label>
-              <select name="Action" id="Action" class="select-options">
-                <option value="">Por favor elija una opcion</option>
-                <option value="Agregar">Agregar</option>
-                <option value="Editar">Editar</option>
-              </select>
-            </div>
-            <div class="label-input">
               <label for="img">Subir imagen:</label>
-              <input type="file" id="img" name="img" accept="image/*">
+              <input type="file" id="img" name="img" accept="image/*" required="true">
             </div>
             <div class="label-input">
               <label for="price">Precio</label>
-              <input class="controls" type="number" name="price" id="price" placeholder="Ingrese el Precio">
+              <input class="controls" type="number" name="price" id="price" placeholder="Ingrese el Precio" required="true">
             </div>
             <div class="label-input">
               <label for="name">Nombre del producto</label>
-              <input class="controls" type="text" name="name" id="name" placeholder="Ingrese el nombre del producto">
+              <input class="controls" type="text" name="name" id="name" placeholder="Ingrese el nombre del producto" required="true">
             </div>
             <div class="label-input">
               <label for="description">Descripcion del producto</label>
               <textarea class="controls" type="a" name="description" id="description"
-                placeholder="Ingrese la descripcion del producto" rows="4" cols="50"></textarea>
+                placeholder="Ingrese la descripcion del producto" rows="4" cols="50" required="true"></textarea>
             </div>
-            <button type="submit" class="button">Enviar</button>
+            <div class="label-input">
+              <label for="keywords">Palabras claves</label>
+              <textarea class="controls" type="a" name="keywords" id="keywords"
+                placeholder="Ingrese palabras clave para el producto separa con ';'" rows="4" cols="50" required="true"></textarea>
+            </div>
+            <button type="submit" class="button" id="submitBtn">Enviar</button>
            
           </div>
         </form>
