@@ -110,11 +110,11 @@
 
 ### Martin Altuna
 
-* Comenzar a hacer: 
-* Hacer más: 
-* Continuar haciendo:
-* Hacer menos: 
-* Dejar de hacer: 
+* Comenzar a hacer: Una vez tomada una tarea en trello, completarla rapidamente para no crear confusiones.
+* Hacer más: Organizar y explicar el codigo mediante anotciones.
+* Continuar haciendo: Tanto preguntar dudas como responderlas y ayudarnos entre nosotros.
+* Hacer menos: Intentar no avanzar de mas sin consultar o explicar al resto.
+* Dejar de hacer: Paralizarse ante una tarea que no sale.
 
 ### Luis Maria Abdala
 * Comenzar a Hacer: 
