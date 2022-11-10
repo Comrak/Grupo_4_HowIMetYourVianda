@@ -94,11 +94,11 @@
 
 ### Victoria Aquino
 
-* Comenzar a hacer: 
-* Hacer más: Reunion
-* Continuar haciendo:
-* Hacer menos: 
-* Dejar de hacer: 
+* Comenzar a hacer: Más comentarios en el Trello sobre tareas asignadas a otras personas.
+* Hacer más: Mejorar la comunicacion del equipo.
+* Continuar haciendo: Mirar las clases y preguntar al equipo cuando hay dudas.
+* Hacer menos: Enojarme cuando algo se me complica.
+* Dejar de hacer: Tener miedo de equivocarme.
 
 ### Montaño Florencia
 
