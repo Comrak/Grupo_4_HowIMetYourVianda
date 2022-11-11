@@ -976,6 +976,10 @@ footer{
         width: 225px;
     
     }
+    .main-body-edit{
+        margin-top: 250px;
+        display: flex;
+    }
 
 
 /* ################## END Section Carrito de Compras ################# */

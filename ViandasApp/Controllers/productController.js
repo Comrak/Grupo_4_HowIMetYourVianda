@@ -29,8 +29,13 @@ const renderproductRegistration = (req, res) => {
     return res.render('products/productRegistration')
 }
 
+const renderProductEdit = (req, res) => {
+    return res.render('products/productEdit', {jsProductos:productos, req:req} )
+}
+
 module.exports = { 
     renderProductDetails,
     renderProductManagement,
-    renderproductRegistration
+    renderproductRegistration,
+    renderProductEdit
 }

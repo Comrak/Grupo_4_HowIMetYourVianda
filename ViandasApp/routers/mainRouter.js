@@ -15,18 +15,14 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 const mainController = require('../controllers/mainController');
-const productController = require('../controllers/productController');
 
 router.get('/', mainController.renderHome);
 router.get('/about', mainController.renderAbout);
-router.get('/products', productController.renderProductDetails);
-router.get('/products/create', productController.renderProductManagement);
 router.get('/register', mainController.renderRegister);
 router.post('/register', mainController.renderRegisterPost);
 router.get('/login', mainController.renderLogin);
 router.get('/carrito', mainController.renderCarrito);
 router.post('/carritoPost', mainController.renderCarritoPost);
-router.post('/products', upload.single("img"), productController.renderproductRegistration);
 
 
 module.exports = router;
