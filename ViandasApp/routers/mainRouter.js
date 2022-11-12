@@ -18,10 +18,10 @@ const mainController = require('../controllers/mainController');
 
 router.get('/', mainController.renderHome);
 router.get('/about', mainController.renderAbout);
-router.get('/register', mainController.renderRegister);
-router.post('/register', mainController.renderRegisterPost);
-router.get('/login', mainController.renderLogin);
-router.get('/carrito', mainController.renderCarrito);
+router.get('/users/register', mainController.renderRegister);
+router.post('/users/register', mainController.renderRegisterPost);
+router.get('/users/login', mainController.renderLogin);
+router.get('/users/carrito', mainController.renderCarrito);
 router.post('/carritoPost', mainController.renderCarritoPost);
 
 

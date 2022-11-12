@@ -1,8 +1,8 @@
 const { json } = require('express');
 const path = require('path');
+
 const renderHome = (req, res) => {
-        
-return res.render('home')
+    return res.render('home')
 }
 
 const renderAbout = (req, res) => {
@@ -10,7 +10,7 @@ const renderAbout = (req, res) => {
 }
 
 const renderRegister = (req, res) => {
-    return res.render('register')
+    return res.render('users/register')
 }
 
 const renderRegisterPost = (req, res) => {
@@ -18,11 +18,11 @@ const renderRegisterPost = (req, res) => {
 }
 
 const renderLogin = (req, res) => {
-    return res.render('login')
+    return res.render('users/login')
 }
 
 const renderCarrito = (req, res) => {
-    return res.render('carritoCompras')
+    return res.render('users/carritoCompras')
 }
 
 const renderCarritoPost = (req, res) => {
