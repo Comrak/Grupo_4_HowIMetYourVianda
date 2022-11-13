@@ -1,51 +1,32 @@
 <%- include('./partials/head')%>
-
+<script defer src="scripts/carrusel.js"></script>
 
     <body>
+      
         <%- include('./partials/header')%>
 
 
             <main class="main-body">
-                <section class="carrusel">
-                    <div id="contentItemCarrusel">
-                        <div class="carrusel" id="tarjeta1">
-                            <div class="item_carrusel" id="tarjeta1">
-                                <img src="img/Bienvenidos.png" class="foto_carrusel">
-                            </div>
-                            <div class="flechas">
-                                <a href="#tarjeta4"><i class="fas fa-chevron-left"></i></a>
-                                <a href="#tarjeta2"><i class="fas fa-chevron-right"></i></a>
-                            </div>
-                        </div>
-                        <div class="carrusel" id="tarjeta2">
-                            <div class="item_carrusel" id="tarjeta2">
-                                <img src="img/Cocineros.jpg" class="foto_carrusel">
-                            </div>
-                            <div class="flechas">
-                                <a href="#tarjeta1"><i class="fas fa-chevron-left"></i></a>
-                                <a href="#tarjeta3"><i class="fas fa-chevron-right"></i></a>
-                            </div>
-                        </div>
-                        <div class="carrusel" id="tarjeta3">
-                            <div class="item_carrusel" id="tarjeta3">
-                                <img src="img/TrabajadorComiendo.jpg" class="foto_carrusel">
-                            </div>
-                            <div class="flechas">
-                                <a href="#tarjeta2"><i class="fas fa-chevron-left"></i></a>
-                                <a href="#tarjeta4"><i class="fas fa-chevron-right"></i></a>
-                            </div>
-                        </div>
-                        <div class="carrusel" id="tarjeta4">
-                            <div class="item_carrusel" id="tarjeta4">
-                                <img src="img/lasagna.jpg" class="foto_carrusel">
-                            </div>
-                            <div class="flechas">
-                                <a href="#tarjeta3"><i class="fas fa-chevron-left"></i></a>
-                                <a href="#tarjeta1"><i class="fas fa-chevron-right"></i></a>
-                            </div>
-                        </div>
+     
+                <div class="carrousel_wrapper">
+                    <div class="big-container">
+
+                        <img src="img/Pizzas.jpeg" alt="img1" class="img">
+                        <img src="img/Cocineros.jpg" alt="img2" class="img">
+                        <img src="img/TrabajadorComiendo.jpg" alt="img3" class="img">
+                        <img src="img/Ensaladas.jpeg" alt="img4" class="img">
                     </div>
-                </section>
+                    <ul class="puntos">
+                        <li class="punto activo"></li>
+                        <li class="punto"></li>
+                        <li class="punto"></li>
+                        <li class="punto"></li>
+                    </ul>
+
+
+                </div>
+
+
 
                 <section class="ult_visita">
                     <div class="productos">

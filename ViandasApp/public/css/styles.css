@@ -1119,6 +1119,8 @@ footer{
     }   
 
     .main-body{
+            display: flex  ;
+            flex-direction: column;
         margin-top: 200px;
         margin-bottom: 15px;
     }
@@ -1162,16 +1164,172 @@ footer{
     }
 
     /* ################## END Section Carrito de Compras ################# */
-    
-    .footer-total {
+
+
+    /* ########################  Section Carrousel ###################### */
+    /* .ult-visita{
+        width:35%;
+    } */
+
+    .carrousel_wrapper{
+      
+        width: 90%;
+        max-width: 120em;
+        height: 68vh;
+        background-color: rgba(243, 231, 231, 0.932);
+        box-shadow: 7px 10px 10px 7px #b3905d;;
+        border-radius: 0.4em;
+        overflow-x: hidden;
+        margin: auto;
+        /* height: 5vh; */
+        
+    }
+    .carrousel_wrapper .big-container{
+        width: 400%;
+        background-color: rgba(243, 231, 231, 0.932);
+        height: 59vh;
+        border-radius: 0.4em;
+
         display: flex;
-        flex-direction: row;
+        flex-flow: row nowrap;
         justify-content: space-between;
-        width: 100%;
-        text-align: center;
+        align-items: center;
+        margin-top: 1em;
+
+        transition: all 0.5s ease-in-out;
+        transform: translateX(0%);
     }
-    .footer-divs {
-        padding: 2%;
-        width: 100%;
+    .carrousel_wrapper .img{
+        width: calc(100%/4 - 2em);
+        min-height: 35vh;
+        max-height: 58vh;
+        margin: auto;
+        object-fit: cover;
+
+        background-color: rgba(243, 231, 231, 0.932);
+        box-shadow: 7px 10px 10px 7px #b3905d;;
+        border-radius: 0.4em;
     }
+    .carrousel_wrapper .puntos{
+        list-style-type: none;
+        width:100%;
+        padding: 1em;
+     
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .carrousel_wrapper .punto{
+        width: 0.7em;
+        height: 0.7em;
+        margin:0.5em 0.5em 0;
+
+
+        background-color: rgba(243, 231, 231, 0.932);
+        box-shadow: 7px 10px 10px 7px #b3905d;;
+        border-radius: 0.4em;
+      
+    }
+
+    .carrousel_wrapper .punto.activo{
+        background-color: lightblue;
+    }
+
+
+    /* ######################## END Section Carrousel ###################### */
   }
+
+
+.registerForm{
+    align-items: center;
+}
+
+/*Register*/
+/* .form{
+    padding: 20px 15px;
+    background-color: lightgray;
+    text-align: left;
+} */
+/* 
+.form-register {
+	position: relative;
+	width: 400px;;
+	padding: 30px;
+	margin: auto;
+	margin-top: 20px;
+	border-radius: 4px;
+	font-family: 'roboto';
+	color: black;
+	box-shadow: 7px 10px 10px 7px;
+  } */
+  
+  .form-register h4 {
+	font-size: 22px;
+	margin-bottom: 20px;
+  }
+  
+ 
+  
+
+  .form-register p {
+	height: 20px;
+	text-align: center;
+	font-size: 13px;
+	line-height: 20px;
+  }
+  
+  .form-register a {
+	color: black;
+	text-decoration: none;
+  }
+  
+  .form-register a:hover {
+	color: white;
+	text-decoration: underline;
+  }
+
+.button{
+	width: 100%;
+	background-color: #2fc260;
+	border:black;
+	padding: 7px 12px;
+	color: #1a1515;
+    border-radius: 5px;
+	margin: 5px;
+	font-size: 13px;
+	text-align: center;
+    margin-bottom: 20px;
+    transition: all 450ms;
+  } 
+
+.button:hover{
+    background-color: #cfee46;
+}
+
+
+
+footer{
+    background-color: rgb(39, 39, 39);
+    color: white;
+
+}
+
+#footer_total{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+#footer_izquierda{
+    padding: 5%;
+    padding-bottom: 2.5%;
+    width: 100%;
+}
+#footer_derecha{
+    padding: 5%;
+    padding-bottom: 2.5%;
+    width: 100%;
+}
+/*Home*/
