@@ -4,6 +4,7 @@ const path = require('path');
 const PUBLICFOLDER = path.resolve('public')
 const routerMain = require('./routers/mainRouter');
 const routerProduct = require('./routers/productsRouter')
+const routerUser = require('./routers/userRouter')
 // Settings post requirement in app
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
@@ -27,3 +28,4 @@ app.listen(numeroPuerto, ()=>{
 
 app.use('/', routerMain);
 app.use('/products', routerProduct);
+app.use('/users', routerUser);

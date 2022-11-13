@@ -43,6 +43,7 @@ const renderProductEdit = (req, res) => {
 
 module.exports = { 
     renderProductDetails,
+    renderDetailId,
     renderProductManagement,
     renderproductRegistration,
     renderProductEdit
