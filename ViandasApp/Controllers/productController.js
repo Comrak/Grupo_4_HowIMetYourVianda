@@ -8,6 +8,14 @@ const renderProductDetails = (req, res,) => {
     return res.render('products/productDetails',{jsProductos:productos})
 }
 
+ const renderDetailId= (req, res,) => {
+        const productId = req.params.productId;
+        const productToFind = products.find((product) => product.id == productId);
+        if (productToFind == undefined) {
+          return res.send("No existe el producto");
+        }
+      }
+
 const renderProductManagement = (req, res) => {
    return res.render('products/productManagement')
 }
