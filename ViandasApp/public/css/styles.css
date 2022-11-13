@@ -42,7 +42,7 @@ body{
 }
 
 .main-body{
-    margin-top: 240px;
+    margin-top: 260px;
 }
 
 /* .main-register{
@@ -917,7 +917,79 @@ footer{
 
 /* ################## END Section Manejo de Productos ################# */
 
+    /* ########################  Section Carrousel ###################### */
+    /* .ult-visita{
+        width:35%;
+    } */
 
+    .carrousel_wrapper{
+      
+        width: 95%;
+        max-width: 120em;
+        height: 49vh;
+        background-color: rgba(243, 231, 231, 0.932);
+        box-shadow: 7px 10px 10px 7px #b3905d;;
+        border-radius: 0.4em;
+        overflow-x: hidden;
+        margin: auto;
+        /* height: 5vh; */
+        
+    }
+    .carrousel_wrapper .big-container{
+        width: 400%;
+        background-color: rgba(243, 231, 231, 0.932);
+        height: 39vh;
+        border-radius: 0.4em;
+
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 1em;
+
+        transition: all 0.5s ease-in-out;
+        transform: translateX(0%);
+    }
+    .carrousel_wrapper .img{
+        width: calc(100%/4 - 2em);
+        min-height: 35vh;
+        max-height: 58vh;
+        margin: auto;
+        object-fit: cover;
+
+        background-color: rgba(243, 231, 231, 0.932);
+        box-shadow: 7px 10px 10px 7px #b3905d;;
+        border-radius: 0.4em;
+    }
+    .carrousel_wrapper .puntos{
+        list-style-type: none;
+        width:100%;
+        padding: 1em;
+     
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .carrousel_wrapper .punto{
+        width: 0.7em;
+        height: 0.7em;
+        margin:0.5em 0.5em 0;
+
+
+        background-color: rgba(243, 231, 231, 0.932);
+        box-shadow: 7px 10px 10px 7px #b3905d;;
+        border-radius: 0.4em;
+      
+    }
+
+    .carrousel_wrapper .punto.activo{
+        background-color: lightblue;
+    }
+
+
+    /* ######################## END Section Carrousel ###################### */
 
 @media only screen and (min-width: 768px) {
     /* exclusivo tablets: */
@@ -931,7 +1003,7 @@ footer{
     }
 
     .main-body{
-        margin-top: 135px;
+        margin-top: 160px;
       
     }
  
@@ -1119,7 +1191,34 @@ footer{
         width: 100%;
     }
 
+   /* ########################  Section Carrousel ###################### */
+    /* .ult-visita{
+        width:35%;
+    } */
 
+    .carrousel_wrapper{
+      
+        width: 90%;
+   
+        height: 65vh;
+
+        /* height: 5vh; */
+        
+    }
+    .carrousel_wrapper .big-container{
+        height: 55vh;
+    }
+
+    .carrousel_wrapper .img{
+        width: calc(100%/4 - 2em);
+        min-height: 35vh;
+        max-height: 55vh;
+   
+    }
+ 
+
+
+    /* ######################## END Section Carrousel ###################### */
   }
   
   @media only screen and (min-width: 1200px) {
@@ -1194,7 +1293,7 @@ footer{
       
         width: 90%;
         max-width: 120em;
-        height: 68vh;
+        height: 70vh;
         background-color: rgba(243, 231, 231, 0.932);
         box-shadow: 7px 10px 10px 7px #b3905d;;
         border-radius: 0.4em;
