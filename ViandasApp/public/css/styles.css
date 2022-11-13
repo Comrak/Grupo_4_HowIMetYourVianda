@@ -1101,6 +1101,25 @@ footer{
 
 
 /* ################## END Section Carrito de Compras ################# */
+
+
+
+    /* ######################## FOOTER RESPONSIVE ###################### */
+  
+    
+    .footer-total {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        text-align: center;
+    }
+    .footer-divs {
+        padding: 2%;
+        width: 100%;
+    }
+
+
   }
   
   @media only screen and (min-width: 1200px) {
@@ -1239,7 +1258,25 @@ footer{
 
 
     /* ######################## END Section Carrousel ###################### */
-  }
+  
+    
+
+    /* ######################## FOOTER RESPONSIVE ###################### */
+  
+    
+    .footer-total {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        text-align: center;
+    }
+    .footer-divs {
+        padding: 2%;
+        width: 100%;
+    }
+
+}
 
 
 .registerForm{
@@ -1309,27 +1346,4 @@ footer{
 }
 
 
-
-footer{
-    background-color: rgb(39, 39, 39);
-    color: white;
-
-}
-
-#footer_total{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-}
-#footer_izquierda{
-    padding: 5%;
-    padding-bottom: 2.5%;
-    width: 100%;
-}
-#footer_derecha{
-    padding: 5%;
-    padding-bottom: 2.5%;
-    width: 100%;
-}
 /*Home*/
