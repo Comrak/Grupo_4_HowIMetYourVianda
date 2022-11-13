@@ -46,5 +46,6 @@ module.exports = {
     renderDetailId,
     renderProductManagement,
     renderproductRegistration,
+    renderDetailId,
     renderProductEdit
 }
