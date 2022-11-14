@@ -10,7 +10,7 @@
             <h4 class="headlines">Viandas del dia</h4>
             <p>Frescas y exquisitas a la puerta de tu casa</p>
             <div class="productos">
-                        <% jsProductos.forEach(function(elemento) { %>
+                <% jsProductos.find(function(elemento) { if(elemento.id == req.params.id){ %>
                             <article>
                                 <img width="240" height="240" src= "<%= elemento.imagen %>" id="<%= elemento.name%>">
                                 <div class="art_principal">
@@ -22,7 +22,7 @@
                                     <p class="description"><%= elemento.description %> </p>
                                 </div>
                             </article>
-                        <% }); %>
+                        <% }}); %>
             </div>
         </section>
     </main>
