@@ -124,11 +124,11 @@
 * Dejar de hacer: merge a un dia antes de la entrega
 
 ### Victoria Aquino
-* Comenzar a 
-* Hacer más: 
-* Continuar 
-* Hacer menos: 
-* Dejar de hacer: 
+* Comenzar a hacer: Reuniones semanales.
+* Hacer más: Compartir cómo plantear las tareas de las consignas.
+* Continuar haciendo: Trabajo en equipo.
+* Hacer menos: Tener miedo a los errores.
+* Dejar de hacer: Demorar en detalles.
 
 ### Montaño Florencia
 * Comenzar a hacer: 
