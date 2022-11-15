@@ -1100,10 +1100,11 @@ footer{
     .productos{
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: flex-start;
     }
     .productos article {
         flex: 0 1 48%;
+        margin: 7px;
     }
     .art_principal{
         display: flex;
