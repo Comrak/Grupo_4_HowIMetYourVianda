@@ -14,20 +14,18 @@
                         
             <div class="productos">
                 <% jsProductos.find(function(elemento) { if(elemento.id == req.params.id){ %>
-                <article class="card">
-                    <div class="card__header">
-                    <img src="<%= elemento.imagen %>" alt="<%= elemento.name%>" class="card__image" id="<%= elemento.name%>">
-                    </div>
-                    <div class="card__body">
-                    <h4><%= elemento.name %></h4>
-                    <p><%= elemento.prices %></p>
-                    <p><%= elemento.description %></p>
-                    </div>
-                    <div class="card__footer">
-                    
-                    </div>
-                </article>
-                <% }}); %>
+                            <article>
+                                <img width="240" height="240" src= "<%= elemento.imagen %>" id="<%= elemento.name%>">
+                                <div class="art_principal">
+                                    <div class="buy_icon">
+                                        <i class="fas fa-truck"></i>
+                                    </div>
+                                    <p class="prices">$<%= elemento.prices %></p>
+                                    <p class="discount"><%= elemento.name %></p>
+                                    <p class="description"><%= elemento.description %> </p>
+                                </div>
+                            </article>
+                        <% }}); %>
             </div>
         </section>
     </main>
