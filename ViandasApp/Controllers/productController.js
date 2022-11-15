@@ -28,7 +28,7 @@ const renderproductRegistration = (req, res) => {
     const id = productos[productos.length - 1].id + 1 
     const newProduct = {
         "id": id,
-        "imagen": "../img/productos/"+req.file.originalname,
+        "imagen": "/img/productos/"+req.file.originalname,
         "prices": req.body.price,
         "name": req.body.name,
         "description": req.body.description,

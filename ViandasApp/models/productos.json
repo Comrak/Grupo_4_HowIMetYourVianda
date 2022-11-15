@@ -41,7 +41,7 @@
     },
     {
         "id": 4,
-        "imagen": "../img/productos/pollo.jpg",
+        "imagen": "/img/productos/pollo.jpg",
         "prices": 450,
         "name": "El hoy 'me cuido'",
         "description": "Te comiste 5 chuletones y dos litros de helado, bueno bajale a la culpa con este rico pollito a la plancha, quizas no bajes de peso pero te sentiras menos culpable y la culpa pesa un monton",
@@ -54,7 +54,7 @@
     },
     {
         "id": 5,
-        "imagen": "../img/productos/pizza.jpg",
+        "imagen": "/img/productos/pizza.jpg",
         "prices": 800,
         "name": "Zappi Burrata",
         "description": "Este estilo de pizza se llama 'Burra'ta pero no te dejes engañar probarla sera la mejor idea que has tenido en la vida",
@@ -67,7 +67,7 @@
     },
     {
         "id": 9,
-        "imagen": "../img/productos/varitasMerluza.jpg",
+        "imagen": "/img/productos/varitasMerluza.jpg",
         "prices": "800",
         "name": "Varitas de Merluza",
         "description": "Varitas de merluzas antartica albina empanizada con pan de masa madre amasado por monjes tibetanos cojos",
@@ -79,22 +79,12 @@
     },
     {
         "id": 10,
-        "imagen": "../img/productos/ab3d6fc1-e920-4007-b179-a05ca89c503a.jpg",
-        "prices": "50",
-        "name": "Sushi",
-        "description": "Sushi veggie",
+        "imagen": "/img/productos/ramen.jpg",
+        "prices": "300",
+        "name": "asdasd",
+        "description": "asdasdasd",
         "tags": [
-            "salmon"
-        ]
-    },
-    {
-        "id": 11,
-        "imagen": "../img/productos/mila.jfif",
-        "prices": "100",
-        "name": "Mila",
-        "description": "Milanesa Napolitana",
-        "tags": [
-            "cheddar"
+            "asdasdasd"
         ]
     }
 ]
