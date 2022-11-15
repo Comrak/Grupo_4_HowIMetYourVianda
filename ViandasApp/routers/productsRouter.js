@@ -19,10 +19,11 @@ const productController = require('../controllers/productController');
 
 
 router.get('/', productController.renderProductDetails);
-router.get('/:id', productController.renderDetailId);
 router.get('/create', productController.renderProductManagement);
+router.get('/:id', productController.renderDetailId);
 router.get('/:id/edit', productController.renderProductEdit)
 router.post('/', upload.single("img"), productController.renderproductRegistration);
+router.put('/:id', upload.single("img"), productController.productEditPost);
 
 
 module.exports = router;

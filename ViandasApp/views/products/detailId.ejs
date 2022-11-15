@@ -1,5 +1,6 @@
 <%- include('../partials/head')%>
 <script src="scripts/productDetailsModals.js"></script>
+<link rel="stylesheet" href="../../css/productStyle.css">
 <body>
     <%- include('../partials/header')%>
     <!-- <section class="banner">
@@ -9,20 +10,24 @@
         <section class="ult_visita">
             <h4 class="headlines">Viandas del dia</h4>
             <p>Frescas y exquisitas a la puerta de tu casa</p>
+            
+                        
             <div class="productos">
-                        <% jsProductos.forEach(function(elemento) { %>
-                            <article>
-                                <img width="240" height="240" src= "<%= elemento.imagen %>" id="<%= elemento.name%>">
-                                <div class="art_principal">
-                                    <div class="buy_icon">
-                                        <i class="fas fa-truck"></i>
-                                    </div>
-                                    <p class="prices">$<%= elemento.prices %></p>
-                                    <p class="discount"><%= elemento.name %></p>
-                                    <p class="description"><%= elemento.description %> </p>
-                                </div>
-                            </article>
-                        <% }); %>
+                <% jsProductos.find(function(elemento) { if(elemento.id == req.params.id){ %>
+                <article class="card">
+                    <div class="card__header">
+                    <img src="<%= elemento.imagen %>" alt="<%= elemento.name%>" class="card__image" id="<%= elemento.name%>">
+                    </div>
+                    <div class="card__body">
+                    <h4><%= elemento.name %></h4>
+                    <p><%= elemento.prices %></p>
+                    <p><%= elemento.description %></p>
+                    </div>
+                    <div class="card__footer">
+                    
+                    </div>
+                </article>
+                <% }}); %>
             </div>
         </section>
     </main>

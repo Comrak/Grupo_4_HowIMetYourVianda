@@ -22,36 +22,38 @@
                 </article>
             <% }}); %>
 </div>
-        <form action="/products" method="post" class="form" enctype="multipart/form-data">
+        <% jsProductos.find(elemento =>{if(elemento.id == req.params.id){  %>
+        <form action="/products/<%= elemento.id%>?_method=PUT" method="post" class="form" enctype="multipart/form-data">
 
           <div class="form-register">
             <h4>Edicion de productos</h4>
             <div class="label-input">
               <label for="img">Subir imagen:</label>
-              <input type="file" id="img" name="img" accept="image/*" required="true">
+              <input type="file" id="img" name="img" accept="image/*">
             </div>
             <div class="label-input">
               <label for="price">Precio</label>
-              <input class="controls" type="number" name="price" id="price" placeholder="Ingrese el Precio" required="true">
+              <input class="controls" type="number" name="price" id="price" placeholder="Ingrese el Precio">
             </div>
             <div class="label-input">
               <label for="name">Nombre del producto</label>
-              <input class="controls" type="text" name="name" id="name" placeholder="Ingrese el nombre del producto" required="true">
+              <input class="controls" type="text" name="name" id="name" placeholder="Ingrese el nombre del producto">
             </div>
             <div class="label-input">
               <label for="description">Descripcion del producto</label>
               <textarea class="controls" type="a" name="description" id="description"
-                placeholder="Ingrese la descripcion del producto" rows="4" cols="50" required="true"></textarea>
+                placeholder="Ingrese la descripcion del producto" rows="4" cols="50"></textarea>
             </div>
             <div class="label-input">
               <label for="keywords">Palabras claves</label>
               <textarea class="controls" type="a" name="keywords" id="keywords"
-                placeholder="Ingrese palabras clave para el producto separa con ';'" rows="4" cols="50" required="true"></textarea>
+                placeholder="Ingrese palabras clave para el producto separa con ';'" rows="4" cols="50"></textarea>
             </div>
             <button type="submit" class="button" id="submitBtn">Enviar</button>
            
           </div>
         </form>
+        <% }}); %>
       </main>
   </body>
   <%- include('../partials/footer')%>
