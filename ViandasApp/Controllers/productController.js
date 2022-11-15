@@ -44,16 +44,12 @@ const renderproductRegistration = (req, res) => {
 const renderProductEdit = (req, res) => {
     return res.render('products/productEdit', {jsProductos:productos, req:req} )
 }
-const renderProductDelete = (req, res) => {
-    return res.destroy('products/:id', {jsProductos:productos, req:req} )
-}
+
 module.exports = { 
     renderProductDetails,
     renderDetailId,
     renderProductManagement,
     renderproductRegistration,
     renderDetailId,
-    renderProductEdit,
-    renderProductDelete,
-
+    renderProductEdit
 }
