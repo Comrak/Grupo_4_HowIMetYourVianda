@@ -131,18 +131,18 @@
 * Dejar de hacer: Demorar en detalles.
 
 ### Montaño Florencia
-* Comenzar a hacer: 
+* Comenzar a hacer:
 * Hacer más: 
 * Continuar haciendo: 
 * Hacer menos: 
 * Dejar de hacer: 
 
 ### Martin Altuna
-* Comenzar a hacer: 
-* Hacer más: 
-* Continuar haciendo: 
-* Hacer menos: Intentar 
-* Dejar de hacer: 
+* Comenzar a hacer: Planificar de que manera realizar las tareas antes de hacerlas, corregir errores que arrastramos de los sprints anteriores.
+* Hacer más: Reuniones para resolver problemas en grupo.
+* Continuar haciendo: Utilizando Trello y las metodologias de trabajo.
+* Hacer menos: Perder tiempo en tratar de resolver problemas sin ayuda.
+* Dejar de hacer: Trabajar dos personas en la misma tarea al mismo tiempo.
 
 ### Luis Maria Abdala
 * Comenzar a Hacer: 
