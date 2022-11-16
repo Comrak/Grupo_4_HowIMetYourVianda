@@ -1,29 +1,33 @@
 <%- include('../partials/head')%>
 <script src="scripts/productDetailsModals.js"></script>
+<link rel="stylesheet" href="../../css/productStyle.css">
 <body>
-  <%- include('../partials/header')%>
-  <!-- <section class="banner">
-    <img src="img/homeBanner.jpg" alt="Como conoci a tu vianda">
-  </section> -->
-  <main class="main-body">
-    <section class="ult_visita">
-      <h4 class="headlines">Viandas del dia</h4>
-      <p>Frescas y exquisitas a la puerta de tu casa</p>
-      <div class="productos">
-        <% jsProductos.forEach(function(elemento) { %>
-          <article>
-            <img width="240" height="240" src= "<%= elemento.imagen %>" id="<%= elemento.name%>">
-            <div class="art_principal">
-              <div class="buy_icon">
-                <i class="fas fa-truck"></i>
-              </div>
-              <p class="prices">$<%= elemento.prices %></p>
-              <p class="discount"><%= elemento.name %></p>
-              <p class="description"><%= elemento.description %> </p>
+    <%- include('../partials/header')%>
+    <!-- <section class="banner">
+        <img src="img/homeBanner.jpg" alt="Como conoci a tu vianda">
+    </section> -->
+    <main class="main-body">
+        <section class="ult_visita">
+            <h4 class="headlines">Viandas del dia</h4>
+            <p>Frescas y exquisitas a la puerta de tu casa</p>
+            <div class="productos">
+                <% jsProductos.forEach(function(elemento) { %>
+                    <article>
+                        <img width="240" height="240" src= "<%= elemento.imagen %>" id="<%= elemento.name%>">
+                        <div class="art_principal">
+                            <div class="buy_icon">
+                                <i class="fas fa-truck"></i>
+                            </div>
+                            <p class="prices">$<%= elemento.prices %></p>
+                            <p class="discount"><%= elemento.name %></p>
+                            <p class="description"><%= elemento.description %> </p>
+                            <button type="submit" class="button" id="submitBtn">Agregar al Carrito / Editar</button>
+                            <button type="submit" class="button" id="submitBtn">Comprar / Borrar</button>
+                        </div>
+                    </article>
+                <% }); %>
             </div>
-          </article>
-        <% }); %>
-      </div>
-    </section>
-  </main>
-  <%- include('../partials/footer')%>
+        </section>
+        <%- include('../products/productArticle')%>
+    </main>
+    <%- include('../partials/footer')%>
