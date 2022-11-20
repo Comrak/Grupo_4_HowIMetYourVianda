@@ -2,6 +2,7 @@
 const path = require('path');
 const fs = require('fs');
 const productos = JSON.parse(fs.readFileSync('./models/productos.json', 'utf8'));
+const actualizadorId = require('../public/scripts/actualizadorId')
 
 
 
@@ -35,6 +36,7 @@ const renderproductRegistration = (req, res) => {
         "tags": (req.body.keywords).split(";")
     }
     productos.push(newProduct);
+    actualizadorId(productos);
     let data = JSON.stringify(productos);
     fs.writeFileSync('./models/productos.json', data);
     return res.render('products/productRegistration')
@@ -45,8 +47,6 @@ const renderProductEdit = (req, res) => {
 }
 
 const productEditPost = (req, res) => {
-    console.log(req.body)
-    console.log(req.params)
     let idParams = req.params.id;
     productos.forEach(element => {
     if (element.id == idParams) {
@@ -58,6 +58,7 @@ const productEditPost = (req, res) => {
         element.name = req.body.name;
         element.description = req.body.description;
         element.tags = (req.body.keywords).split(";")
+        actualizadorId(productos);
         let data = JSON.stringify(productos);
         fs.writeFileSync('./models/productos.json', data);
         return res.render('products/productRegistration')

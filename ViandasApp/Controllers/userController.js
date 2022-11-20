@@ -2,6 +2,7 @@ const { json } = require('express');
 const path = require('path');
 const fs = require('fs');
 const usuarios = JSON.parse(fs.readFileSync('./models/users.json', 'utf8'));
+const actualizadorId = require('../public/scripts/actualizadorId')
 
 //const renderHome = (req, res) => {
  //   return res.render('home')
@@ -30,6 +31,7 @@ const renderRegisterPost = (req, res) => {
         "password": req.body.password
     }
     usuarios.push(newUser);
+    actualizadorId(usuarios);
     let data = JSON.stringify(usuarios);
     fs.writeFileSync('./models/users.json', data);
     return res.render('users/login')
