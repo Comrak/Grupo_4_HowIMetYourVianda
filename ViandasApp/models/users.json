@@ -1,0 +1,14 @@
+[
+  { "id": 0 },
+  {
+    "id": 1,
+    "lastName": "Altuna",
+    "birthDate": "1998-09-20",
+    "email": "martin.altuna98@gmail.com",
+    "phone": "(221) 571-4488",
+    "aderss": "148 Nro 600",
+    "imagen": "/img/userImg/1649028189174.jpg",
+    "tags": ["Milanesa", " Carne", " Pizza", " Pasta"],
+    "password": "estaesmiclave"
+  }
+]

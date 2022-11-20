@@ -13,15 +13,15 @@ const renderDetailId= (req, res) => {
     const productId = req.params.id;
     const productToFind = productos.find((product) => product.id == productId);
     if (productToFind == undefined) {
-      return res.send("No existe el producto");
+        return res.send("No existe el producto");
     } else {
         return res.render('products/detailId', {jsProductos:productos, req:req} )
     }
-  }
+}
 
 
 const renderProductManagement = (req, res) => {
-   return res.render('products/productManagement')
+    return res.render('products/productManagement')
 }
 
 const renderproductRegistration = (req, res) => {
@@ -37,7 +37,6 @@ const renderproductRegistration = (req, res) => {
     productos.push(newProduct);
     let data = JSON.stringify(productos);
     fs.writeFileSync('./models/productos.json', data);
-
     return res.render('products/productRegistration')
 }
 
@@ -52,7 +51,6 @@ const productEditPost = (req, res) => {
     productos.forEach(element => {
     if (element.id == idParams) {
         if (req.file==undefined){
-
         }else{
         element.imagen = "img/productos/"+req.file.originalname
         }
@@ -60,9 +58,8 @@ const productEditPost = (req, res) => {
         element.name = req.body.name;
         element.description = req.body.description;
         element.tags = (req.body.keywords).split(";")
-    let data = JSON.stringify(productos);
+        let data = JSON.stringify(productos);
         fs.writeFileSync('./models/productos.json', data);
-
         return res.render('products/productRegistration')
     }
     })
