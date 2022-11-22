@@ -5,11 +5,13 @@ const PUBLICFOLDER = path.resolve('public')
 const routerMain = require('./routers/mainRouter');
 const routerProduct = require('./routers/productsRouter')
 const routerUser = require('./routers/userRouter')
+const logMiddleware = require('./middleware/logginMiddleware')
 // Settings post requirement in app
+app.use(logMiddleware)
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
-//calling methodOverride
+// calling methodOverride
 const methodOverride = require('method-override');
 app.use(methodOverride('_method'));
 
@@ -21,7 +23,7 @@ app.use(express.static(PUBLICFOLDER))
 app.set('view engine', 'ejs');
 
 
-const numeroPuerto = 3000;
+const numeroPuerto = 3300;
 app.listen(numeroPuerto, ()=>{
     console.log('Servidor funcionando en el puerto ' + numeroPuerto);
 })

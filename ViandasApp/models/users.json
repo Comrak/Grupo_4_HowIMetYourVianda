@@ -1,14 +1,17 @@
 [
-  { "id": 0 },
-  {
-    "id": 1,
-    "lastName": "Altuna",
-    "birthDate": "1998-09-20",
-    "email": "martin.altuna98@gmail.com",
-    "phone": "(221) 571-4488",
-    "aderss": "148 Nro 600",
-    "imagen": "/img/userImg/1649028189174.jpg",
-    "tags": ["Milanesa", " Carne", " Pizza", " Pasta"],
-    "password": "estaesmiclave"
-  }
+ {
+  "id": 1,
+  "userName": "admin",
+  "firstname": "carlos",
+  "lastname": "perez",
+  "email": "admin@admin.com",
+  "password": "$2b$10$",
+  "role": "admin",
+  "Country": "Argentina",
+  "City": "Buenos Aires",
+  "Address": "Av. Corrientes 1234",
+  "LandPhone": "123456789",
+  "MobilePhone": "123456789",
+  "avatar": "/img/users/avatar.png"
+ }
 ]

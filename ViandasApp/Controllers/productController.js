@@ -1,90 +1,132 @@
 
 const path = require('path');
 const fs = require('fs');
-const productos = JSON.parse(fs.readFileSync('./models/productos.json', 'utf8'));
-const actualizadorId = require('../public/scripts/actualizadorId')
 
+const productsFilePath = path.resolve('./models/productos.json')
+const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf8'));
+const Math = require('Math')
 
-
-const renderProductDetails = (req, res,) => {
-    return res.render('products/productDetails',{jsProductos:productos})
+// see all products
+const renderProductAll = (req, res,) => {
+    return res.render('products/productAll',{jsProductos:productos})
 }
 
-const renderDetailId= (req, res) => {
-    const productId = req.params.id;
-    const productToFind = productos.find((product) => product.id == productId);
-    if (productToFind == undefined) {
+// see a filter list of product
+const renderDetail= (req, res,) => {
+    console.log(req.query.data)
+    console.log(req.params.id)
+    if(req.params.id == undefined || req.params.id == null || req.params.id == 'getDetail'){
+        if(req.query.data == undefined || req.query.data == null ){
+            console.log(`${req.query.data} es undefined `)
+            return res.send("No existe el producto");
+        }else{
+            console.log('no salio el find')
+            const productToFind = productos.find((product) => ((product.id == req.query.data)|| (product.name.match(req.query.data))));
+            if (productToFind == undefined) {
+                return res.send("No existe el producto");
+            }
+            return res.render('products/detail', {productToFind: productToFind})
+        }
+    }else{
+        const productId = req.params.id;
+        const productToFind = productos.find((product) => product.id == productId);
+        if (productToFind == undefined) {
         return res.send("No existe el producto");
-    } else {
-        return res.render('products/detailId', {jsProductos:productos, req:req} )
+        }
+        return res.render('products/detail', {productToFind: productToFind});
     }
+    
 }
 
-
-const renderProductManagement = (req, res) => {
-    return res.render('products/productManagement')
+const renderProductCreate = (req, res) => {
+   return res.render('products/productManagement')
 }
 
-const renderproductRegistration = (req, res) => {
-    const id = productos[productos.length - 1].id + 1 
-    const newProduct = {
-        "id": id,
-        "imagen": "/img/productos/"+req.file.originalname,
-        "prices": req.body.price,
-        "name": req.body.name,
-        "description": req.body.description,
-        "tags": (req.body.keywords).split(";")
-    }
-    productos.push(newProduct);
-    actualizadorId(productos);
-    let data = JSON.stringify(productos);
-    fs.writeFileSync('./models/productos.json', data);
-    return res.render('products/productRegistration')
+const renderProductRegistration = (req, res) => {
+
+    const camposDeNuevoProducto = req.body;
+    camposDeNuevoProducto.imagen = '/img/productos/'+req.file.filename;
+    camposDeNuevoProducto.tags = req.body.tags.trim().split(',')
+
+   
+    // tomar el ultimo elemento del array y sumarle 1
+    const ids = productos.map(object => {
+        return object.id;
+      });
+
+    const maxId = Math.max(...ids);
+                  
+    camposDeNuevoProducto.id = maxId + 1;
+    
+    productos.push(camposDeNuevoProducto);
+
+    fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '));
+    return res.redirect('/products');
 }
 
 const renderProductEdit = (req, res) => {
-    return res.render('products/productEdit', {jsProductos:productos, req:req} )
+
+    let id = req.params.id;
+		
+    let productToEdit = productos.find(product => product.id == id);
+    productToEdit.tags = productToEdit.tags.join(';').split(';') ;
+
+
+    if(productToEdit==undefined){	
+        return res.render('error')
+        }
+        
+        return res.render('products/productEdit', {productToEdit:productToEdit, req:req} )
 }
 
-const productEditPost = (req, res) => {
-    let idParams = req.params.id;
-    productos.forEach(element => {
-    if (element.id == idParams) {
-        if (req.file==undefined){
-        }else{
-        element.imagen = "img/productos/"+req.file.originalname
-        }
-        element.prices = req.body.price;
-        element.name = req.body.name;
-        element.description = req.body.description;
-        element.tags = (req.body.keywords).split(";")
-        actualizadorId(productos);
-        let data = JSON.stringify(productos);
-        fs.writeFileSync('./models/productos.json', data);
-        return res.render('products/productRegistration')
+const renderProductUpdate = (req, res) => {
+    
+    let id = req.params.id;
+    const dataToUpdate = req.body;
+    dataToUpdate.tags = req.body.tags.trim().split(',') 
+    
+    // check if the user has uploaded a new image
+    if (req.file != undefined) {
+        dataToUpdate.imagen = '/img/productos/'+req.file.filename;
+    }   
+    // find the product to update
+    const productIndex = productos.findIndex(product => product.id == id);
+    if (productIndex == -1) {
+        return res.render('error');
     }
-    })
+    productos[productIndex] = {
+        ... productos[productIndex],
+        ... dataToUpdate,
+    }
+
+    fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '));
+
+    return res.redirect('/products');
+
+     
 }
-const productDelete = (req,res) => {
-    let idForDelete = req.params.id;
-    let leftProducts = productos.filter(element => {
-        return element.id != idForDelete;
-    })
-    let productos = leftProducts;
-    actualizadorId(productos);
-    let datas = JSON.stringify(productos);
-    fs.writeFileSync('./models/productos.json', datas);
-    return res.render('products/productDetails')
+
+const renderProductDelete = (req, res) => {
+    let id = req.params.id;
+		
+    const productIndex = productos.findIndex(product => product.id == id);
+    if (productIndex == -1) {
+        return res.render('error');
+    }
+        productos.splice(productIndex, 1);
+
+        fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '));
+        return res.redirect('/products');
 }
+
 
 
 module.exports = { 
-    renderProductDetails,
-    renderDetailId,
-    renderProductManagement,
-    renderproductRegistration,
-    renderDetailId,
+    renderProductAll,
+    renderDetail,
+    renderProductCreate,
+    renderProductRegistration,
     renderProductEdit,
-    productEditPost,
-    productDelete,
+    renderProductUpdate,
+    renderProductDelete
 }
