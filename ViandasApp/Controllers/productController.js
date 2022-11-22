@@ -21,7 +21,8 @@ const renderDetail= (req, res,) => {
             return res.send("No existe el producto");
         }else{
             console.log('no salio el find')
-            const productToFind = productos.find((product) => ((product.id == req.query.data)|| (product.name.match(req.query.data))));
+            const productToFind = productos.find((product) => ((product.id == req.query.data)|| 
+                                                                (product.name.match(req.query.data))));
             if (productToFind == undefined) {
                 return res.send("No existe el producto");
             }

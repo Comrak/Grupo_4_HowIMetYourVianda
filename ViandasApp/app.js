@@ -23,7 +23,7 @@ app.use(express.static(PUBLICFOLDER))
 app.set('view engine', 'ejs');
 
 
-const numeroPuerto = 3300;
+const numeroPuerto = 4300;
 app.listen(numeroPuerto, ()=>{
     console.log('Servidor funcionando en el puerto ' + numeroPuerto);
 })
