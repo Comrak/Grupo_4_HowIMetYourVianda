@@ -22,7 +22,7 @@
                             <p class="discount"><%= elemento.name %></p>
                             <p class="description"><%= elemento.description %> </p>
                             <button type="submit" class="button" id="submitBtn">Agregar al Carrito / Editar</button>
-                            <form method="POST" action="products/productDetails/<%= elemento.id%>?_method=DELETE">
+                            <form method="POST" action="/products/delete/<%= elemento.id%>?_method=DELETE">
                             <button type="submit" class="button" id="submitBtn">Borrar</button>
                             </form>
                         </div>

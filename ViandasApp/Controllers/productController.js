@@ -65,17 +65,17 @@ const productEditPost = (req, res) => {
     }
     })
 }
-const productDelete = (req,res) => {
-    let idForDelete = req.params.id;
-    let leftProducts = productos.filter(element => {
-        return element.id != idForDelete;
+
+const productDelete = function (req,res) {
+    let deletedProducts = productos.findIndex(function (producto) {
+        return producto.id == req.params.id;
     })
-    let productos = leftProducts;
-    actualizadorId(productos);
+    productos.splice(deletedProducts, 1);
     let datas = JSON.stringify(productos);
     fs.writeFileSync('./models/productos.json', datas);
-    return res.render('products/productDetails')
+    return res.redirect('/products')
 }
+
 
 
 module.exports = { 
