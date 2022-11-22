@@ -101,18 +101,18 @@
 * Dejar de hacer: Paralizarse ante una tarea que no sale.
 
 ### Luis Maria Abdala
-* Comenzar a Hacer: 
-* Hacer más: 
-* Continuar haciendo:
-* Hacer menos: 
-* Dejar de Hacer: 
+* Comenzar a hacer: Más comentarios en el Trello sobre tareas asignadas a otras personas.
+* Hacer más: Mejorar la comunicacion del equipo.
+* Continuar haciendo: Mirar las clases y preguntar al equipo cuando hay dudas.
+* Hacer menos: Enojarme cuando algo se me complica.
+* Dejar de hacer: Tener miedo de equivocarme.
 
 ### Ariel Limes
-* Comenzar a hacer: 
-* Hacer más: 
-* Continuar haciendo:
-* Hacer menos:
-* Dejar de hacer: 
+* Comenzar a hacer: Mejora la Comunicacion interna, y la asignacion de tareas.
+* Hacer más: coordinarnos para reemplazar a los que no pueden cubrir.
+* Continuar haciendo: Usar el Trelo para asignar tareas y coordinar.
+* Hacer menos: Avanzar en cosas que no son necesarias.
+* Dejar de hacer: congelarse ante algo dificil
 
 ## Sprint 4  
 
@@ -145,15 +145,23 @@
 * Dejar de hacer: Trabajar dos personas en la misma tarea al mismo tiempo.
 
 ### Luis Maria Abdala
-* Comenzar a Hacer: 
-* Hacer más: 
-* Continuar haciendo:
-* Hacer menos: 
-* Dejar de Hacer: 
+* Comenzar a hacer: Más comentarios en el Trello sobre tareas asignadas a otras personas.
+* Hacer más: Mejorar la comunicacion del equipo.
+* Continuar haciendo: Mirar las clases y preguntar al equipo cuando hay dudas.
+* Hacer menos: Enojarme cuando algo se me complica.
+* Dejar de hacer: Tener miedo de equivocarme.
 
 ### Ariel Limes
-* Comenzar a hacer: 
-* Hacer más: 
-* Continuar haciendo:
-* Hacer menos:
-* Dejar de hacer: 
+* Comenzar a hacer: mas dailys y weeklys meeting: 
+* Hacer más: reuniones de trabajo para asignar tareas y coordinar.
+* Continuar haciendo: Utilizar el Trelo para asignar tareas y coordinar.do:
+* Hacer menos: intentar resolver solo sin ayuda de otros
+* Dejar de hacer: demorar en detalles menores
+
+
+
+    
+    
+    
+    
+    
