@@ -1,0 +1,105 @@
+[
+ {
+  "id": 1,
+  "imagen": "/img/productos/lasagna.jpg",
+  "prices": "1522",
+  "name": "La que no falla",
+  "description": "En algunos lugares le dicen lasagna en otros pasticho nosotros simplemente le decimos deliciosa\r\n                \r\n                \r\n                \r\n                \r\n                    \r\n                    \r\n                    \r\n                    \r\n                    \r\n                    \r\n                    \r\n                    \r\n                    \r\n                    \r\n                    \r\n                    \r\n                    ",
+  "tags": [
+   "lasagna",
+   "Pasta",
+   "Italiano",
+   "Tomate",
+   "Queso",
+   "vivila"
+  ]
+ },
+ {
+  "id": 2,
+  "imagen": "/img/productos/carne.jpg",
+  "prices": "700",
+  "name": "La pesadilla vegetariana",
+  "description": "Querés comerte un asado pero te falta el asador, el carbon, el vino y los amigos, bueno quizas no podamos ayudarte con la mayoria de esas cosas pero con este plato se te van a ir las ganas de carne\r\n                \r\n                \r\n                    \r\n                    \r\n                    \r\n                    \r\n                    \r\n                    \r\n                    ",
+  "tags": [
+   "Vegano",
+   "Feliz"
+  ]
+ },
+ {
+  "id": 3,
+  "imagen": "/img/productos/MilanesaNapo.jpg",
+  "prices": "400",
+  "name": "La vieja confiable",
+  "description": "No sabes que pedir, bueno pidete una mila napo con papas no le fallo nunca a nadie y tampoco te va a fallar a ti\r\n                    ",
+  "tags": [
+   "Carne",
+   "Milanesa",
+   "Italiano",
+   "Tomate",
+   "Queso",
+   "Napolitana"
+  ]
+ },
+ {
+  "id": 4,
+  "imagen": "/img/productos/pollo.jpg",
+  "prices": "450",
+  "name": "El hoy 'me cuido'",
+  "description": "Te comiste 5 chuletones y dos litros de helado, bueno bajale a la culpa con este rico pollito a la plancha, quizas no bajes de peso pero te sentiras menos culpable y la culpa pesa un monton\r\n                    ",
+  "tags": [
+   "Pollo",
+   "Light",
+   "Fitness",
+   "Sano"
+  ]
+ },
+ {
+  "id": 5,
+  "imagen": "/img/productos/pizza.jpg",
+  "prices": 800,
+  "name": "Zappi Burrata",
+  "description": "Este estilo de pizza se llama 'Burra'ta pero no te dejes engañar probarla sera la mejor idea que has tenido en la vida",
+  "tags": [
+   "Pizza",
+   "Italiano",
+   "Tomate",
+   "Queso"
+  ]
+ },
+ {
+  "id": 9,
+  "imagen": "/img/productos/varitasMerluza.jpg",
+  "prices": "800",
+  "name": "Varitas de Merluza",
+  "description": "Varitas de merluzas antartica albina empanizada con pan de masa madre amasado por monjes tibetanos cojos\r\n                    \r\n                    ",
+  "tags": [
+   "Merluza",
+   "pescado",
+   "varitas"
+  ]
+ },
+ {
+  "prices": "1542",
+  "name": "Pizza",
+  "description": "Pizza de las mejores, Esta es la mejor pizza que probaste en tu vida..No te la pierdas\r\n                    \r\n                    \r\n                    \r\n                    ",
+  "tags": [
+   "Pizza",
+   "Vegana",
+   "rica"
+  ],
+  "imagen": "/img/productos/img_1668828952819.jpeg",
+  "id": 10
+ },
+ {
+  "prices": "1250",
+  "name": "Hamburgesa",
+  "description": "La mejor hamburgesa del mundo\r\n                    \r\n                    ",
+  "tags": [
+   "hamburgesa",
+   "sana",
+   "epica"
+  ],
+  "imagen": "/img/productos/img_1669083688199.jpeg",
+  "id": 11
+ }
+]

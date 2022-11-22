@@ -1,0 +1,17 @@
+[
+ {
+  "id": 1,
+  "userName": "admin",
+  "firstname": "carlos",
+  "lastname": "perez",
+  "email": "admin@admin.com",
+  "password": "$2b$10$",
+  "role": "admin",
+  "Country": "Argentina",
+  "City": "Buenos Aires",
+  "Address": "Av. Corrientes 1234",
+  "LandPhone": "123456789",
+  "MobilePhone": "123456789",
+  "avatar": "/img/users/avatar.png"
+ }
+]

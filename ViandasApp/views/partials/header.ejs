@@ -1,0 +1,39 @@
+<header class="main-header">
+    <div class="main-header-top-bar">
+        <div class="top-bar-container">
+            <a href="/" class="logo-wrapper"><img src="../../img/homeIconNoBG.png" class="logo" alt="Error"></a>
+            <div class="search-bar input-group">
+                
+                    <form action="/products/getDetail" method="get" class="form">
+                        <input class="Buscador form-control" type="text" name="data" id="data"
+                            placeholder="Cual Vianda Queres hoy?">
+
+                        <button class=" btn btn-primary" button type="submit" id="submitBtn"><i
+                                class="fas fa-search"></i></button>
+                    </form>
+                
+            </div>
+        </div>
+        <h2 class="copy-header">
+            <span class="text-entry"> Tus viandas favoritas directo a tu casa</span>
+        </h2>
+    </div>
+
+    <a href="#" class="hamburguer-button">
+        <i class="fa-solid fa-bars"></i>
+    </a>
+
+    <nav class="main-navbar">
+        <ul class="left-navbar">
+            <li> <i class="fa-solid fa-bowl-food"></i> <a href="/products">Viandas</a></li>
+            <li> <i class="fa-solid fa-gear"></i> <a href="/products/create">Manejo de productos</a></li>
+            <li> <i class="fa-solid fa-truck"></i> <a href="#">Zonas de Envio</a></li>
+
+        </ul>
+        <ul class="right-navbar">
+            <li> <a href="/users/register">Crea Tu Cuenta</a> <i class="fas fa-user-circle"></i> </li>
+            <li> <a href="/users/login">Ingresa</a> <i class="fas fa-sign-in-alt"></i> </li>
+            <li> <a href="/users/carrito">Tu carrito</a> <i class="fas fa-shopping-basket"></i> </li>
+        </ul>
+    </nav>
+</header>
