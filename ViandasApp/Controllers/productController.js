@@ -65,6 +65,18 @@ const productEditPost = (req, res) => {
     }
     })
 }
+const productDelete = (req,res) => {
+    let idForDelete = req.params.id;
+    let leftProducts = productos.filter(element => {
+        return element.id != idForDelete;
+    })
+    let productos = leftProducts;
+    actualizadorId(productos);
+    let datas = JSON.stringify(productos);
+    fs.writeFileSync('./models/productos.json', datas);
+    return res.render('products/productDetails')
+}
+
 
 module.exports = { 
     renderProductDetails,
@@ -73,5 +85,6 @@ module.exports = {
     renderproductRegistration,
     renderDetailId,
     renderProductEdit,
-    productEditPost
+    productEditPost,
+    productDelete,
 }
