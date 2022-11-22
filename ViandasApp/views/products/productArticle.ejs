@@ -3,6 +3,9 @@
     <% jsProductos.forEach(function(elemento) { %>
     <article class="card">
         <div class="card__header">
+          <div class="fav">
+            <i class="fas fa-heart"></i>
+          </div>
           <img src="<%= elemento.imagen %>" alt="<%= elemento.name%>" class="card__image" id="<%= elemento.name%>">
         </div>
         <div class="card__body">

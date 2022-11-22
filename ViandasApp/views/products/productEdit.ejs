@@ -33,16 +33,16 @@
             </div>
             <div class="label-input">
               <label for="price">Precio</label>
-              <input class="controls" type="number" name="price" id="price" placeholder="Ingrese el Precio">
+              <input class="controls" type="number" name="price" id="price" placeholder="Ingrese el Precio" value="<%= elemento.prices%>">
             </div>
             <div class="label-input">
               <label for="name">Nombre del producto</label>
-              <input class="controls" type="text" name="name" id="name" placeholder="Ingrese el nombre del producto">
+              <input class="controls" type="text" name="name" id="name" placeholder="Ingrese el nombre del producto" value="<%= elemento.name%>">
             </div>
             <div class="label-input">
               <label for="description">Descripcion del producto</label>
               <textarea class="controls" type="a" name="description" id="description"
-                placeholder="Ingrese la descripcion del producto" rows="4" cols="50"></textarea>
+                placeholder="Ingrese la descripcion del producto" rows="4" cols="50" value="<%= elemento.description %>"></textarea>
             </div>
             <div class="label-input">
               <label for="keywords">Palabras claves</label>

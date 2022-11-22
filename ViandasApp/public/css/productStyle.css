@@ -18,6 +18,19 @@
   gap: 2rem;
 }
 
+.fav {
+  display: block; 
+  font-size: 16px; 
+  margin: 10px;
+  padding: 5px; 
+  width: 30px; 
+  height: 30px; 
+  border: 1px solid #39b54a; 
+  background-color: #FFF; 
+  border-radius: 50%; 
+  position: absolute;
+}
+
 .productos article img {
     height: 240px;
   width: 100%;
@@ -49,8 +62,10 @@
 .tag {
   border: none;
   align-self: flex-start;
-  padding: .5em 1em;
-  border-radius: 1em;
+  width: 50%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-radius: 2em;
   font-size: .75rem;
   background: #2F80ED;
   color: #fafafa;
