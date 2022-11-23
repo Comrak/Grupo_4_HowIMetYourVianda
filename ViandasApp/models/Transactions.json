@@ -1,0 +1,16 @@
+[
+ {
+  "id": 1,
+  "UserId": 1,
+  "ProductId": 1,
+  "TransactionDate": "2021-08-01",
+  "TransactionType": "Compra",
+  "TransactionStatus": "Aprobada",
+  "TransactionAmount": 1000,
+  "TransactionCurrency": "ARS",
+  "TransactionDescription": "Compra de producto",
+  "TransactionPaymentMethod": "MercadoPago",
+  "TransactionPaymentId": "123456789",
+  "TransactionPaymentStatus": "Aprobada"
+ }
+]
