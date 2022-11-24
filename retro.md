@@ -156,4 +156,48 @@
 * Hacer más: reuniones de trabajo para asignar tareas y coordinar.
 * Continuar haciendo: Utilizar el Trelo para asignar tareas y coordinar.do:
 * Hacer menos: intentar resolver solo sin ayuda de otros
-* Dejar de hacer: demorar en detalles menores
+* Dejar de hacer: demorar en detalles menores.
+
+## Sprint 5
+
+### Jose Nardulli  
+* Comenzar a hacer: 
+* Hacer más: 
+* Continuar haciendo: 
+* Hacer menos: 
+* Dejar de hacer: 
+
+### Victoria Aquino
+* Comenzar a hacer: 
+* Hacer más: 
+* Continuar haciendo: 
+* Hacer menos: 
+* Dejar de hacer: 
+
+### Montaño Florencia
+* Comenzar a hacer:
+* Hacer más: 
+* Continuar haciendo: 
+* Hacer menos: 
+* Dejar de hacer: 
+
+### Martin Altuna
+* Comenzar a hacer: 
+* Hacer más: 
+* Continuar haciendo: 
+* Hacer menos: 
+* Dejar de hacer: 
+
+### Luis Maria Abdala
+* Comenzar a hacer: 
+* Hacer más: 
+* Continuar haciendo: 
+* Hacer menos: 
+* Dejar de hacer: 
+
+### Ariel Limes
+* Comenzar a hacer: 
+* Hacer más: 
+* Continuar haciendo: 
+* Hacer menos: 
+* Dejar de hacer: 
