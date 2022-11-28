@@ -1002,3 +1002,7 @@ se ingreso a: /users/register en la fecha: Mon Nov 28 2022 17:58:31 GMT-0300 (ho
 se ingreso a: /css/styles.css en la fecha: Mon Nov 28 2022 17:58:31 GMT-0300 (hora estándar de Argentina) 
 se ingreso a: /img/homeIconNoBG.png en la fecha: Mon Nov 28 2022 17:58:31 GMT-0300 (hora estándar de Argentina) 
 se ingreso a: /img/homeBanner2.jpg en la fecha: Mon Nov 28 2022 17:58:31 GMT-0300 (hora estándar de Argentina) 
+se ingreso a: /users/register en la fecha: Mon Nov 28 2022 18:16:20 GMT-0300 (hora estándar de Argentina) 
+se ingreso a: /css/styles.css en la fecha: Mon Nov 28 2022 18:16:20 GMT-0300 (hora estándar de Argentina) 
+se ingreso a: /img/homeIconNoBG.png en la fecha: Mon Nov 28 2022 18:16:20 GMT-0300 (hora estándar de Argentina) 
+se ingreso a: /img/homeBanner2.jpg en la fecha: Mon Nov 28 2022 18:16:20 GMT-0300 (hora estándar de Argentina) 
