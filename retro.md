@@ -161,11 +161,11 @@
 ## Sprint 5
 
 ### Jose Nardulli  
-* Comenzar a hacer: 
-* Hacer más: 
-* Continuar haciendo: 
-* Hacer menos: 
-* Dejar de hacer: 
+* Comenzar a hacer: revisar mas a fondo el codigo
+* Hacer más: participar mas
+* Continuar haciendo: ayudar a mis companeros 
+* Hacer menos: descuidar las asignaciones
+* Dejar de hacer: descuidar las asignaciones
 
 ### Victoria Aquino
 * Comenzar a hacer: Mejorar la comunicación.
