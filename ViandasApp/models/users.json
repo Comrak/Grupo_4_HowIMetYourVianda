@@ -13,5 +13,35 @@
   "LandPhone": "123456789",
   "MobilePhone": "123456789",
   "avatar": "/img/users/avatar.png"
+ },
+ {
+  "id": 2,
+  "fullName": "Ricardo Font",
+  "birthDate": "1987-05-01",
+  "email": "rfont@gmail.com",
+  "mobilePhone": "1165238965",
+  "address": "Ayacucho 1123",
+  "city": "Capital Federal",
+  "country": "Argentina",
+  "profile": "Administrador",
+  "password": "$2b$10$8fKEQb01zwAsfcMpKFFgGOUfucETiO0n8OuO1zn/6hInGxcqJSaqC",
+  "confirmPassword": "$2b$10$FDDD3P7GvcnLsgktmgEZmOvcfesPYn0e/QuoVSPu4mq3hKhiNRw8W",
+  "rememberMe": "Recordar usuario",
+  "avatar": "RicardoFont.jpg"
+ },
+ {
+  "id": 3,
+  "fullName": "Moria Bazan",
+  "birthDate": "1974-06-01",
+  "email": "mbazan@gmail.com",
+  "mobilePhone": "1145632589",
+  "address": "Callao 1254",
+  "city": "Capital Federal",
+  "country": "Argentina",
+  "profile": "Cliente",
+  "password": "$2b$10$9Pmo2usw6CvJxKALESBcfu94.cUX7CEkGGQ6mPWltYF1kliFiR/P6",
+  "confirmPassword": "$2b$10$kukAK4rw8pIFtSW8mfiMhecajbQ8jfO5Lc7IyOQA03drc4FG8XjY2",
+  "rememberMe": "Recordar usuario",
+  "avatar": "Moria.jpg"
  }
 ]

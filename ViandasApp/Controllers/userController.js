@@ -31,7 +31,7 @@ const renderRegisterPost = (req, res) => {
         }
     
         // if all validations are ok then check if the user already exists
-        let userInDB = user.findByField('email', req.body.email);
+        let userInDB = User.findByField('email', req.body.email);
     
         if (userInDB) {
             return res.render('users/register', {

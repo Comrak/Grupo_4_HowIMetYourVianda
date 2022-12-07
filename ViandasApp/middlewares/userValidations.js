@@ -18,6 +18,12 @@ const validations = [
     body('address')
                     .notEmpty().withMessage('Falta completar el campo Dirección').bail()
                     .isLength({ min: 5 }).withMessage('La dirección debe tener al menos 5 caracteres'),
+    body('city')    
+                    .notEmpty().withMessage('Debes completar el campo Ciudad').bail()
+                    .isLength({ min: 2 }).withMessage('La ciudad debe tener al menos 2 caracteres'), 
+    body('country').
+                    notEmpty().withMessage('Debes completar el campo País'),
+
     body('profile').
                     notEmpty().withMessage('Falta completar el rol de usuario'),
     

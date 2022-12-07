@@ -56,6 +56,32 @@
                 </div>
               </div>
               <div class="label-input">
+                <label for=" city"><b>Ciudad</b> </label>
+                <input class="controls <%= locals.errors && errors.city ? 'is-invalid' : null %>" type="text"
+                  name="city" id="city" placeholder="Ingrese Ciudad"
+                  value="<%= locals.oldData ? oldData.city : null %>">
+                <div class="text-danger">
+                  <%= (locals.errors && errors.city) ? errors.city.msg : '' %>
+                </div>
+              </div>
+              <div class="label-input">
+                <label><b>País de nacimiento:</b></label>
+                <select name="country" class="controls <%= locals.errors && errors.country ? 'is-invalid' : null %>"
+                  <option value="">Elegí un país</option>
+                  <% let countries=['Argentina', 'Bolivia' , 'Brasil' , 'Colombia' , 'Chile' , 'Ecuador' , 'Paraguay'
+                    , 'Perú' , 'Uruguay' , 'Venezuela' ]; %>
+                    <% for (const oneCountry of countries) { %>
+                      <option value="<%= oneCountry %>" <%=locals.oldData && (oneCountry===oldData.country) ? 'selected'
+                        : null %>
+                        > <%= oneCountry %>
+                      </option>
+                      <% } %>
+                </select>
+                <div class="text-danger">
+                  <%= (locals.errors && errors.country) ? errors.country.msg : '' %>
+              </div>
+            </div>
+              <div class="label-input">
                 <label><b>Foto de usuario</b></label>
                 <input class="controls <%= locals.errors && errors.avatar ? 'is-invalid' : null %>" type="file" 
                 name="avatar" id="userImage" value="<%= locals.oldData ? oldData.avatar : null %>">
