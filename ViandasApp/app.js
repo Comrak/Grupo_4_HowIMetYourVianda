@@ -3,16 +3,32 @@ const app = express();
 const path = require('path');
 const PUBLICFOLDER = path.resolve('public')
 const routerMain = require('./routers/mainRouter');
-const routerProduct = require('./routers/productsRouter')
-const routerUser = require('./routers/userRouter')
-const logMiddleware = require('./middleware/logginMiddleware')
+const routerProduct = require('./routers/productsRouter');
+const routerUser = require('./routers/userRouter');
+const session = require('express-session');
+const cookies = require('cookie-parser')
+
+
+const logMiddleware = require('./middlewares/userLoggedMiddleware')
 // Settings post requirement in app
-app.use(logMiddleware)
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({extended: false}));
 app.use(express.json());
+
+//Session
+app.use (session({
+secret  : 'secret',
+resave  : false,
+saveUninitialized : false
+}));
+
+app.use(cookies());
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware')
+app.use(userLoggedMiddleware);
+
 
 // calling methodOverride
 const methodOverride = require('method-override');
+const { cookie } = require('express-validator');
 app.use(methodOverride('_method'));
 
 

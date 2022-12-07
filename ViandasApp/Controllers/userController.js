@@ -1,10 +1,10 @@
 const { json } = require('express');
 const path = require('path');
-const user = require('../models/user');
+const User = require('../models/User');
 
 const {validationResult} = require('express-validator');
 const {userInfo} = require('os');
-const bcryptjs = require('bcryptjs');
+const bcryptjs = require('bcrypt');
 
 
 
@@ -31,7 +31,7 @@ const renderRegisterPost = (req, res) => {
         }
     
         // if all validations are ok then check if the user already exists
-        let userInDB = User.findByField('email', req.body.email);
+        let userInDB = user.findByField('email', req.body.email);
     
         if (userInDB) {
             return res.render('users/register', {

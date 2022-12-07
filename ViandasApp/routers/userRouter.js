@@ -4,7 +4,7 @@ const path = require('path');
 const { body } = require('express-validator');
 
 const userController = require('../controllers/userController');
-const validations = require('../middlewares/uservalidations');
+const validations = require('../middlewares/userValidations');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 
 const multer = require("multer");
