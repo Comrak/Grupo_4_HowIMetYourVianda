@@ -26,11 +26,26 @@ const uploadFile = multer({ storage });
 
 
 
-
+// Formulario de registro
 router.get('/register', guestMiddleware,userController.renderRegister);
+
+// Procesar el registro
 router.post('/register', uploadFile.single('avatar'), validations,userController.renderRegisterPost);
-router.get('/login', userController.renderLogin);
+
+// Formulario de login
+router.get('/login', guestMiddleware, userController.renderLogin);
+
+// Procesar el login
+router.post('/login', userController.renderLoginProcess);
+
+// Perfil de Usuario
+router.get('/profile', authMiddleware,userController.profile);
+
+// Procesar el LogOut
+router.get('/logout', userController.logout);
+
+//Carrito de Compras
 router.get('/carrito', userController.renderCarrito);
-router.post('/', userController.renderCarritoPost);
+router.post('/carrito', userController.renderCarritoPost);
 
 module.exports= router;

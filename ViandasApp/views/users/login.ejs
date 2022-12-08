@@ -8,18 +8,24 @@
                         <div class="form-login">
                             <h4>Ingreso</h4>
                             <div class="label-input">
-                                <label for="email">Usuario</label>
+                                <label for="email"><b> Email Usuario</b></label>
                                 <input class="controls" type="email" name="userEmail" id="userEmail"
-                                    placeholder="Ingrese su Usuario">
+                                    placeholder="Ingrese su Mail">
+                                    <div class="text-danger">
+                                        <%= (locals.errors && errors.userEmail) ? errors.userEmail.msg : '' %>
+                                    </div>
                             </div>
                             <div class="label-input">
-                                <label for="password"> Contraseña </label>
+                                <label for="password"><b>Contraseña</b></label>
                                 <input class="controls" type="password" name="userPassword" id="userPassword"
                                     placeholder="Ingrese su Contraseña">
+                                    <div class="text-danger">
+                                        <%= (locals.errors && errors.userPassword) ? errors.userPassword.msg : '' %>
+                                    </div>
                             </div>
                             <p><a href="#">Olvidaste tu contraseña?</a></p>
                             <br>
-                            <p><input type="checkbox" name="rememberMe" value="Recordar usuario">
+                            <p><input type="checkbox" name="rememberMe" value="on">
                                 <label>Recordar usuario</label>
                             </p>
                             <p><button type="submit" class="button">Ingresar</button></p>
