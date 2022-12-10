@@ -112,7 +112,7 @@ const renderLoginProcess = (req, res) => {
 
 const renderProfile = (req, res) => {
     
-    return res.render('users/usersProfile',{
+    return res.render('users/profile',{
         user: req.session.userLogged
     });
 }

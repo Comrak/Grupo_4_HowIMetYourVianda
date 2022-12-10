@@ -39,7 +39,7 @@ router.get('/login', guestMiddleware, userController.renderLogin);
 router.post('/login', userController.renderLoginProcess);
 
 // Perfil de Usuario
-router.get('/profile', authMiddleware,userController.profile);
+router.get('/profile', authMiddleware,userController.renderProfile);
 
 // Procesar el LogOut
 router.get('/logout', userController.logout);

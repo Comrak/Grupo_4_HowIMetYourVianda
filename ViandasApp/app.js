@@ -9,16 +9,16 @@ const session = require('express-session');
 const cookies = require('cookie-parser')
 
 
-const logMiddleware = require('./middlewares/userLoggedMiddleware')
+
 // Settings post requirement in app
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
 //Session
 app.use (session({
-secret  : 'secret',
-resave  : false,
-saveUninitialized : false
+ secret  : 'secret',
+ resave  : false,
+ saveUninitialized : false
 }));
 
 app.use(cookies());
@@ -30,8 +30,6 @@ app.use(userLoggedMiddleware);
 const methodOverride = require('method-override');
 const { cookie } = require('express-validator');
 app.use(methodOverride('_method'));
-
-
 
 
 app.use(express.static(PUBLICFOLDER))
