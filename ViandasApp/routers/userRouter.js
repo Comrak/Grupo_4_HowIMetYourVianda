@@ -9,6 +9,7 @@ const guestMiddleware = require('../middlewares/guestMiddleware');
 
 const multer = require("multer");
 const authMiddleware = require('../middlewares/authMiddleware');
+const { fileName } = require('../models/User');
 
 
 
@@ -17,7 +18,8 @@ const storage = multer.diskStorage({
         cb(null, path.resolve('public/img/users'));
     },
     filename: (req, file, cb) => {
-        cb(null,file.originalname);
+        let filename = '${Date.now()}_img${path.extname(file.originalname)}}'
+        cb(null,fileName);
     }
 });
 

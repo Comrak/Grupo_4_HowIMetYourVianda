@@ -117,7 +117,7 @@ const renderProfile = (req, res) => {
     });
 }
 
-const renderLogout = (req, res) => {
+const logout = (req, res) => {
     res.clearCookie('userEmail');
     req.session.destroy();
     return res.redirect('/');
@@ -138,7 +138,7 @@ module.exports = {
     renderLogin,
     renderLoginProcess,
     renderProfile,
-    renderLogout,
+    logout,
     renderCarrito,
     renderCarritoPost,
     renderRegisterPost

@@ -43,5 +43,20 @@
   "confirmPassword": "$2b$10$kukAK4rw8pIFtSW8mfiMhecajbQ8jfO5Lc7IyOQA03drc4FG8XjY2",
   "rememberMe": "Recordar usuario",
   "avatar": "Moria.jpg"
+ },
+ {
+  "id": 4,
+  "fullName": "Enrique Solis",
+  "birthDate": "1984-04-01",
+  "email": "esolis@gmail.com",
+  "mobilePhone": "Enrique2022",
+  "address": "Ayacucho 2152",
+  "city": "Capital Federal",
+  "country": "Argentina",
+  "profile": "Cliente",
+  "password": "$2b$10$I57eA1MuFDrsgrLACSpaIO7W36VZK.juiQe2Ww7aFPBls2kml740q",
+  "confirmPassword": "$2b$10$hEDeHy1UrI8fFyOZPCgb3O96Ww9pn31Z.fAHT4Pyherg87WMygNUC",
+  "rememberMe": "Recordar usuario",
+  "avatar": "EnriqueSolis.jpg"
  }
 ]
