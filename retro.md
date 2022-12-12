@@ -131,11 +131,11 @@
 * Dejar de hacer: Demorar en detalles.
 
 ### Montaño Florencia
-* Comenzar a hacer: Consultas en clase.
-* Hacer más: Preguntar dudas especificas a los profes.
-* Continuar haciendo: Participar de las reuniones.
-* Hacer menos: Limitarme al material de la clase exclusivamente.
-* Dejar de hacer: Frustrarme cuando algo no me sale.
+* Comenzar a hacer:
+* Hacer más: 
+* Continuar haciendo: 
+* Hacer menos: 
+* Dejar de hacer: 
 
 ### Martin Altuna
 * Comenzar a hacer: Planificar de que manera realizar las tareas antes de hacerlas, corregir errores que arrastramos de los sprints anteriores.
