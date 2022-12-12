@@ -17,3 +17,9 @@
     color: rgb(46, 43, 231);
     text-decoration: none;
 }
+
+.img-size{
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+}

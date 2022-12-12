@@ -1,4 +1,4 @@
-<%- include('../partials/head')%>
+<%- include('../partials/head',{cssFile:'userStyles.css'})%>
 
     <body>
         <%- include('../partials/header')%>
@@ -9,7 +9,7 @@
                     <div class="row">
                         <div class="col-md-3">
                             <h2>Bienvenido <%= user.fullName %>   </h2>
-                            <img src="/img/users/<%=user.avatar%> ">
+                            <img class ="img-size"src="/img/users/<%=user.avatar%> ">
                             <br>
                             <br>
                             <div class="alert alert-success"> <%= user.email %>   </div>
