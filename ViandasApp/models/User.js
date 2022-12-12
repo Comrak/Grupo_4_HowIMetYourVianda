@@ -78,5 +78,4 @@ const User = {
         fs.writeFileSync(this.fileName, JSON.stringify(finalUsers, null, ' '));
 }
 }
-
 module.exports = User;

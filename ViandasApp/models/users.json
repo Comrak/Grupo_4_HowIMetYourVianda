@@ -1,19 +1,5 @@
 [
- {
-  "id": 1,
-  "userName": "admin",
-  "firstname": "carlos",
-  "lastname": "perez",
-  "email": "admin@admin.com",
-  "password": "$2b$10$",
-  "role": "admin",
-  "Country": "Argentina",
-  "City": "Buenos Aires",
-  "Address": "Av. Corrientes 1234",
-  "LandPhone": "123456789",
-  "MobilePhone": "123456789",
-  "avatar": "/img/users/avatar.png"
- },
+
  {
   "id": 2,
   "fullName": "Ricardo Font",
@@ -23,7 +9,7 @@
   "address": "Ayacucho 1123",
   "city": "Capital Federal",
   "country": "Argentina",
-  "profile": "Administrador",
+  "profile": "admin",
   "password": "$2b$10$8fKEQb01zwAsfcMpKFFgGOUfucETiO0n8OuO1zn/6hInGxcqJSaqC",
   "confirmPassword": "$2b$10$FDDD3P7GvcnLsgktmgEZmOvcfesPYn0e/QuoVSPu4mq3hKhiNRw8W",
   "rememberMe": "Recordar usuario",
@@ -58,5 +44,19 @@
   "confirmPassword": "$2b$10$hEDeHy1UrI8fFyOZPCgb3O96Ww9pn31Z.fAHT4Pyherg87WMygNUC",
   "rememberMe": "Recordar usuario",
   "avatar": "EnriqueSolis.jpg"
+ },
+ {
+  "id": 5,
+  "fullName": "lucas",
+  "birthDate": "1985-12-02",
+  "email": "lucas@dh.com",
+  "mobilePhone": "6545613213456",
+  "address": "fasdfjñlkj",
+  "city": "caba",
+  "country": "Argentina",
+  "profile": "admin",
+  "password": "$2b$10$RG/LME6SD90jBvqbSrjbk.MEzG2IuFKeZTqD6WEAeoJjHvwhSnJUS",
+  "confirmPassword": "$2b$10$eRB/BCOOVtMoCYm6OsqcKui3kgVXlzU0nOJuCFWSzhMtkxDWeYGhe",
+  "avatar": "1670850887212_img.jpeg}"
  }
 ]
