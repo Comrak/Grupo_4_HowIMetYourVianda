@@ -43,5 +43,19 @@
   "confirmPassword": "$2b$10$kukAK4rw8pIFtSW8mfiMhecajbQ8jfO5Lc7IyOQA03drc4FG8XjY2",
   "rememberMe": "Recordar usuario",
   "avatar": "Moria.jpg"
+ },
+ {
+  "id": 4,
+  "fullName": "luis miguel",
+  "birthDate": "1945-02-20",
+  "email": "luismi@dh.com",
+  "mobilePhone": "45642341342",
+  "address": "asdñlfakjsdñlfkj",
+  "city": "caba",
+  "country": "Argentina",
+  "profile": "Administrador",
+  "password": "$2b$10$Opm45nHMrzPBH.1MxQAKEO8YR199dv0Bv09yy.eAQSmaNPtn9t2am",
+  "confirmPassword": "$2b$10$lFSAHrATJtSbLQWpD7XC7.Fh66fhpOqVq6sfp76KnahuqB3WtJNyS",
+  "avatar": "juan pablo.jpeg"
  }
 ]
