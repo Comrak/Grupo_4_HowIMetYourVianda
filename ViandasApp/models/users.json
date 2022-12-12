@@ -1,5 +1,4 @@
 [
-
  {
   "id": 2,
   "fullName": "Ricardo Font",
@@ -58,5 +57,33 @@
   "password": "$2b$10$RG/LME6SD90jBvqbSrjbk.MEzG2IuFKeZTqD6WEAeoJjHvwhSnJUS",
   "confirmPassword": "$2b$10$eRB/BCOOVtMoCYm6OsqcKui3kgVXlzU0nOJuCFWSzhMtkxDWeYGhe",
   "avatar": "1670850887212_img.jpeg}"
+ },
+ {
+  "id": 6,
+  "fullName": "Lucas",
+  "birthDate": "1980-12-02",
+  "email": "lucas@gmail.com",
+  "mobilePhone": "455643241234",
+  "address": "jlfakjsfdñlajsñld",
+  "city": "caba",
+  "country": " ",
+  "profile": "admin",
+  "password": "$2b$10$cTBO.Btz9IoEX6rrYhFTm.fmmNrLouo6KJSaOY6b1ACnVDlMY44Da",
+  "confirmPassword": "$2b$10$mqJaIrxwagx9KoPez6j06eeF7T8aGW0wXssEXepbLJN8qJdlqqc5u",
+  "avatar": "1670867254632_img.jpeg}"
+ },
+ {
+  "id": 7,
+  "fullName": "luismiguel",
+  "birthDate": "1980-12-02",
+  "email": "luismi@gmail.com",
+  "mobilePhone": "4564654321",
+  "address": "ñalksjdfñlakdsjfñl",
+  "city": "caba",
+  "country": " ",
+  "profile": "cliente",
+  "password": "$2b$10$fQpPZnjAvbdM80Hxx2eQMun/Xlz8Uof8YtHUp6FNm.lsrdGYfUqku",
+  "confirmPassword": "$2b$10$MSLFzh.oX.r4t8/QDvTdcex7vUUO5xm8cM53fleg/7a5Voh36eaIa",
+  "avatar": "1670867410974_img.jpeg}"
  }
 ]
