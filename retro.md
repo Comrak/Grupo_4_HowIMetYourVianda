@@ -196,8 +196,8 @@
 * Dejar de hacer: 
 
 ### Ariel Limes
-* Comenzar a hacer: 
-* Hacer más: 
-* Continuar haciendo: 
-* Hacer menos: 
-* Dejar de hacer: 
+* Comenzar a hacer: Mantener el compromiso con el equipo para terminar las tareas.
+* Hacer más: tener mas reuniones dia a dia para coordinar.
+* Continuar haciendo: poner en practica todo lo que vimos
+* Hacer menos: tomar tareas de otro
+* Dejar de hacer: no responder a los mensajes del grupo
