@@ -79,9 +79,9 @@
   ]
  },
  {
-  "prices": "1542",
+  "prices": "1543",
   "name": "Pizza",
-  "description": "Pizza de las mejores, Esta es la mejor pizza que probaste en tu vida..No te la pierdas\r\n                    \r\n                    \r\n                    \r\n                    ",
+  "description": "Pizza de las mejores, Esta es la mejor pizza que probaste en tu vida..No te la pierdas\r\n                    \r\n                    \r\n                    \r\n                    \r\n                    ",
   "tags": [
    "Pizza",
    "Vegana",
@@ -101,5 +101,15 @@
   ],
   "imagen": "/img/productos/img_1669083688199.jpeg",
   "id": 11
+ },
+ {
+  "prices": "3555",
+  "name": "asdasd",
+  "description": "asdasdasd",
+  "tags": [
+   "asdasdasd"
+  ],
+  "imagen": "/img/productos/img_1669161733874.jpg",
+  "id": 12
  }
 ]
