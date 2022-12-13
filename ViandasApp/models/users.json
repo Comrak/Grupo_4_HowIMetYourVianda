@@ -85,5 +85,35 @@
   "password": "$2b$10$fQpPZnjAvbdM80Hxx2eQMun/Xlz8Uof8YtHUp6FNm.lsrdGYfUqku",
   "confirmPassword": "$2b$10$MSLFzh.oX.r4t8/QDvTdcex7vUUO5xm8cM53fleg/7a5Voh36eaIa",
   "avatar": "1670867410974_img.jpeg}"
+ },
+ {
+  "id": 8,
+  "fullName": "Jose",
+  "birthDate": "1987-04-30",
+  "email": "asd@asd.com",
+  "mobilePhone": "1234567890",
+  "address": "TOrino",
+  "city": "TOrino",
+  "country": " ",
+  "profile": "admin",
+  "password": "$2b$10$K/GFY9EUYLBTgqE8QSV9XuVp055V3gR5SM.2JLOinB9k.Bg9MjdCq",
+  "confirmPassword": "$2b$10$V323xSnfqSuugUi6EoY1POwgFhnZU8Ll3v18nEjW7BbJiTpmpG9dW",
+  "rememberMe": "Recordar usuario",
+  "avatar": "1670875991745_img.jpg}"
+ },
+ {
+  "id": 9,
+  "fullName": "Ariel",
+  "birthDate": "1987-04-30",
+  "email": "arielito@ariel.com",
+  "mobilePhone": "1234567890",
+  "address": "Buenos Aires",
+  "city": "Buenos Aires",
+  "country": " ",
+  "profile": "cliente",
+  "password": "$2b$10$YtILS8DkyIMWhSkTKrx68u6aIufFWGu5vWFANQBTqAGH3nlAe/3MG",
+  "confirmPassword": "$2b$10$bVVylJIbzm2l7QPl.52S.uHRVf11fPjclT9JBjaDrSd8rFlFv3.y2",
+  "rememberMe": "Recordar usuario",
+  "avatar": "1670876094197_img.jpg}"
  }
 ]
