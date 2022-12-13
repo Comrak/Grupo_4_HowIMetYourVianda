@@ -1,0 +1,25 @@
+@import url("styles.css");
+
+
+
+.botton-margin{
+  margin: 0.5em 0;
+
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form a{
+    color: rgb(46, 43, 231);
+    text-decoration: none;
+}
+
+.img-size{
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+}
