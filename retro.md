@@ -156,12 +156,48 @@
 * Hacer más: reuniones de trabajo para asignar tareas y coordinar.
 * Continuar haciendo: Utilizar el Trelo para asignar tareas y coordinar.do:
 * Hacer menos: intentar resolver solo sin ayuda de otros
-* Dejar de hacer: demorar en detalles menores
+* Dejar de hacer: demorar en detalles menores.
 
+## Sprint 5
 
+### Jose Nardulli  
+* Comenzar a hacer: revisar mas a fondo el codigo
+* Hacer más: participar mas
+* Continuar haciendo: ayudar a mis companeros 
+* Hacer menos: descuidar las asignaciones
+* Dejar de hacer: descuidar las asignaciones
 
-    
-    
-    
-    
-    
+### Victoria Aquino
+* Comenzar a hacer: Mejorar la comunicación.
+* Hacer más: Revisión del trabajo realizado de todos.
+* Continuar haciendo: Estar pendiente del estado de avance del proyecto integrador. 
+* Hacer menos: Ir más allá de lo que pide la consigna de cada sprint.
+* Dejar de hacer: Postergar la realización de las tareas.
+
+### Montaño Florencia
+* Comenzar a hacer: Comentarios en el Trello.
+* Hacer más: Reuniones de equipo.
+* Continuar haciendo: Trabajar en equipo.
+* Hacer menos: Perder tiempo en resolver algo sola.
+* Dejar de hacer: Tener miedo de cometer errores.
+
+### Martin Altuna
+* Comenzar a hacer: 
+* Hacer más: 
+* Continuar haciendo: 
+* Hacer menos: 
+* Dejar de hacer: 
+
+### Luis Maria Abdala
+* Comenzar a hacer: 
+* Hacer más: 
+* Continuar haciendo: 
+* Hacer menos: 
+* Dejar de hacer: 
+
+### Ariel Limes
+* Comenzar a hacer: Mantener el compromiso con el equipo para terminar las tareas.
+* Hacer más: tener mas reuniones dia a dia para coordinar.
+* Continuar haciendo: poner en practica todo lo que vimos
+* Hacer menos: tomar tareas de otro
+* Dejar de hacer: no responder a los mensajes del grupo
