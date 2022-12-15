@@ -212,11 +212,11 @@
 * Dejar de hacer: abandonar al equipo 
 
 ### Victoria Aquino
-* Comenzar a hacer: 
-* Hacer más: 
-* Continuar haciendo: 
-* Hacer menos: 
-* Dejar de hacer: 
+* Comenzar a hacer: Revisiones con más tiempo de la entrega.
+* Hacer más: Reuniones semanales.
+* Continuar haciendo: Trabajar en equipo y participar en el proyecto.
+* Hacer menos: Atrasarme en los temas nuevos por cumplir con el sprint.
+* Dejar de hacer: Intentar trabajar en las consignas que son opcionales cuando estamos corriendo para cumplir con las obligatorias.
 
 ### Montaño Florencia
 * Comenzar a hacer: 
