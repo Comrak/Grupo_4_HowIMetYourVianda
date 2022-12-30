@@ -2,13 +2,13 @@
 const path = require('path');
 const fs = require('fs');
 
-const productsFilePath = path.resolve('./models/productos.json')
-const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf8'));
+const productos = path.resolve('.src/database/models/products.js')
 const Math = require('Math')
 
 // see all products
 const renderProductAll = (req, res,) => {
-    return res.render('products/productAll',{jsProductos:productos})
+    const AllProducts = productos.findAll();
+    return res.render('products/productAll',{jsProductos:AllProducts})
 }
 
 // see a filter list of product
