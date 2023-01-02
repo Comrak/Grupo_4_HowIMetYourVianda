@@ -34,7 +34,7 @@ module.exports = function(sequelize, DataTypes) {
         key: 'id'
       }
     },
-    adress: {
+    adress_dir: {
       type: DataTypes.STRING(255),
       allowNull: false
     },

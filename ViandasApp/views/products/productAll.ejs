@@ -9,23 +9,23 @@
                     <h4 class="headlines">Viandas del dia</h4>
 
                     <div class="productos">
+                        
                         <% jsProductos.forEach(function(producto) { %>
-
                             <article class="product-list">
                                 <div class="art_principal">
                                     <div class="imagen-producto">
-                                        <img src="<%= producto.imagen %>" id="<%= producto.name%>">
+                                        <img src="<%= producto.image %>" id="<%= producto.name%>">
                                     </div>
 
                                     <div class="product-price-name">
-                                        <p class="prices">$<%= producto.prices %>
+                                        <p class="prices">$<%= producto.price %>
                                         </p>
                                         <p class="discount">
                                             <%= producto.name %>
                                         </p>
                                     </div>
                                     <p class="description">
-                                        <%= producto.description %>
+                                        <%= producto.descripcion %>
                                     </p>
 
                                 </div>

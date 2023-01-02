@@ -7,3 +7,5 @@ config: path.resolve('./database/config', 'config.js'),
 'seeders-path': path.resolve('./database/seeders'),
 'migrations-path': path.resolve('./database/migrations'),
 }
+
+

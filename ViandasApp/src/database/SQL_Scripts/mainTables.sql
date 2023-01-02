@@ -11,7 +11,7 @@ CREATE TABLE Users (
     firtsName varchar(55) NOT NULL,
     lastName varchar(55) NOT NULL,
     email varchar(55) NOT NULL,
-    password varchar(55) NOT NULL,
+    password varchar(255) NOT NULL,
     role_id int NOT NULL,
     adress varchar(255) NOT NULL,
     adress_id INT NOT NULL,
@@ -144,3 +144,7 @@ ADD FOREIGN KEY (type_id) REFERENCES TransactionType(id),
 ADD FOREIGN KEY (currency_id) REFERENCES Currency(id),
 ADD FOREIGN KEY (paymentMethod_id) REFERENCES PaymentMethod(id),
 ADD FOREIGN KEY (paymentStatus_id) REFERENCES PaymentStatus(id); 
+
+
+--codigo que use para cargar los modelos con database firts: 
+--sequelize-auto -o "./database/models" -d HowIMetYourVianda -h localhost -u userdeBD -p passdeBD 3306 -x -e mysql

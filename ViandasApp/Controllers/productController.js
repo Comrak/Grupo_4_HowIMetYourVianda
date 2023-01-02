@@ -1,14 +1,22 @@
 
 const path = require('path');
 const fs = require('fs');
+const db = require('../src/database/models')
 
-const productos = path.resolve('.src/database/models/products.js')
+const productsFilePath = path.resolve('./models/productos.json')
+const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf8'));
 const Math = require('Math')
 
 // see all products
 const renderProductAll = (req, res,) => {
-    const AllProducts = productos.findAll();
-    return res.render('products/productAll',{jsProductos:AllProducts})
+    let productosAll =[];
+    db.products.findAll().then((resultado)=>{
+        resultado.forEach(element => {
+            element.tags = element.tags.replace('[','').replace(']','').replaceAll('"','').split(',')
+            productosAll.push(element.dataValues)
+        });
+        return res.render('products/productAll',{jsProductos:productosAll})
+    })
 }
 
 // see a filter list of product
