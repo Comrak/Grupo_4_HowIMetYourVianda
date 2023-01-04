@@ -1,8 +1,8 @@
 module.exports = {
   "development": {
-    "username": process.env.DB_USER,
-    "password": process.env.DB_PASS,
-    "database": process.env.DB_NAME,
+    "username": "root",
+    "password": null,
+    "database": "How_i_met_your_vianda",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
