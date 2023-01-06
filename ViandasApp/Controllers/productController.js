@@ -5,8 +5,8 @@ const { Op } = require("sequelize");
 const db = require('../database/models');
 const Products = db.Products;
 
-const productsFilePath = path.resolve('./models/productos.json')
-const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf8'));
+//const productsFilePath = path.resolve('./models/productos.json')
+//const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf8'));
 const Math = require('Math')
 
 // see all products

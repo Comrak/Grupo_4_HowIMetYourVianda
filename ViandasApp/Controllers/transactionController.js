@@ -1,7 +1,7 @@
 
 const path = require('path');
 
-const User = require('../models/User');
+//const User = require('../models/User');
 
 const {validationResult} = require('express-validator');
 const { userInfo } = require('os');
