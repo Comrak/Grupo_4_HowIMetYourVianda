@@ -17,3 +17,6 @@ Google Meet joining info
 Video call link: https://meet.google.com/ewg-oinu-mhq
 
 acordamos entregar antes y no esperar a ultimo momento para pedir ayuda o recibir fedback
+
+# Monthly y weekly sprint 6
+Jose Nardulli y ariel se reunieron para disenar el esquema de bases de datos, ariel limes se encargo del realizado de las migraciones y jose de generar la base de datos en sql y realizar el DER ademas de comprobar el funcionamiento del proyecto y su subida al repo
