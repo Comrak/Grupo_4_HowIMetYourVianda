@@ -1,12 +1,23 @@
-const { json } = require('express');
+
 const path = require('path');
-const User = require('../models/User');
+const { Op } = require("sequelize");
+
+const fetch = require('node-fetch');
+
+// const User = require('../models/User');
+
+const db = require('../database/models');
+const Users = db.Users;
+const Country = db.Country;
+const UserRol = db.UserRol;
+const City = db.City;
+const Address = db.Address;
+
 
 const {validationResult} = require('express-validator');
-const {userInfo} = require('os');
-const bcryptjs = require('bcrypt');
-
-
+const { userInfo } = require('os');
+const bcryptjs = require('bcryptjs');
+const { response } = require('express');
 
 //const renderHome = (req, res) => {
  //   return res.render('home')
@@ -16,65 +27,93 @@ const bcryptjs = require('bcrypt');
   //  return res.render('about')
 //}
 
-const renderRegister = (req, res) => {
-    return res.render('users/register')
+const register = async (req, res) => {
+    
+    const countries = await Country.findAll();
+    const userRoles = await UserRol.findAll();
+    
+    return res.render('users/register',{countries,userRoles})
 }
 
-const renderRegisterPost = (req, res) => {
-    const resultValidation=validationResult(req)
-        // check if there are errors
-        if(!resultValidation.isEmpty()){
-                    return res.render('users/register', {
-                                                        errors: resultValidation.mapped(),
-                                                        oldData: req.body
-                                                     });
-        }
+const processRegister = async (req, res) => {
     
-        // if all validations are ok then check if the user already exists
-        let userInDB = User.findByField('email', req.body.email);
-    
-        if (userInDB) {
-            return res.render('users/register', {
-                            errors: {
-                                email: {
-                                    msg: 'Este email ya está registrado'
-                                }
-                            },
-                            oldData: req.body
-         });
-        }
-    
-    
-        // if user is new then create the user in DB
-    
-        let hashedPassword = bcryptjs.hashSync(req.body.password, 10);
-        let hashedConfirmPassword = bcryptjs.hashSync(req.body.confirmPassword, 10);
-        let userToCreate={
-            ...req.body,
-            avatar: req.file.filename,
-            password: hashedPassword,
-            confirmPassword: hashedConfirmPassword
-    
-        }
-    
-        User.create(userToCreate);
-        return res.redirect('login')
-    
-    
-    }
-    
+ 
+    const countries = await Country.findAll();
+    const userRoles = await UserRol.findAll();
 
-const renderLogin = (req, res) => {
+    const resultValidation=validationResult(req)
+    // check if there are errors
+    if(!resultValidation.isEmpty()){
+                return res.render('users/register', {
+                                                    errors: resultValidation.mapped(),  // los errores que contiene el objeto resultValidation
+                                                    oldData: req.body,
+                                                    countries,
+                                                    userRoles               
+                                                 });
+    }
+
+    // if all validations are ok then check if the user already exists
+    let userInDB = await Users.findOne({
+        where: {'email': req.body.email}  // 'email' es el campo de la tabla 'users
+    });
+
+    
+    if (userInDB) {
+        return res.render('users/register', {
+                        errors: {
+                            email: {
+                                msg: 'Este email ya está registrado'
+                            }
+                        },
+                        oldData: req.body,
+                        countries:countries,
+                        userRoles:userRoles
+     });
+    }
+
+
+    // if user is new then create the user in DB
+
+    let hashedPassword = bcryptjs.hashSync(req.body.password, 10);
+    let hashedConfirmPassword = bcryptjs.hashSync(req.body.confirmPassword, 10);
+    let userToCreate={
+        ...req.body,
+        country_id: req.body.country,
+        role_id: req.body.profile,
+        avatar: req.file.filename,
+        password: hashedPassword,
+        confirmPassword: hashedConfirmPassword
+    }
+
+    try{
+        let userCreated = await Users.create(userToCreate);
+        return res.redirect('login')
+    }
+    catch(error){
+        console.log(error)
+    }
+
+
+}
+
+const login = (req, res) => {
+    
     return res.render('users/login')
 }
 
-const renderLoginProcess = (req, res) => {
-    
-    let userToLogin = User.findByField('email', req.body.userEmail);
+const loginProcess = async (req, res) => {
+
+    const bodyData = req.body;
+
+    let userToLogin = await Users.findOne({
+        where: {'email': req.body.email},
+        include : ['userCountry','userRole'] 
+    });
+   
    // ******************* check if user exists ************ 
     if (userToLogin) {
     // ****************** Check password *******************    
-                let passwordOK=bcryptjs.compareSync(req.body.userPassword, userToLogin.password)
+                let passwordOK=bcryptjs.compareSync(req.body.password, userToLogin.password)
                 if (passwordOK) {
                     // elimino del objeto userToLogin la propiedad password
                     delete userToLogin.password;
@@ -95,7 +134,7 @@ const renderLoginProcess = (req, res) => {
                             msg: 'Esta Contraseña es incorrecta'
                         }
                     },
-                    oldData: req.body
+                    oldData: bodyData
                 });      
     } else {
         return res.render('users/login', {
@@ -104,15 +143,15 @@ const renderLoginProcess = (req, res) => {
                     msg: 'Este email no está registrado'
                 }
             },
-            oldData: req.body
+            oldData: bodyData
         });
     }
  }
 
 
-const renderProfile = (req, res) => {
+const profile = (req, res) => {
     
-    return res.render('users/profile',{
+    return res.render('users/usersProfile',{
         user: req.session.userLogged
     });
 }
@@ -124,22 +163,87 @@ const logout = (req, res) => {
 
 }
 
-const renderCarrito = (req, res) => {
+const carrito = (req, res) => {
     return res.render('users/carritoCompras')
 }
 
-const renderCarritoPost = (req, res) => {
-    return res.render('')
+const processCarrito = (req, res) => {
+    return res.render('users/carritoCompras')
+}
+
+const address = async (req, res) => {
+    const countries = await Country.findAll();
+    const cities = await City.findAll();
+     
+    return res.render('users/address',{countries,cities})
+}
+
+const processAddress =   async (req, res) => {
+
+   
+
+    const addressResultValidation=validationResult(req);
+    const countries = await Country.findAll();
+    const cities = await City.findAll();
+
+
+    if(!addressResultValidation.isEmpty()){
+        return res.render('users/address', {
+                                            errors: addressResultValidation.mapped(),  // los errores que contiene el objeto resultValidation
+                                            oldData: req.body,  
+                                            countries:countries,
+                                            cities:cities
+                                            });
+    }
+
+    let addressToCreate={
+        ...req.body
+       }
+
+
+    try{
+        let userCreated = await Address.create(addressToCreate);
+        return res.redirect('/users/profile')
+    }
+    catch(error){
+        console.log(error)
+    }
+
+
+
+
+
+
+
+}
+
+// ****************************************  API REST  ****************************************
+userList = async (req, res) => {
+    const users = await Users.findAll();
+    return res.json({data:users})
+    }
+
+citiesList = async (req, res) => {
+    // promesa 1 busca que el servidor este levantado y funcione
+    const response = await fetch('https://apis.datos.gob.ar/georef/api/provincias?');
+    // promesa 2 espera a que la promesa 1 se resuelva y el formato sea adecuado para json
+    const cities = await response.json()
+    return res.json({data:cities.provincias})
 }
 
 
 module.exports = {  
-    renderRegister,
-    renderLogin,
-    renderLoginProcess,
-    renderProfile,
+    register,
+    processRegister,
+    login,
+    loginProcess,
+    profile,
     logout,
-    renderCarrito,
-    renderCarritoPost,
-    renderRegisterPost
-}       
+    carrito,
+    processCarrito,
+    address,
+    processAddress,
+    userList,
+    citiesList
+  
+}      

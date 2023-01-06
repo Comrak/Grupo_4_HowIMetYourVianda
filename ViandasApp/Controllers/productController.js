@@ -1,84 +1,49 @@
 
 const path = require('path');
 const fs = require('fs');
-const db = require('../src/database/models')
+const { Op } = require("sequelize");
+const db = require('../database/models');
+const Products = db.Products;
 
 const productsFilePath = path.resolve('./models/productos.json')
 const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf8'));
 const Math = require('Math')
 
 // see all products
-const renderProductAll = (req, res,) => {
-    let productosAll =[];
-    db.products.findAll().then((resultado)=>{
-        resultado.forEach(element => {
-            element.tags = element.tags.replace('[','').replace(']','').replaceAll('"','').split(',')
-            productosAll.push(element.dataValues)
-        });
-        return res.render('products/productAll',{jsProductos:productosAll})
-    })
+const renderProductAll = async (req, res,) => {
+    const productos = await Products.findAll();
+    return res.render('products/productAll',{jsProductos:productos})
 }
 
 // see a filter list of product
-const renderDetail= (req, res,) => {
-    console.log(req.query.data)
-    console.log(req.params.id)
-    if(req.params.id == undefined || req.params.id == null || req.params.id == 'getDetail'){
-        if(req.query.data == undefined || req.query.data == null ){
-            console.log(`${req.query.data} es undefined `)
-            return res.send("No existe el producto");
-        }else{
-            console.log('no salio el find')
-            const productToFind = productos.find((product) => ((product.id == req.query.data)|| 
-                                                                (product.name.match(req.query.data))));
-            if (productToFind == undefined) {
-                return res.send("No existe el producto");
-            }
-            return res.render('products/detail', {productToFind: productToFind})
-        }
-    }else{
+ const renderDetail= async (req, res,) => {
         const productId = req.params.id;
-        const productToFind = productos.find((product) => product.id == productId);
-        if (productToFind == undefined) {
-        return res.send("No existe el producto");
+        const productFinded = await Products.findByPk(productId);
+        // const productToFind = productos.find((product) => product.id == productId);
+        if (productFinded == undefined) {
+          return res.send("No existe el producto");
         }
-        return res.render('products/detail', {productToFind: productToFind});
-    }
-    
-}
+        return res.render('products/detail', {productToFind: productFinded});
+      }
 
 const renderProductCreate = (req, res) => {
    return res.render('products/productManagement')
 }
 
-const renderProductRegistration = (req, res) => {
+const renderProductRegistration = async (req, res) => {
 
     const camposDeNuevoProducto = req.body;
-    camposDeNuevoProducto.imagen = '/img/productos/'+req.file.filename;
-    camposDeNuevoProducto.tags = req.body.tags.trim().split(',')
-
-   
-    // tomar el ultimo elemento del array y sumarle 1
-    const ids = productos.map(object => {
-        return object.id;
-      });
-
-    const maxId = Math.max(...ids);
-                  
-    camposDeNuevoProducto.id = maxId + 1;
-    
-    productos.push(camposDeNuevoProducto);
-
-    fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '));
+    camposDeNuevoProducto.image = '/img/productos/'+req.file.filename;
+    // camposDeNuevoProducto.tags = req.body.tags.trim().split(',')
+    const newProduct= await Products.create(camposDeNuevoProducto)
     return res.redirect('/products');
 }
 
-const renderProductEdit = (req, res) => {
+const renderProductEdit = async (req, res) => {
 
-    let id = req.params.id;
-		
-    let productToEdit = productos.find(product => product.id == id);
-    productToEdit.tags = productToEdit.tags.join(';').split(';') ;
+    const productId = req.params.id;
+    const productToEdit = await Products.findByPk(productId);
+    // productToEdit.tags = productToEdit.tags.join(';').split(';') ;
 
 
     if(productToEdit==undefined){	
@@ -88,28 +53,33 @@ const renderProductEdit = (req, res) => {
         return res.render('products/productEdit', {productToEdit:productToEdit, req:req} )
 }
 
-const renderProductUpdate = (req, res) => {
+const renderProductUpdate = async (req, res) => {
     
     let id = req.params.id;
     const dataToUpdate = req.body;
-    dataToUpdate.tags = req.body.tags.trim().split(',') 
+    // dataToUpdate.tags = req.body.tags.trim().split(',') 
     
     // check if the user has uploaded a new image
     if (req.file != undefined) {
-        dataToUpdate.imagen = '/img/productos/'+req.file.filename;
+        dataToUpdate.image = '/img/productos/'+req.file.filename;
     }   
-    // find the product to update
-    const productIndex = productos.findIndex(product => product.id == id);
-    if (productIndex == -1) {
+    // find the product in the database
+    let productToUpdate = await Products.findByPk(id);
+    // check if the product exists
+    if (!productToUpdate) {
         return res.render('error');
     }
-    productos[productIndex] = {
-        ... productos[productIndex],
+    // if exists then update the product
+    productToUpdate = {
+        ... productToUpdate,
         ... dataToUpdate,
     }
 
-    fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '));
-
+    const productUpdated = await Products.update(productToUpdate, {
+        where: {
+            id: id
+        }
+    });
     return res.redirect('/products');
 
      
@@ -117,14 +87,12 @@ const renderProductUpdate = (req, res) => {
 
 const renderProductDelete = (req, res) => {
     let id = req.params.id;
-		
-    const productIndex = productos.findIndex(product => product.id == id);
-    if (productIndex == -1) {
-        return res.render('error');
-    }
-        productos.splice(productIndex, 1);
-
-        fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '));
+	
+    Products.destroy({
+        where: {
+            id: id
+        }
+    });
         return res.redirect('/products');
 }
 

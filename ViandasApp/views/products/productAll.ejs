@@ -9,8 +9,8 @@
                     <h4 class="headlines">Viandas del dia</h4>
 
                     <div class="productos">
-                        
                         <% jsProductos.forEach(function(producto) { %>
+
                             <article class="product-list">
                                 <div class="art_principal">
                                     <div class="imagen-producto">
@@ -25,18 +25,18 @@
                                         </p>
                                     </div>
                                     <p class="description">
-                                        <%= producto.descripcion %>
+                                        <%= producto.description %>
                                     </p>
 
                                 </div>
 
-                                <% if (locals.userLogged && locals.userLogged.profile=='cliente' ) { %>
+                                <% if (locals.userLogged && locals.userLogged.role_id === 2 ) { %>
                                     <div class="add-carrito btn-bottom">
                                         <a href="/users/carrito">
                                             <button class="btn btn-primary ">Agregar al carrito</button>
                                         </a>
                                     </div>
-                                    <% } else if (locals.userLogged && locals.userLogged.profile=='admin' ) { %>
+                                    <% } else if (locals.userLogged && locals.userLogged.role_id===1 ) { %>
                                         <div class="add-carrito btn-bottom ">
                                             <a href="/products/<%=producto.id%>">
                                                 <button class="btn btn-primary ">Acceder a Edicion</button>
