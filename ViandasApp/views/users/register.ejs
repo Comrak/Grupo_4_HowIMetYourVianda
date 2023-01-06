@@ -48,94 +48,72 @@
                   <%= (locals.errors && errors.mobilePhone) ? errors.mobilePhone.msg : '' %>
                 </div>
               </div>
-              <div class="form-group botton-margin">
-                <label for=" adress"><b>Domicilio</b> </label>
-                <input class="form-control <%= locals.errors && errors.address ? 'is-invalid' : null %>" type="text"
-                  name="address" id="adress" placeholder="Ingrese su Domicilio"
-                  value="<%= locals.oldData ? oldData.address : null %>">
-
-                <div class="text-danger">
-                  <%= (locals.errors && errors.address) ? errors.address.msg : '' %>
-                </div>
-              </div>
-              <div class="form-group botton-margin">
-                <label for=" city"><b>Ciudad</b> </label>
-                <input class="form-control <%= locals.errors && errors.city ? 'is-invalid' : null %>" type="text"
-                  name="city" id="city" placeholder="Ingrese Ciudad"
-                  value="<%= locals.oldData ? oldData.city : null %>">
-                <div class="text-danger">
-                  <%= (locals.errors && errors.city) ? errors.city.msg : '' %>
-                </div>
-              </div>
+    
               <div class="form-group botton-margin">
                 <label><b>País de nacimiento:</b></label>
                 <select name="country" class="form-control <%= locals.errors && errors.country ? 'is-invalid' : null %>"
                   <option value="">Elegí un país</option>
-                  <% let countries=['Argentina', 'Bolivia' , 'Brasil' , 'Colombia' , 'Chile' , 'Ecuador' , 'Paraguay'
-                    , 'Perú' , 'Uruguay' , 'Venezuela' ]; %>
+              
                     <% for (const oneCountry of countries) { %>
-                      <option value=" <%=locals.oldData && (oneCountry===oldData.country) ? 'selected': null %>"> 
-                        <%= oneCountry %>
-                      </option>
+                      <option value="<%=oneCountry.id%>"<%=locals.oldData && (oneCountry.id===oldData.country) ? 'selected' :null %>> <%= oneCountry.name %> </option>
                       <% } %>
                 </select>
                 <div class="text-danger">
                   <%= (locals.errors && errors.country) ? errors.country.msg : '' %>
                 </div>
+
                 <div class="form-group botton-margin">
                   <label><b>Perfil:</b></label>
-                  <select name="profile" class="form-control <%= locals.errors && errors.country ? 'is-invalid' : null %>"
-                    <option value="">Elegí un Perfil</option>
-                    <% let profiles=['admin', 'cliente' ]; %>
-                      <% for (const profile of profiles) { %>
-                        <option value="<%= profile %>" <%=locals.oldData && (profile===oldData.profile) ? 'selected'
-                          : null %>
-                          > <%= profile %>
-                        </option>
+                  <select name="profile"
+                    class="form-control <%= locals.errors && errors.country ? 'is-invalid' : null %>" <option
+                    value="">Elegí un Perfil</option>
+                  
+                      <% for (const profile of userRoles) { %>
+                        <option value="<%= profile.id %>" <%=locals.oldData && (profile.id===oldData.profile) ? 'selected' :null %>> <%= profile.role %> </option>
                         <% } %>
                   </select>
                   <div class="text-danger">
                     <%= (locals.errors && errors.profile) ? errors.profile.msg : '' %>
                   </div>
 
-              </div>
-              <div class="form-group botton-margin">
-                <label for="userImage"> <b> Imagen De Usuario </b></label>
-                <input class="form-control <%= locals.errors && errors.avatar ? 'is-invalid' : null %>" type="file"
-                  name="avatar" id="userImage" value="<%= locals.oldData ? oldData.avatar : null %>">
-                <div class="text-danger">
-                  <%= (locals.errors && errors.avatar) ? errors.avatar.msg : '' %>
                 </div>
-              </div>
-              <div class="form-group botton-margin">
-                <label for="password"> <b>Contraseña</b> </label>
-                <input class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
-                  type="password" name="password" id="password" placeholder="Ingrese su Contraseña">
-                <div class="text-danger">
-                  <%= (locals.errors && errors.password) ? errors.password.msg : '' %>
+                <div class="form-group botton-margin">
+                  <label for="userImage"> <b> Imagen De Usuario </b></label>
+                  <input class="form-control <%= locals.errors && errors.avatar ? 'is-invalid' : null %>" type="file"
+                    name="avatar" id="userImage" value="<%= locals.oldData ? oldData.avatar : null %>">
+                  <div class="text-danger">
+                    <%= (locals.errors && errors.avatar) ? errors.avatar.msg : '' %>
+                  </div>
                 </div>
-              </div>
-              <div class="form-group botton-margin">
-                <label for="confirmPassword"> <b>Confirmar Contraseña</b> </label>
-                <input class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
-                  type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirme su Contraseña">
-                <div class="text-danger">
-                  <%= (locals.errors && errors.confirmPassword) ? errors.confirmPassword.msg : '' %>
+                <div class="form-group botton-margin">
+                  <label for="password"> <b>Contraseña</b> </label>
+                  <input class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
+                    type="password" name="password" id="password" placeholder="Ingrese su Contraseña">
+                  <div class="text-danger">
+                    <%= (locals.errors && errors.password) ? errors.password.msg : '' %>
+                  </div>
                 </div>
-              </div>
+                <div class="form-group botton-margin">
+                  <label for="confirmPassword"> <b>Confirmar Contraseña</b> </label>
+                  <input class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
+                    type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirme su Contraseña">
+                  <div class="text-danger">
+                    <%= (locals.errors && errors.confirmPassword) ? errors.confirmPassword.msg : '' %>
+                  </div>
+                </div>
 
-              <div class="botton-margin flex-center">
-                <input type="checkbox" name="rememberMe" value="Recordar usuario">
-                Estoy de acuerdo con  <a href="#"> Terminos y Condiciones</a>
-              </div>
-              <div class="flex-center">
-                <button type="submit" class="btn btn-success button-size">Enviar</button>
-              </div>
+                <div class="botton-margin flex-center">
+                  <input type="checkbox" name="rememberMe" value="Recordar usuario">
+                  Estoy de acuerdo con <a href="#"> Terminos y Condiciones</a>
+                </div>
+                <div class="flex-center">
+                  <button type="submit" class="btn btn-success button-size">Enviar</button>
+                </div>
 
-              <div class="botton-margin flex-center">
-                <a href="#">¿Ya tengo Cuenta?</a>
+                <div class="botton-margin flex-center">
+                  <a href="#">¿Ya tengo Cuenta?</a>
+                </div>
               </div>
-            </div>
           </form>
         </main>
       </main>

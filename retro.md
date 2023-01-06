@@ -201,3 +201,48 @@
 * Continuar haciendo: poner en practica todo lo que vimos
 * Hacer menos: tomar tareas de otro
 * Dejar de hacer: no responder a los mensajes del grupo
+
+## Sprint 6
+
+### Jose Nardulli  
+* Comenzar a hacer: Ayudar en la direccion de las tareas y el equipo    
+* Hacer más: apoyar en el desarrollo general del proyecto
+* Continuar haciendo: comunicarse con el equipo
+* Hacer menos: dejar de lado las tareas
+* Dejar de hacer: abandonar al equipo 
+
+### Victoria Aquino
+* Comenzar a hacer: Revisiones con más tiempo de la entrega.
+* Hacer más: Reuniones semanales.
+* Continuar haciendo: Trabajar en equipo y participar en el proyecto.
+* Hacer menos: Atrasarme en los temas nuevos por cumplir con el sprint.
+* Dejar de hacer: Intentar trabajar en las consignas que son opcionales cuando estamos corriendo para cumplir con las obligatorias.
+
+### Montaño Florencia
+* Comenzar a hacer: 
+* Hacer más: 
+* Continuar haciendo: 
+* Hacer menos: 
+* Dejar de hacer: 
+
+### Martin Altuna
+* Comenzar a hacer: 
+* Hacer más: 
+* Continuar haciendo: 
+* Hacer menos: 
+* Dejar de hacer: 
+
+### Luis Maria Abdala
+* Comenzar a hacer: 
+* Hacer más: 
+* Continuar haciendo: 
+* Hacer menos: 
+* Dejar de hacer: 
+
+### Ariel Limes
+* Comenzar a hacer: Mantener el compromiso con el equipo para terminar las tareas.
+* Hacer más: tener mas reuniones dia a dia para coordinar.
+* Continuar haciendo: poner en practica todo lo que vimos
+* Hacer menos: tomar tareas de otro
+* Dejar de hacer: no responder a los mensajes del grupo
+ 
