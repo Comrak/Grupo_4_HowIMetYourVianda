@@ -9,11 +9,30 @@
 
 .flex-center{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
 .form a{
     color: rgb(46, 43, 231);
     text-decoration: none;
+}
+
+.button-delete{
+	min-width: 8em ;
+	width: 100%;
+	background-color: #eb291b;
+	border:black;
+	padding: 7px 12px;
+	color: #ffffff;
+  border-radius: 5px;
+	margin-top: 5px;
+	font-size: 16px;
+	text-align: center;
+  margin-bottom: 20px;
+  transition: all 450ms;
+} 
+
+img{
+  max-width: 100%;
 }

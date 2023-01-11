@@ -223,7 +223,17 @@ const processEdit = async (req, res) => {
             id: id
         }
     });
-    return res.redirect('profile');
+    return res.redirect('login');
+}
+
+const deleteUser = (req, res) => {
+    let userToDelete = req.session.userLogged.id;
+    Users.destroy({
+            where:{
+                id:userToDelete
+            }
+        });
+        return res.render('users/login')
 }
 
 const logout = (req, res) => {
@@ -315,6 +325,7 @@ module.exports = {
     processCarrito,
     address,
     processAddress,
+    deleteUser,
     userList,
     citiesList
   

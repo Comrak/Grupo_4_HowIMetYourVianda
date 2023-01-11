@@ -57,6 +57,10 @@ router.get('/logout', userController.logout);
 router.get('/carrito', userController.carrito);
 router.post('/carrito', userController.processCarrito);
 
+// Delete user
+router.delete('/delete', authMiddleware, userController.deleteUser); 
+
+
 // *********************** API REST ***************************
 router.get('/list', userController.userList);
 router.get('/cities', userController.citiesList);
