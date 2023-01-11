@@ -29,10 +29,10 @@ router.get('/create',authMiddleware ,productController.renderProductCreate);
 router.post('/', upload.single("img"), productController.renderProductRegistration);
 
 //Get a single Product with id
-router.get('/:id', authMiddleware,productController.renderDetail);
+router.get('/detail/:id', authMiddleware,productController.renderDetail);
 
 //Update a Product with id
-router.get('/edit/:id', authMiddleware,productController.renderProductEdit)
+router.get('/:id', authMiddleware,productController.renderProductEdit)
 router.put('/:id',upload.single("img"),productController.renderProductUpdate);
 
 // Delete a record

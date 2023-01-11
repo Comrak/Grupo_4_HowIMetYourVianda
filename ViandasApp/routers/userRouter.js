@@ -41,6 +41,11 @@ router.post('/login', userController.loginProcess);
 // Perfil de Usuario
 router.get('/profile', authMiddleware,userController.profile);
 
+//Formulario de Edicion
+router.get('/edit', userController.userEdit);
+// Procesar la edicion
+router.put('/edit', upload.single('avatar'), validations, userController.processEdit)
+
 // formulario para agregar direcciones
 router.get('/address', userController.address);
 router.post('/address',addressValidations, userController.processAddress);
