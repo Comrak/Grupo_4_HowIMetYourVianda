@@ -1,6 +1,5 @@
 const formsDelete = document.querySelectorAll('#form-address-delete');
 
-
 for (let formDelete of formsDelete) {
 
 formDelete.addEventListener('submit', function (e) {
@@ -15,8 +14,9 @@ formDelete.addEventListener('submit', function (e) {
         cancelButtonColor: '#d33',
     }).then((result) => {
         if (result.isConfirmed) {
-            formDelete.submit()
-            console.log('submit');
+            
+            Swal.fire('Erased!', '', 'success')
+            formDelete.submit(); ;
         }
     })
 
