@@ -7,7 +7,7 @@
       <main class="main-body">
 
         <main class="main-register">
-          <form action="/users/address" method="post" class="form-address" >
+          <form action="/users/address/edit/<%=addressToEdit.id%>" method="post" class="form-address" >
             
             <div class="form-register">
 
@@ -17,7 +17,7 @@
                 <label for=" name"> <b>Alias de la Dirección</b></label>
                 <input class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %>" type="text"
                   name="name" id="name" placeholder="Ingrese el Nombre para esta Direccion"
-                  value="<%= locals.oldData ? oldData.name : null %>">
+                  value="<%= locals.oldData ? oldData.name : addressToEdit.name %>">
                 <div class="text-danger">
                   <%= (locals.errors && errors.name) ? errors.name.msg : '' %>
                 </div>
@@ -26,7 +26,7 @@
               <div class="form-group botton-margin">
                 <label for=" street"> <b> Calle</b></label>
                 <input class="form-control <%= locals.errors && errors.street ? 'is-invalid' : null %>" type="text"
-                  name="street" id="street" value="<%= locals.oldData ? oldData.street : null %>">
+                  name="street" id="street" value="<%= locals.oldData ? oldData.street : addressToEdit.street %>">
                 <div class="text-danger">
                   <%= (locals.errors && errors.street) ? errors.street.msg : '' %>
                 </div>
@@ -35,7 +35,7 @@
               <div class="form-group botton-margin">
                 <label for=" number"> <b> Altura</b></label>
                 <input class="form-control <%= locals.errors && errors.number ? 'is-invalid' : null %>" type="text"
-                  name="number" id="number" value="<%= locals.oldData ? oldData.number : null %>">
+                  name="number" id="number" value="<%= locals.oldData ? oldData.number : addressToEdit.number %>">
                 <div class="text-danger">
                   <%= (locals.errors && errors.number) ? errors.number.msg : '' %>
                 </div>
@@ -44,7 +44,7 @@
               <div class="form-group botton-margin">
                 <label for=" floor"> <b> Piso</b></label>
                 <input class="form-control <%= locals.errors && errors.floor ? 'is-invalid' : null %>" type="text"
-                  name="floor" id="floor" value="<%= locals.oldData ? oldData.floor : null %>">
+                  name="floor" id="floor" value="<%= locals.oldData ? oldData.floor : addressToEdit.floor %>">
                 <div class="text-danger">
                   <%= (locals.errors && errors.floor) ? errors.floor.msg : '' %>
                 </div>
@@ -53,7 +53,7 @@
               <div class="form-group botton-margin">
                 <label for=" dept"> <b> Departamento</b></label>
                 <input class="form-control <%= locals.errors && errors.dept ? 'is-invalid' : null %>" type="text"
-                  name="dept" id="dept" value="<%= locals.oldData ? oldData.dept : null %>">
+                  name="dept" id="dept" value="<%= locals.oldData ? oldData.dept : addressToEdit.dept %>">
                 <div class="text-danger">
                   <%= (locals.errors && errors.dept) ? errors.dept.msg : '' %>
                 </div>
@@ -62,7 +62,7 @@
               <div class="form-group botton-margin">
                 <label for=" zipCode"> <b> Codigo Postal</b></label>
                 <input class="form-control <%= locals.errors && errors.zipCode ? 'is-invalid' : null %>" type="text"
-                  name="zipCode" id="zipCode" value="<%= locals.oldData ? oldData.zipCode : null %>">
+                  name="zipCode" id="zipCode" value="<%= locals.oldData ? oldData.zipCode : addressToEdit.zipCode %>">
                 <div class="text-danger">
                   <%= (locals.errors && errors.zipCode) ? errors.zipCode.msg : '' %>
                 </div>
@@ -101,7 +101,7 @@
 
                 <br>
                 <div class="flex-center">
-                  <button type="submit" class="btn btn-success button-size">Agregar Dirección</button>
+                  <button type="submit" class="btn btn-warning button-size">Editar Dirección</button>
                 </div>
 
 

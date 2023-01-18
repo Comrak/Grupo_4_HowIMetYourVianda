@@ -23,12 +23,9 @@ module.exports = (sequelize, DataTypes) => {
         as:'city',
         foreignKey:'city_id',
       }),
-      Address.belongsToMany(models.Users,{
-        as:'addressUser',
-        through:'user_address',
-        foreignKey:'address_id',
-        otherKey:'user_id',
-        timestamps:true
+      Address.belongsTo(models.Users,{
+        as:'user',
+        foreignKey:'user_id',
       })
     }
   }
@@ -40,7 +37,8 @@ module.exports = (sequelize, DataTypes) => {
     dept: DataTypes.STRING,
     zipCode: DataTypes.INTEGER,
     city_id: DataTypes.INTEGER,
-    country_id: DataTypes.INTEGER
+    country_id: DataTypes.INTEGER,
+    user_id: DataTypes.INTEGER
  
   }, {
     sequelize,

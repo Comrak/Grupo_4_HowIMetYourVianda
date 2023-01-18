@@ -41,9 +41,21 @@ router.post('/login', userController.loginProcess);
 // Perfil de Usuario
 router.get('/profile', authMiddleware,userController.profile);
 
+// formulario para editar Usuario
+router.get('/edit/:id',authMiddleware, userController.editProfile);
+// Procesar el formulario de edición
+router.post('/edit/:id',upload.single('avatar'),validations, userController.processEditProfile);
+
 // formulario para agregar direcciones
-router.get('/address', userController.address);
-router.post('/address',addressValidations, userController.processAddress);
+router.get('/address',authMiddleware, userController.address);
+router.post('/address',authMiddleware,addressValidations, userController.processAddress);
+
+// formulario para editar direcciones
+router.get('/address/edit/:id',authMiddleware, userController.editAddress);
+router.post('/address/edit/:id',addressValidations, userController.processEditAddress);
+
+// formulario para eliminar direcciones
+router.post('/address/delete/:id',authMiddleware, userController.deleteAddress);
 
 // Procesar el LogOut
 router.get('/logout', userController.logout);
@@ -52,9 +64,7 @@ router.get('/logout', userController.logout);
 router.get('/carrito', userController.carrito);
 router.post('/carrito', userController.processCarrito);
 
-// *********************** API REST ***************************
-router.get('/list', userController.userList);
-router.get('/cities', userController.citiesList);
+
 
 
 module.exports= router;

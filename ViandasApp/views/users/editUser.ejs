@@ -7,9 +7,9 @@
       <main class="main-body">
 
         <main class="main-register">
-          <form action="/users/addressP" method="POST" class="form" enctype="multipart/form-data">
+          <form action="/users/edit/<%= oldData.id %>"" method="POST" class="form" enctype="multipart/form-data">
             <div class="form-register">
-              <h4>Registro</h4>
+              <h4>Edicion</h4>
               <div class="form-group botton-margin">
                 <label for=" fullName"> <b>Nombre y Apellido</b></label>
                 <input class="form-control <%= locals.errors && errors.fullName ? 'is-invalid' : null %>" type="text"
@@ -48,38 +48,67 @@
                   <%= (locals.errors && errors.mobilePhone) ? errors.mobilePhone.msg : '' %>
                 </div>
               </div>
-
+    
               <div class="form-group botton-margin">
                 <label><b>País de nacimiento:</b></label>
                 <select name="country" class="form-control <%= locals.errors && errors.country ? 'is-invalid' : null %>"
                   <option value="">Elegí un país</option>
-
-                  <% for (const oneCountry of countries) { %>
-                    <option value="<%=oneCountry.id%>" <%=locals.oldData && (oneCountry.id===oldData.country)
-                      ? 'selected' :null %>> <%= oneCountry.name %>
-                    </option>
-                    <% } %>
+              
+                    <% for (const oneCountry of countries) { %>
+                      <option value="<%=oneCountry.id%>"<%=locals.oldData && (oneCountry.id===oldData.country) ? 'selected' :null %>> <%= oneCountry.name %> </option>
+                      <% } %>
                 </select>
                 <div class="text-danger">
                   <%= (locals.errors && errors.country) ? errors.country.msg : '' %>
                 </div>
+
+                <div class="form-group botton-margin">
+                  <label><b>Perfil:</b></label>
+                  <select name="profile"
+                    class="form-control <%= locals.errors && errors.country ? 'is-invalid' : null %>" <option
+                    value="">Elegí un Perfil</option>
+                  
+                      <% for (const profile of userRoles) { %>
+                        <option value="<%= profile.id %>" <%=locals.oldData && (profile.id===oldData.profile) ? 'selected' :null %>> <%= profile.role %> </option>
+                        <% } %>
+                  </select>
+                  <div class="text-danger">
+                    <%= (locals.errors && errors.profile) ? errors.profile.msg : '' %>
+                  </div>
+
+                </div>
+                <div class="form-group botton-margin">
+                  <label for="userImage"> <b> Imagen De Usuario </b></label>
+                  <input class="form-control <%= locals.errors && errors.avatar ? 'is-invalid' : null %>" type="file"
+                    name="avatar" id="userImage" value="<%= locals.oldData ? oldData.avatar : null %>">
+                  <div class="text-danger">
+                    <%= (locals.errors && errors.avatar) ? errors.avatar.msg : '' %>
+                  </div>
+                </div>
+                <div class="form-group botton-margin">
+                  <label for="password"> <b>Contraseña</b> </label>
+                  <input class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
+                    type="password" name="password" id="password" placeholder="Ingrese su Contraseña">
+                  <div class="text-danger">
+                    <%= (locals.errors && errors.password) ? errors.password.msg : '' %>
+                  </div>
+                </div>
+                <div class="form-group botton-margin">
+                  <label for="confirmPassword"> <b>Confirmar Contraseña</b> </label>
+                  <input class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
+                    type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirme su Contraseña">
+                  <div class="text-danger">
+                    <%= (locals.errors && errors.confirmPassword) ? errors.confirmPassword.msg : '' %>
+                  </div>
+                </div>
+
+           
+                <div class="flex-center">
+                  <button type="submit" class="btn btn-warning button-size">Actualizar</button>
+                </div>
+
+                
               </div>
-
-
-
-
-              <div class="botton-margin flex-center">
-                <input type="checkbox" name="rememberMe" value="Recordar usuario">
-                Estoy de acuerdo con <a href="#"> Terminos y Condiciones</a>
-              </div>
-              <div class="flex-center">
-                <button type="submit" class="btn btn-success button-size">Enviar</button>
-              </div>
-
-              <div class="botton-margin flex-center">
-                <a href="#">¿Ya tengo Cuenta?</a>
-              </div>
-            </div>
           </form>
         </main>
       </main>
