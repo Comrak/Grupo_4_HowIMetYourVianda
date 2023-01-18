@@ -19,13 +19,17 @@
                             <div class="alert alert-success"> Tu tienes el Rol de: <b>
                                     <%= user.userRole.role %>
                                 </b> </div>
-                            <br>
-                            <br>
-
+                            
+                          
+                            <form action="/users/edit/<%= user.id %>" method="get" id="form-update">
+                                <button type="Editar" id="btn-editar" class="btn btn-warning btn-sm"><i
+                                        class="fa-solid fa-pen-to-square"></i> Editar Usuario </button>
+                            </form>
                         </div>
                         <div class=" address-block-h">
                             <div class="address-title">
-                                <a href="/users/address" class="btn btn-primary btn-sm right-margin"><i class="fa-solid fa-plus"></i></a>
+                                <a href="/users/address" class="btn btn-primary btn-sm right-margin"><i
+                                        class="fa-solid fa-plus"></i></a>
                                 <h2>Direcciones Disponibles</h2>
                             </div>
                             <table class="table">
@@ -63,16 +67,21 @@
                                                 <%= address.city.name %>
                                             </td>
                                             <td>
-                                                <form action="/users/address/edit/<%= address.id %>" method="get" id="form-delete"">
-                                                    <button type="Editar" id="btn-editar"
-                                                        class="btn btn-warning btn-sm"><i class="fa-solid fa-pen-to-square"></i></button>
+                                                <form action="/users/address/edit/<%= address.id %>" method="get"
+                                                    id="form-delete"">
+                                                    <button type=" Editar" id="btn-editar"
+                                                    class="btn btn-warning btn-sm"><i
+                                                        class="fa-solid fa-pen-to-square"></i></button>
                                                 </form>
                                             </td>
 
                                             <td>
-                                                <form action="/users/address/delete/<%= address.id %>" method="POST" id="form-address-delete">
-                                                    <button type="submit" id="btn-delete"class="btn btn-danger btn-sm"><i class="fa-solid fa-pen-to-square"></i></button>
-                                              
+                                                <form action="/users/address/delete/<%= address.id %>" method="POST"
+                                                    id="form-address-delete">
+                                                    <button type="submit" id="btn-delete"
+                                                        class="btn btn-danger btn-sm"><i
+                                                            class="fa-solid fa-pen-to-square"></i></button>
+
                                                 </form>
                                             </td>
                                     </tr>
@@ -82,13 +91,14 @@
                             </table>
 
                         </div>
+
                     </div>
                 </div>
                 <!-- //Container -->
                 </div>
                 <%- include('../partials/footer')%>
 
-    <script src="/scripts/UserEvents.js"></script>
+                    <script src="/scripts/UserEvents.js"></script>
     </body>
 
     </html>

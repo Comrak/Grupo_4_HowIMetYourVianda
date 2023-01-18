@@ -304,9 +304,64 @@ const deleteAddress = async (req, res) => {
 
 }
 
+const editProfile = async (req, res) => {
+    const userId = req.params.id;
+    const countries = await Country.findAll();
+    const userRoles = await UserRol.findAll();
+   
+    const userToEdit = await Users.findByPk(userId);
+    return res.render('users/editUser',{oldData:userToEdit,userRoles,countries})
 
+}
 
+const processEditProfile = async (req, res) => {
+ 
+    const userId = req.session.userLogged.id;
+    const countries = await Country.findAll();
+    const userRoles = await UserRol.findAll();
 
+    const resultValidation=validationResult(req)
+    // check if there are errors
+    if(!resultValidation.isEmpty()){
+                return res.render('users/editUser', {
+                                                    errors: resultValidation.mapped(),  // los errores que contiene el objeto resultValidation
+                                                    oldData: req.body,
+                                                    countries,
+                                                    userRoles               
+                                                 });
+    }
+
+    let hashedPassword = bcryptjs.hashSync(req.body.password, 10);
+    let hashedConfirmPassword = bcryptjs.hashSync(req.body.confirmPassword, 10);
+    let userToCreate={
+        ...req.body,
+        country_id: req.body.country,
+        role_id: req.body.profile,
+        avatar: req.file.filename,
+        password: hashedPassword,
+        confirmPassword: hashedConfirmPassword
+    }
+
+    try{
+        let userCreated = await Users.update(userToCreate,{where:{id:userId}});
+        
+        const addressList = await Address.findAll({
+            include: ['city'],
+            where: {user_id:userId}
+        })                                                                                        
+        
+      
+        // return res.send(addressList)
+        return res.render('users/usersProfile',{
+            user: req.session.userLogged,
+            addressList:addressList
+        });
+    }
+    catch(error){
+        console.log(error)
+    }
+
+}
 
 
 module.exports = {  
@@ -322,7 +377,9 @@ module.exports = {
     processAddress,
     editAddress,
     processEditAddress,
-    deleteAddress
+    deleteAddress,
+    editProfile,
+    processEditProfile
 
   
 }      

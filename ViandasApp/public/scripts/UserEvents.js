@@ -16,7 +16,7 @@ formDelete.addEventListener('submit', function (e) {
         if (result.isConfirmed) {
             
             Swal.fire('Erased!', '', 'success')
-            formDelete.submit(); ;
+            formDelete.submit();
         }
     })
 
