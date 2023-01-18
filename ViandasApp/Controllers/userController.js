@@ -288,7 +288,7 @@ const deleteAddress = async (req, res) => {
     const userId = req.session.userLogged.id;
     const addressId = req.params.id;
 
-        // await Address.destroy({where:{id:addressId}})
+        await Address.destroy({where:{id:addressId}})
  
     
 
