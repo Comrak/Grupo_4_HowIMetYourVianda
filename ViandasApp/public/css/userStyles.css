@@ -2,6 +2,8 @@
 
 
 
+
+
 .botton-margin{
   margin: 0.5em 0;
 
@@ -9,7 +11,7 @@
 
 .flex-center{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
@@ -18,21 +20,57 @@
     text-decoration: none;
 }
 
-.button-delete{
-	min-width: 8em ;
-	width: 100%;
-	background-color: #eb291b;
-	border:black;
-	padding: 7px 12px;
-	color: #ffffff;
-  border-radius: 5px;
-	margin-top: 5px;
-	font-size: 16px;
-	text-align: center;
-  margin-bottom: 20px;
-  transition: all 450ms;
-} 
+.container img{
+  width: 100%;
+}
 
-img{
-  max-width: 100%;
+.container h2{
+  text-align: center;
+  margin: 0.5em 0;
+}
+
+.hight-50{
+  height: 50%;
+}
+
+@media only screen and (min-width: 768px) {
+
+.address-block-h{
+  display: flex !important;
+  width: 55%;
+ 
+  flex-direction: column ;
+}
+
+.address-block-v{
+  display: flex !important;
+  width: 65%;
+ 
+  flex-direction: row ;
+}
+
+.address-title{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  flex-direction: row ;
+}
+
+.right-margin{
+  margin-right: 1em;
+}
+
+
+.vertical_align{
+vertical-align: middle;
+}
+
+ td{
+  padding: 0.05rem 0.05rem !important;
+}
+
+
+
+
 }

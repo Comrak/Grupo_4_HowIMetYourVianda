@@ -41,14 +41,21 @@ router.post('/login', userController.loginProcess);
 // Perfil de Usuario
 router.get('/profile', authMiddleware,userController.profile);
 
-//Formulario de Edicion
-router.get('/edit', userController.userEdit);
-// Procesar la edicion
-router.put('/edit', upload.single('avatar'), validations, userController.processEdit)
+// formulario para editar Usuario
+router.get('/edit/:id',authMiddleware, userController.editProfile);
+// Procesar el formulario de edición
+router.post('/edit/:id',upload.single('avatar'),validations, userController.processEditProfile);
 
 // formulario para agregar direcciones
-router.get('/address', userController.address);
-router.post('/address',addressValidations, userController.processAddress);
+router.get('/address',authMiddleware, userController.address);
+router.post('/address',authMiddleware,addressValidations, userController.processAddress);
+
+// formulario para editar direcciones
+router.get('/address/edit/:id',authMiddleware, userController.editAddress);
+router.post('/address/edit/:id',addressValidations, userController.processEditAddress);
+
+// formulario para eliminar direcciones
+router.post('/address/delete/:id',authMiddleware, userController.deleteAddress);
 
 // Procesar el LogOut
 router.get('/logout', userController.logout);
@@ -57,13 +64,7 @@ router.get('/logout', userController.logout);
 router.get('/carrito', userController.carrito);
 router.post('/carrito', userController.processCarrito);
 
-// Delete user
-router.delete('/delete', authMiddleware, userController.deleteUser); 
 
-
-// *********************** API REST ***************************
-router.get('/list', userController.userList);
-router.get('/cities', userController.citiesList);
 
 
 module.exports= router;

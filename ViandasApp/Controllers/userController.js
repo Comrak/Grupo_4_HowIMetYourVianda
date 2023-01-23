@@ -149,10 +149,19 @@ const loginProcess = async (req, res) => {
  }
 
 
-const profile = (req, res) => {
+ const profile = async (req, res) => {
     
+    const userId = req.session.userLogged.id;
+    const addressList = await Address.findAll({
+        include: ['city'],
+        where: {user_id:userId}
+    })                                                                                        
+    
+  
+    // return res.send(addressList)
     return res.render('users/usersProfile',{
-        user: req.session.userLogged
+        user: req.session.userLogged,
+        addressList:addressList
     });
 }
 
@@ -260,12 +269,11 @@ const address = async (req, res) => {
 
 const processAddress =   async (req, res) => {
 
-   
-
+    const bodyInfo = req.body;
+    const userId = req.session.userLogged.id;
     const addressResultValidation=validationResult(req);
     const countries = await Country.findAll();
     const cities = await City.findAll();
-
 
     if(!addressResultValidation.isEmpty()){
         return res.render('users/address', {
@@ -276,39 +284,163 @@ const processAddress =   async (req, res) => {
                                             });
     }
 
-    let addressToCreate={
-        ...req.body
-       }
+    // capture the address data from body
 
+    bodyInfo.user_id=userId;
+    
+    let addressToCreate={ ...bodyInfo }
+    
+    try{
+
+        // create address
+        const addressCreated = await Address.create(addressToCreate);
+
+    }
+     catch(error){
+        console.log(error)
+    }
+
+        // find all addresses of the user                                            
+        const addressList = await Address.findAll({
+            include: ['city'],
+            where: {user_id:userId}
+        })              
+      
+        return res.render('users/usersProfile',{
+            user: req.session.userLogged,
+            addressList:addressList
+        });
+}
+
+const editAddress = async (req, res) => {
+    const countries = await Country.findAll();
+    const cities = await City.findAll();
+    const addressId = req.params.id;
+    const addressToEdit = await Address.findByPk(addressId);
+    return res.render('users/editAddress',{addressToEdit,countries,cities})
+}
+
+const processEditAddress = async (req, res) => {
+    const bodyInfo = req.body;
+    const addressResultValidation=validationResult(req);
+    const countries = await Country.findAll();
+    const cities = await City.findAll();
+    const userId = req.session.userLogged.id;
+    const addressId = req.params.id;
+    const addressToEdit = await Address.findByPk(addressId);
+
+    if(!addressResultValidation.isEmpty()){
+        return res.render('users/editAddress', {
+                                            errors: addressResultValidation.mapped(),  // los errores que contiene el objeto resultValidation
+                                            oldData: req.body,
+                                            addressToEdit:addressToEdit,
+                                            countries:countries,
+                                            cities:cities
+                                            });
+    }
+
+    bodyInfo.user_id=userId;
+    let addressToUpdate={ ...bodyInfo }
 
     try{
-        let userCreated = await Address.create(addressToCreate);
-        return res.redirect('/users/profile')
+        // update address
+        await Address.update(addressToUpdate,{where:{id:addressId}})
+        // find all addresses of the user
+
+  
+        const addressList = await Address.findAll({
+            include: ['city'],
+            where: {user_id:userId}
+        })                                                                                        
+        
+        return res.render('users/usersProfile',{
+            user: req.session.userLogged,
+            addressList:addressList
+        });
+
+    }
+    catch(error){
+        console.log(error)
+    }
+}
+
+const deleteAddress = async (req, res) => {
+    const userId = req.session.userLogged.id;
+    const addressId = req.params.id;
+
+        await Address.destroy({where:{id:addressId}})
+ 
+    
+
+        const addressList = await Address.findAll({
+            include: ['city'],
+            where: {user_id:userId}
+        })                                                                                        
+
+    return res.render('users/usersProfile',{
+        user: req.session.userLogged,
+        addressList:addressList
+    });
+
+}
+
+const editProfile = async (req, res) => {
+    const userId = req.params.id;
+    const countries = await Country.findAll();
+    const userRoles = await UserRol.findAll();
+   
+    const userToEdit = await Users.findByPk(userId);
+    return res.render('users/editUser',{oldData:userToEdit,userRoles,countries})
+
+}
+
+const processEditProfile = async (req, res) => {
+ 
+    const userId = req.session.userLogged.id;
+    const countries = await Country.findAll();
+    const userRoles = await UserRol.findAll();
+
+    const resultValidation=validationResult(req)
+    // check if there are errors
+    if(!resultValidation.isEmpty()){
+                return res.render('users/editUser', {
+                                                    errors: resultValidation.mapped(),  // los errores que contiene el objeto resultValidation
+                                                    oldData: req.body,
+                                                    countries,
+                                                    userRoles               
+                                                 });
+    }
+
+    let hashedPassword = bcryptjs.hashSync(req.body.password, 10);
+    let hashedConfirmPassword = bcryptjs.hashSync(req.body.confirmPassword, 10);
+    let userToCreate={
+        ...req.body,
+        country_id: req.body.country,
+        role_id: req.body.profile,
+        avatar: req.file.filename,
+        password: hashedPassword,
+        confirmPassword: hashedConfirmPassword
+    }
+
+    try{
+        let userCreated = await Users.update(userToCreate,{where:{id:userId}});
+        
+        const addressList = await Address.findAll({
+            include: ['city'],
+            where: {user_id:userId}
+        })                                                                                        
+        
+      
+        // return res.send(addressList)
+        return res.render('users/usersProfile',{
+            user: req.session.userLogged,
+            addressList:addressList
+        });
     }
     catch(error){
         console.log(error)
     }
 
-
-
-
-
-
-
-}
-
-// ****************************************  API REST  ****************************************
-userList = async (req, res) => {
-    const users = await Users.findAll();
-    return res.json({data:users})
-    }
-
-citiesList = async (req, res) => {
-    // promesa 1 busca que el servidor este levantado y funcione
-    const response = await fetch('https://apis.datos.gob.ar/georef/api/provincias?');
-    // promesa 2 espera a que la promesa 1 se resuelva y el formato sea adecuado para json
-    const cities = await response.json()
-    return res.json({data:cities.provincias})
 }
 
 
@@ -318,15 +450,16 @@ module.exports = {
     login,
     loginProcess,
     profile,
-    userEdit,
-    processEdit,
     logout,
     carrito,
     processCarrito,
     address,
     processAddress,
-    deleteUser,
-    userList,
-    citiesList
+    editAddress,
+    processEditAddress,
+    deleteAddress,
+    editProfile,
+    processEditProfile
+
   
-}      
+}          
