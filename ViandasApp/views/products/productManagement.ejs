@@ -1,6 +1,6 @@
-<%- include('../partials/head')%>
+<%- include('../partials/head',{cssFile:'userStyles.css'})%>
 
-<script src="../../scripts/createProductValidation.js"></script>
+
   <body>
     <%- include('../partials/header')%>
       <main class="main-body">
@@ -8,29 +8,31 @@
 
           <div class="form-register">
             <h4>Manejo de Productos</h4>
-            <div class="label-input">
-              <label for="img">Subir imagen:</label>
-              <input type="file" id="img" name="img" accept="image/*" required="true">
+            <div class="form-group botton-margin">
+              <label for="name"> <b> Nombre del producto </b> </label>
+              <input class="form-control" type="text" name="name" id="name" placeholder="Ingrese el nombre del producto" required="true">
             </div>
-            <div class="label-input">
-              <label for="price">Precio</label>
-              <input class="controls" type="number" name="prices" id="price" placeholder="Ingrese el Precio" required="true">
+         
+            <div class="form-group botton-margin">
+              <label for="price"> <b>  Precio </b> </label>
+              <input class="form-control" type="number" name="price" id="price" placeholder="Ingrese el Precio" required="true">
             </div>
-            <div class="label-input">
-              <label for="name">Nombre del producto</label>
-              <input class="controls" type="text" name="name" id="name" placeholder="Ingrese el nombre del producto" required="true">
-            </div>
-            <div class="label-input">
-              <label for="description">Descripcion del producto</label>
-              <textarea class="controls" type="a" name="description" id="description"
+         
+            <div class="form-group botton-margin">
+              <label for="description"> <b> Descripcion del producto </b> </label>
+              <textarea class="form-control" type="a" name="description" id="description"
                 placeholder="Ingrese la descripcion del producto" rows="4" cols="50" required="true"></textarea>
             </div>
-            <div class="label-input">
-              <label for="keywords">Palabras claves</label>
-              <textarea class="controls" type="a" name="tags" id="keywords"
+            <div class="form-group botton-margin">
+              <label for="keywords"> <b> Palabras claves </b></label>
+              <textarea class="form-control" type="a" name="tags" id="keywords"
                 placeholder="Ingrese palabras clave para el producto separa con ';'" rows="4" cols="50" required="true"></textarea>
             </div>
-            <button type="submit" class="button" id="submitBtn">Enviar</button>
+            <div class="form-group botton-margin">
+              <label for="img"> <b> Subir imagen: </b></label>
+              <input class="form-control"type="file" id="img" name="img" accept="image/*" required="true">
+            </div>
+            <button type="submit" class="btn btn-success button-size" id="submitBtn">Enviar</button>
            
           </div>
         </form>
