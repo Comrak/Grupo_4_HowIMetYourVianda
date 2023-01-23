@@ -122,7 +122,7 @@ const loginProcess = async (req, res) => {
                     req.session.userLogged = userToLogin;
                     // si el usuario eligió recordarme
                     if (req.body.rememberMe) {
-                        res.cookie('userEmail', req.body.userEmail, {maxAge: (1000 * 60) * 2})
+                        res.cookie('userEmail', req.body.userEmail, {maxAge: (1000 * 60) * 10})
                     }
                     // redirigir a la pagina del usuario
                     res.redirect('/users/profile')
@@ -163,6 +163,86 @@ const loginProcess = async (req, res) => {
         user: req.session.userLogged,
         addressList:addressList
     });
+}
+
+const userEdit = async (req, res) => {
+    
+    const countries = await Country.findAll();
+    const userRoles = await UserRol.findAll();
+
+    
+    return res.render('users/userEdit',{countries,userRoles, 
+        user: req.session.userLogged})
+}
+
+const processEdit = async (req, res) => {
+    
+    let id = req.session.userLogged.id;
+    const dataToUpdate = req.body; 
+    const countries = await Country.findAll();
+    const userRoles = await UserRol.findAll();
+    
+    // check if the user has uploaded a new image
+    if (req.file != undefined) {
+        dataToUpdate.image = req.file.filename;
+    }   
+    // find the user in the database
+    let userToUpdate = await Users.findByPk(id);
+    // check if the user exists
+    if (!userToUpdate) {
+        return res.render('error');
+    }
+    // check if the updated email already exist
+    let userInDB = await Users.findOne({
+        where: {'email': req.body.email}  // 'email' es el campo de la tabla 'users
+    });
+    if(userInDB == null){
+        
+    }
+    
+    else if (userInDB.id !== userToUpdate.id) {
+        return res.render('users/userEdit', {
+                        errors: {
+                            email: {
+                                msg: 'Este email ya está registrado'
+                            }
+                        },
+                        oldData: req.body,
+                        countries:countries,
+                        userRoles:userRoles,
+                        user: req.session.userLogged
+     });
+    }
+
+    // if exists then update the user
+    let hashedPassword = bcryptjs.hashSync(req.body.password, 10);
+    let hashedConfirmPassword = bcryptjs.hashSync(req.body.confirmPassword, 10);
+    let userUpdate={
+        ...req.body,
+        country_id: req.body.country,
+        role_id: req.body.profile,
+        avatar: dataToUpdate.userImage,
+        password: hashedPassword,
+        confirmPassword: hashedConfirmPassword
+    }
+
+
+    const userUpdated = await Users.update(userUpdate, {
+        where: {
+            id: id
+        }
+    });
+    return res.redirect('login');
+}
+
+const deleteUser = (req, res) => {
+    let userToDelete = req.session.userLogged.id;
+    Users.destroy({
+            where:{
+                id:userToDelete
+            }
+        });
+        return res.render('users/login')
 }
 
 const logout = (req, res) => {
@@ -382,4 +462,4 @@ module.exports = {
     processEditProfile
 
   
-}      
+}          
