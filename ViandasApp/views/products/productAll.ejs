@@ -14,11 +14,11 @@
                             <article class="product-list">
                                 <div class="art_principal">
                                     <div class="imagen-producto">
-                                        <img src="<%= producto.imagen %>" id="<%= producto.name%>">
+                                        <a href="/products/detail/<%= producto.id %>"><img src="<%= producto.image %>" id="<%= producto.name%>"></a>
                                     </div>
 
                                     <div class="product-price-name">
-                                        <p class="prices">$<%= producto.prices %>
+                                        <p class="prices">$<%= producto.price %>
                                         </p>
                                         <p class="discount">
                                             <%= producto.name %>
@@ -30,13 +30,13 @@
 
                                 </div>
 
-                                <% if (locals.userLogged && locals.userLogged.profile=='cliente' ) { %>
+                                <% if (locals.userLogged && locals.userLogged.role_id === 2 ) { %>
                                     <div class="add-carrito btn-bottom">
                                         <a href="/users/carrito">
                                             <button class="btn btn-primary ">Agregar al carrito</button>
                                         </a>
                                     </div>
-                                    <% } else if (locals.userLogged && locals.userLogged.profile=='admin' ) { %>
+                                    <% } else if (locals.userLogged && locals.userLogged.role_id===1 ) { %>
                                         <div class="add-carrito btn-bottom ">
                                             <a href="/products/<%=producto.id%>">
                                                 <button class="btn btn-primary ">Acceder a Edicion</button>

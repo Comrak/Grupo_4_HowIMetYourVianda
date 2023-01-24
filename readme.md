@@ -32,3 +32,10 @@ Preparación y entrega de viandas para almuerzos y cenas.
 
 Enlace al tablero de trabajo:
 dashboard con nuestros sprints, <https://trello.com/b/iTwaThgF/howimetyourvianda>
+
+### Notas sprint 6 
+el DER para la base de datos y los scripts se encuentran en la carpeta database, aunque el sistema esta adaptado para hacer una migracion a traves de sequalize
+
+los usuarios 
+NatiAdmin, y NatiUser fueron creados como fue requerido en el slack, usar como login el mail NatiAdmin@DH.com y NatiUser@DH.com respectivamente 
+los passwrods son los mismo que fueron sugeridos 

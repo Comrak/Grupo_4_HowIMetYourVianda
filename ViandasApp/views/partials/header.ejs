@@ -22,7 +22,7 @@
         <ul class="left-navbar">
 
             <li> <i class="fa-solid fa-bowl-food"></i> <a href="/products">Viandas</a></li>
-            <% if (locals.isLogged && locals.userLogged.profile == 'admin') { %>
+            <% if (locals.isLogged && locals.userLogged.role_id === 1) { %>
                 <li> <i class="fa-solid fa-gear"></i> <a href="/products/create">Manejo de productos</a></li>
                 <% } %>
                     <li> <i class="fa-solid fa-truck"></i> <a href="#">Zonas de Envio</a></li>
@@ -39,7 +39,7 @@
                     </li>
                     <li> <a href="/users/logout">Cerrar Sesion</a> <i class="fas fa-sign-in-alt"></i> </li>  
                           
-                    <li> <a href="/users/carrito">Tu carrito</a> <i class="fas fa-shopping-basket"></i> </li>
+                    <li> <a href="/trans/carrito">Tu carrito</a> <i class="fas fa-shopping-basket"></i> </li>
         </ul>
         <% } %>
     </nav>

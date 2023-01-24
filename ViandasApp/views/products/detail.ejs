@@ -15,12 +15,12 @@
                         <% productToFind.name %>
                             <article class="product-article">
                                 <div class="imagen-producto">
-                                    <img src="<%= productToFind.imagen %>" id="<%= productToFind.name%>"
+                                    <img src="<%= productToFind.image %>" id="<%= productToFind.name%>"
                                         class="Img-Edit">
                                 </div>
                                 <div class="art_principal">
 
-                                    <p class="prices"> Precio $<%= productToFind.prices %>
+                                    <p class="prices"> Precio $<%= productToFind.price %>
                                     </p>
 
                                     <p class="description">
@@ -33,7 +33,7 @@
                                 <form action="/products/edit/<%=productToFind.id%>">
                                     <button type="submit" class="button-edit">Editar</button>
                                 </form>
-                                <form action="/products/delete/<%=productToFind.id%>?_method=DELETE" method="POST">
+                               <form action="/products/delete/<%=productToFind.id%>?_method=DELETE" method="POST"> 
                                     <button type="submit" class="button-delete">Eliminar</button>
                                 </form>
                             </div>
