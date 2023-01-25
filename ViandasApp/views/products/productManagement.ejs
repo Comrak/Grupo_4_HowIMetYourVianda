@@ -11,6 +11,7 @@
             <div class="form-group botton-margin">
               <label for="name"> <b> Nombre del producto </b> </label>
               <input class="form-control" type="text" name="name" id="name" placeholder="Ingrese el nombre del producto" required="true">
+              <span></span>
             </div>
          
             <div class="form-group botton-margin">
@@ -21,7 +22,8 @@
             <div class="form-group botton-margin">
               <label for="description"> <b> Descripcion del producto </b> </label>
               <textarea class="form-control" type="a" name="description" id="description"
-                placeholder="Ingrese la descripcion del producto" rows="4" cols="50" required="true"></textarea>
+              placeholder="Ingrese la descripcion del producto" rows="4" cols="50" required="true"></textarea>
+              <span></span>
             </div>
             <div class="form-group botton-margin">
               <label for="keywords"> <b> Palabras claves </b></label>
@@ -31,11 +33,13 @@
             <div class="form-group botton-margin">
               <label for="img"> <b> Subir imagen: </b></label>
               <input class="form-control"type="file" id="img" name="img" accept="image/*" required="true">
+              <span></span>
             </div>
             <button type="submit" class="btn btn-success button-size" id="submitBtn">Enviar</button>
            
           </div>
         </form>
+        <script src = "../scripts/productManagementValidation.js"></script>
       </main>
   </body>
   <%- include('../partials/footer')%>
