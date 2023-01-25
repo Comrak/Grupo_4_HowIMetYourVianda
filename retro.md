@@ -256,11 +256,11 @@
 * Dejar de hacer: 
 
 ### Victoria Aquino
-* Comenzar a hacer: 
-* Hacer más: 
-* Continuar haciendo: 
-* Hacer menos: 
-* Dejar de hacer: 
+* Comenzar a hacer: Tomar las tareas lo más pronto posible. 
+* Hacer más: Comentarios en el Trello.
+* Continuar haciendo: Trabajar en equipo.
+* Hacer menos: Perder tiempo en resolver algo sola.
+* Dejar de hacer: Enojarme cuando algo se me complica.
 
 ### Montaño Florencia
 * Comenzar a hacer: 
