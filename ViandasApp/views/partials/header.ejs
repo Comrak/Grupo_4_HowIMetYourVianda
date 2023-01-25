@@ -3,8 +3,10 @@
         <div class="top-bar-container">
             <a href="/" class="logo-wrapper"><img src="../../img/homeIconNoBG.png" class="logo" alt="Error"></a>
             <div class="search-bar form-outline">
-                <input class="Buscador form-control" type="text" placeholder="Cual Vianda Queres hoy?">
-                <button class="search-buttom btn btn-primary"><i class="fas fa-search"></i></button>
+                <form action="../products/detail" method="get">
+                    <input name="searchText" class="Buscador form-control" type="text" placeholder="Cual Vianda Queres hoy?">
+                    <button class="search-buttom btn btn-primary"><i class="fas fa-search"></i></button>
+                </form>
             </div>
         </div>
         <h2 class="copy-header">
