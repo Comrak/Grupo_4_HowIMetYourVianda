@@ -246,3 +246,32 @@
 * Hacer menos: tomar tareas de otro
 * Dejar de hacer: no responder a los mensajes del grupo
  
+## Sprint 7
+
+### Jose Nardulli  
+* Comenzar a hacer:   
+* Hacer más: 
+* Continuar haciendo: 
+* Hacer menos: 
+* Dejar de hacer: 
+
+### Victoria Aquino
+* Comenzar a hacer: 
+* Hacer más: 
+* Continuar haciendo: 
+* Hacer menos: 
+* Dejar de hacer: 
+
+### Montaño Florencia
+* Comenzar a hacer: 
+* Hacer más: 
+* Continuar haciendo:  
+* Hacer menos: 
+* Dejar de hacer: 
+
+### Ariel Limes
+* Comenzar a hacer: 
+* Hacer más: 
+* Continuar haciendo: 
+* Hacer menos: 
+* Dejar de hacer: 
