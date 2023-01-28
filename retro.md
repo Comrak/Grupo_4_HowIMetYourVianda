@@ -263,11 +263,11 @@
 * Dejar de hacer: Enojarme cuando algo se me complica.
 
 ### Montaño Florencia
-* Comenzar a hacer: 
-* Hacer más: 
-* Continuar haciendo:  
-* Hacer menos: 
-* Dejar de hacer: 
+* Comenzar a hacer: Probar cosas que puedan servir, aunque no sea una tarea obligatoria. 
+* Hacer más: Manos en el proyecto.
+* Continuar haciendo:  Participar de todas las reuniones.
+* Hacer menos: Mirar demasiada teoría.
+* Dejar de hacer: Preocuparme por arruinar algo en el proyecto. 
 
 ### Ariel Limes
 * Comenzar a hacer: 
