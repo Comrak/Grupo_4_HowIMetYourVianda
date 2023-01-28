@@ -21,7 +21,7 @@ const validations = [
         if(!file) {
             throw new Error('Debes subir una imagen');
         } else {
-            let fileExtension = path.extname(file.originalname);
+           // let fileExtension = path.extname(file.originalname);
 
             if(!acceptedExtensions.includes(path.extname(file.originalname))){
                 throw new Error('Las extensiones de archivo permitidas son ' + acceptedExtensions.join(', '));

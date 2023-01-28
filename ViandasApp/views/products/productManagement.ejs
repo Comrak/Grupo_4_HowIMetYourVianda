@@ -4,13 +4,15 @@
   <body>
     <%- include('../partials/header')%>
       <main class="main-body">
+
         <form action="/products" method="post" class="form" enctype="multipart/form-data">
 
           <div class="form-register">
             <h4>Manejo de Productos</h4>
             <div class="form-group botton-margin">
               <label for="name"> <b> Nombre del producto </b> </label>
-              <input class="form-control <%= locals.errors && errors.name? 'is-invalid' : null %>" type="text" name="name" id="name" placeholder="Ingrese el nombre del producto" required="true"
+
+              <input class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %>" type="text" name="name" id="name" placeholder="Ingrese el nombre del producto" required="true"
               value="<%= locals.oldData ? oldData.name : null %>">
               <div class="text-danger">
                 <%= (locals.errors && errors.name) ? errors.name.msg : '' %>
@@ -47,7 +49,7 @@
             </div>
             <div class="form-group botton-margin">
               <label for="img"> <b> Subir imagen: </b></label>
-              <input class="form-control <%= locals.errors && errors.img? 'is-invalid' : null %>"type="file" id="img" name="img" accept="image/*" required="true"
+              <input class="form-control <%= locals.errors && errors.img ? 'is-invalid' : null %>"type="file" id="img" name="img" accept="image/*" required="true"
               value="<%= locals.oldData ? oldData.img : null %>">
               <span></span>
               <div class="text-danger">
