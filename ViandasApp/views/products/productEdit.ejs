@@ -18,6 +18,7 @@
                     <!-- <img class="image-edit" src="<%= productToEdit.image %>" id="<%= productToEdit.name%>"> -->
                     <label for="img">Subir imagen:</label>
                     <input type="file" id="img" name="img" accept="image/*">
+                    <span></span>
                   </div>
                 </div>
                 <div class="item-group">
@@ -25,11 +26,13 @@
                     <label for="name">Nombre del producto</label>
                     <input class="controls" type="text" name="name" id="name"
                       placeholder="Ingrese el nombre del producto" value="<%=productToEdit.name%>">
+                    <span></span>
                   </div>
                   <div class="label-input">
                     <label for="price">Precio</label>
                     <input class="controls" type="number" name="price" id="price" placeholder="Ingrese el Precio"
                       value="<%=productToEdit.price%>">
+                    
                   </div>
                 </div>
                 <div class="item-group">
@@ -38,6 +41,7 @@
                     <textarea class="controls" type="a" name="description" id="description"
                       placeholder="Ingrese la descripcion del producto" rows="4" cols="50"><%=productToEdit.description%>
                     </textarea>
+                  <span></span>
                   </div>
                   <div class="label-input">
                     <label for="keywords">Palabras claves</label>
