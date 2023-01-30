@@ -11,9 +11,9 @@ const validations = [
 	body('description')
                 .notEmpty().withMessage('La descripción del producto no puede estar vacía').bail()
                 .isLength({ min: 20 }).withMessage('La descripción deberá contener al menos 20 caracteres'),
-    body('keywords')
-                 .notEmpty().withMessage('Las palabras claves del producto no puede estar vacío').bail()
-                 .isLength({ min: 5 }).withMessage('Deberá contener al menos 2 palabras'),
+    body('tags')
+                .notEmpty().withMessage('Las palabras claves del producto no puede estar vacío').bail()
+                .isLength({ min: 5 }).withMessage('Deberá contener al menos 2 palabras'),
     body('img').custom((value, { req }) => {
         let file = req.file;
         let acceptedExtensions = ['.jpg', '.jpeg', '.png', '.gif'];

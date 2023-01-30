@@ -43,6 +43,7 @@ const renderProductCreate = (req, res) => {
 const renderProductRegistration = async (req, res) => {
 
     const resultValidation = validationResult(req);
+    
 
     if (!resultValidation.isEmpty()) {
         return res.render('products/productManagement', {
