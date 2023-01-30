@@ -270,8 +270,8 @@
 * Dejar de hacer: Preocuparme por arruinar algo en el proyecto. 
 
 ### Ariel Limes
-* Comenzar a hacer: 
-* Hacer más: 
-* Continuar haciendo: 
-* Hacer menos: 
-* Dejar de hacer: 
+* Comenzar a hacer: Más comentarios en el Trello.
+* Hacer más: Más dailys y weeklys meeting.
+* Continuar haciendo: Trabajar paralelamente con la ejercitación que plantea cada clase.
+* Hacer menos: Demorar en detalles menores.
+* Dejar de hacer: Intentar resolver solo sin ayuda de otros.
