@@ -33,7 +33,6 @@
               <textarea class="form-control <%= locals.errors && errors.description? 'is-invalid' : null %>" type="a" name="description" id="description"
               placeholder="Ingrese la descripcion del producto" rows="4" cols="50" required="true"></textarea
               value="<%= locals.oldData ? oldData.description : null %>">
-              <span></span>
               <div class="text-danger">
                 <%= (locals.errors && errors.description) ? errors.description.msg : '' %>
               </div>

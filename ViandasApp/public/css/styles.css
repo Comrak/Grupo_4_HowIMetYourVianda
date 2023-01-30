@@ -16,6 +16,20 @@
 }
 
 
+.invalid{
+    border: solid 1px red;
+    font-size: 0.8em;
+    box-shadow: 0 0 5px red;
+  }
+  
+  .valid{
+    border: solid 1px green;
+    font-size: 0.8em;
+    box-shadow: 0 0 5px green;
+  }
+
+
+
 *{
     margin: 0px;
     padding: 0px;
@@ -28,7 +42,7 @@ body{
 
 
 .button-size{
-	width: 40%;
+	width: 100%;
 
 }
 /* ################# Section Header ##############*/

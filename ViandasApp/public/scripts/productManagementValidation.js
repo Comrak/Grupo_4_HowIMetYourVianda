@@ -5,6 +5,23 @@ const nameField = document.querySelector("[name=name]");
 const priceField = document.querySelector("[name=price]");
 const descriptionField = document.querySelector("[name=description]");
 const imgField = document.querySelector("[name=img]");
+const tagsField = document.querySelector("[name=tags]");
+
+const setErrors = (field, isError=true) => {
+    if (isError) {
+        field.classList.add("invalid");
+        field.classList.remove("valid");
+        field.nextElementSibling.classList.add("error");
+        field.nextElementSibling.innerText = `${field.name} es un campo requerido`;
+    } else {
+        field.classList.add("valid");
+        field.classList.remove("invalid");
+        field.nextElementSibling.classList.remove("error");
+        field.nextElementSibling.innerText = "";
+    }
+}
+
+
 
 
 // Validacion de Nombre del Producto
@@ -12,26 +29,43 @@ nameField.addEventListener("blur", function(e){
     const field = e.target;
     const fieldValue = e.target.value;
     if (fieldValue.length < 5) {
-        field.nextElementSibling.classList.add("error");
-        field.nextElementSibling.innerText = "Debes escribir el nombre del producto";
+        setErrors(field);
     } else {
-        field.nextElementSibling.classList.remove("error");
-        field.nextElementSibling.innerText = "";
+        setErrors(field, false);
     }
 });
 
-
+// Validacion de Precio del Producto
+priceField.addEventListener("blur", function(e){
+    const field = e.target;
+    const fieldValue = e.target.value;
+    if ( fieldValue === '') {
+        setErrors(field);
+    } else {
+        setErrors(field, false);
+    }
+});
 
 // Validacion de Descripcion
 descriptionField.addEventListener("blur", function(e){
     const field = e.target;
     const fieldValue = e.target.value;
     if (fieldValue.length < 20) {
-        field.nextElementSibling.classList.add("error");
-        field.nextElementSibling.innerText = "Debes escribir una descripción del producto de un mínimo de 20 caracteres";
+        setErrors(field);
     } else {
-        field.nextElementSibling.classList.remove("error");
-        field.nextElementSibling.innerText = "";
+        setErrors(field, false);
+    }
+});
+
+
+// Validacion de tags del Producto
+tagsField.addEventListener("blur", function(e){
+    const field = e.target;
+    const fieldValue = e.target.value;
+    if (fieldValue.length < 5 ) {
+        setErrors(field);
+    } else {
+        setErrors(field, false);
     }
 });
 
@@ -42,11 +76,9 @@ imgField.addEventListener("change", function(e){
     const fileExtension = e.target.files[0].name.split(".").pop().toLowerCase();
     const allowedExt = ["jpg", "jpeg", "png", "gif"];
     if (!allowedExt.includes(fileExtension)) {
-        field.nextElementSibling.classList.add("error");
-        field.nextElementSibling.innerText = `Las extensiones permitidas son ${allowedExt.join(", ")}`;
+        setErrors(field);
     } else {
-        field.nextElementSibling.classList.remove("error");
-        field.nextElementSibling.innerText = "";
+        setErrors(field, false);
     }
   });
 

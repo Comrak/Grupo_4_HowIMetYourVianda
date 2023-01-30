@@ -2,6 +2,7 @@
 const path = require('path');
 const fs = require('fs');
 const { Op } = require("sequelize");
+const {validationResult} = require('express-validator');
 const db = require('../database/models');
 const Products = db.Products;
 
@@ -40,6 +41,15 @@ const renderProductCreate = (req, res) => {
 }
 
 const renderProductRegistration = async (req, res) => {
+
+    const resultValidation = validationResult(req);
+
+    if (!resultValidation.isEmpty()) {
+        return res.render('products/productManagement', {
+            errors: resultValidation.mapped(),
+            oldData: req.body   
+        });
+    }
 
     const camposDeNuevoProducto = req.body;
     camposDeNuevoProducto.image = '/img/productos/'+req.file.filename;
