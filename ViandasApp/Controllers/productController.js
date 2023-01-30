@@ -75,33 +75,48 @@ const renderProductEdit = async (req, res) => {
 
 const renderProductUpdate = async (req, res) => {
     
-    let id = req.params.id;
+    let productId = req.params.id;
     const dataToUpdate = req.body;
-    // dataToUpdate.tags = req.body.tags.trim().split(',') 
+    const productToEdit = await Products.findByPk(productId);
+
+
+    const resultValidation = validationResult(req);
     
+    if (!resultValidation.isEmpty()) {
+        return res.render('products/productEdit', {
+            errors: resultValidation.mapped(),
+            oldData: req.body,
+            productToEdit:productToEdit
+        });
+    }
+
+
     // check if the user has uploaded a new image
     if (req.file != undefined) {
         dataToUpdate.image = '/img/productos/'+req.file.filename;
     }   
     // find the product in the database
-    let productToUpdate = await Products.findByPk(id);
+    let productToUpdate = await Products.findByPk(productId);
     // check if the product exists
     if (!productToUpdate) {
         return res.render('error');
     }
+
+    dataToUpdate.tags=dataToUpdate.tags.trim()
+    dataToUpdate.description=dataToUpdate.description.trim()
     // if exists then update the product
     productToUpdate = {
         ... productToUpdate,
         ... dataToUpdate,
     }
 
+
     const productUpdated = await Products.update(productToUpdate, {
         where: {
-            id: id
+            id: productId
         }
     });
     return res.redirect('/products');
-
      
 }
 
