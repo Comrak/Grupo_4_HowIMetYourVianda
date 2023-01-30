@@ -16,6 +16,10 @@
 }
 
 
+.search-bar form{
+    display:flex
+}
+
 .invalid{
     border: solid 1px red;
     font-size: 0.8em;
@@ -1003,7 +1007,7 @@ footer{
         width:90%
     }
     .search-buttom{
-        width:10%
+        width:15%
     }
     .articulos {
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
