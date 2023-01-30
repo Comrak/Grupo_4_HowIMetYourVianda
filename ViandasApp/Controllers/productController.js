@@ -88,7 +88,7 @@ const renderProductUpdate = async (req, res) => {
     if (!resultValidation.isEmpty()) {
         return res.render('products/Editproduct', {
             errors: resultValidation.mapped(),
-            productId: productToEdit,
+            productToEdit: productToEdit,
             
         });
     }
