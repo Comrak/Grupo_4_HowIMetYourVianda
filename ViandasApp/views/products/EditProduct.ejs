@@ -5,15 +5,16 @@
     <%- include('../partials/header')%>
       <main class="main-body">
 
-        <form action="/products" method="post" class="form" enctype="multipart/form-data">
+        <form action="/products/<%=productToEdit.id%>?_method=PUT" method="POST" class="form-edit"
+          enctype="multipart/form-data">
 
           <div class="form-register">
-            <h4>Manejo de Productos</h4>
+            <h4>Edicion de Productos</h4>
             <div class="form-group botton-margin">
               <label for="name"> <b> Nombre del producto </b> </label>
 
               <input class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %>" type="text" name="name" id="name" placeholder="Ingrese el nombre del producto"
-              value="<%= locals.oldData ? oldData.name : null %>">
+              value="<%= locals.productToEdit ? productToEdit.name : null %>">
               <div class="text-danger">
                 <%= (locals.errors && errors.name) ? errors.name.msg : '' %>
               </div>
@@ -22,7 +23,7 @@
             <div class="form-group botton-margin">
               <label for="price"> <b>  Precio </b> </label>
               <input class="form-control <%= locals.errors && errors.price? 'is-invalid' : null %>" type="number" name="price" id="price" placeholder="Ingrese el Precio" 
-              value="<%= locals.oldData ? oldData.price : null %>">
+              value="<%= locals.productToEdit ? productToEdit.price : null %>">
               <div class="text-danger">
                 <%= (locals.errors && errors.price) ? errors.price.msg : '' %>
               </div>
@@ -32,7 +33,7 @@
               <label for="description"> <b> Descripcion del producto </b> </label>
               <textarea class="form-control <%= locals.errors && errors.description? 'is-invalid' : null %>" type="a" name="description" id="description"
               placeholder="Ingrese la descripcion del producto" rows="4" cols="50" ></textarea
-              value="<%= locals.oldData ? oldData.description : null %>">
+              value="<%= locals.productToEdit ? productToEdit.description : null %>">
               <div class="text-danger">
                 <%= (locals.errors && errors.description) ? errors.description.msg : '' %>
               </div>
@@ -41,7 +42,7 @@
               <label for="keywords"> <b> Palabras claves </b></label>
               <textarea class="form-control <%= locals.errors && errors.keywords? 'is-invalid' : null %>" type="a" name="tags" id="keywords"
                 placeholder="Ingrese palabras clave para el producto separa con ';'" rows="4" cols="50" ></textarea
-                value="<%= locals.oldData ? oldData.tags : null %>">
+                value="<%= locals.productToEdit ? productToEdit.tags : null %>">
                 <div class="text-danger">
                   <%= (locals.errors && errors.tags) ? errors.tags.msg : '' %>
                 </div>
@@ -49,13 +50,13 @@
             <div class="form-group botton-margin">
               <label for="img"> <b> Subir imagen: </b></label>
               <input class="form-control <%= locals.errors && errors.img ? 'is-invalid' : null %>"type="file" id="img" name="img" accept="image/*" 
-              value="<%= locals.oldData ? oldData.img : null %>">
+              value="<%= locals.productToEdit ? productToEdit.img : null %>">
               <span></span>
               <div class="text-danger">
                 <%= (locals.errors && errors.img) ? errors.img.msg : '' %>
               </div>
             </div>
-            <button type="submit" class="btn btn-success button-size" id="submitBtn">Enviar</button>
+            <button type="submit" class="btn btn-warning button-size" id="submitBtn">Actualizar</button>
            
           </div>
         </form>

@@ -70,7 +70,7 @@ const renderProductEdit = async (req, res) => {
         return res.render('error')
         }
         
-        return res.render('products/productEdit', {productToEdit:productToEdit, req:req} )
+        return res.render('products/EditProduct', {productToEdit:productToEdit, req:req} )
 }
 
 const renderProductUpdate = async (req, res) => {
@@ -79,14 +79,17 @@ const renderProductUpdate = async (req, res) => {
     const dataToUpdate = req.body;
     const productToEdit = await Products.findByPk(productId);
 
+   
 
     const resultValidation = validationResult(req);
+
+
     
     if (!resultValidation.isEmpty()) {
-        return res.render('products/productEdit', {
+        return res.render('products/Editproduct', {
             errors: resultValidation.mapped(),
-            oldData: req.body,
-            productToEdit:productToEdit
+            productId: productToEdit,
+            
         });
     }
 

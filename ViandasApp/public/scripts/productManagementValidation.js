@@ -22,8 +22,6 @@ const setErrors = (field, isError=true) => {
 }
 
 
-
-
 // Validacion de Nombre del Producto
 nameField.addEventListener("blur", function(e){
     const field = e.target;
