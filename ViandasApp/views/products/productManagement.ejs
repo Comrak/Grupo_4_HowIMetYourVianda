@@ -30,7 +30,7 @@
          
             <div class="form-group botton-margin">
               <label for="description"> <b> Descripcion del producto </b> </label>
-              <textarea class="form-control <%= locals.errors && errors.description? 'is-invalid' : null %>" type="a" name="description" id="description"
+              <textarea class="form-control <%= locals.errors && errors.description? 'is-invalid' : null %>" type="text" name="description" id="description"
               placeholder="Ingrese la descripcion del producto" rows="4" cols="50" ></textarea
               value="<%= locals.oldData ? oldData.description : null %>">
               <div class="text-danger">
