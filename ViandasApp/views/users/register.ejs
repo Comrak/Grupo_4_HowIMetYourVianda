@@ -21,14 +21,10 @@
                 <input class="form-control <%= locals.errors && errors.fullName ? 'is-invalid' : null %>" type="text"
                   name="fullName" id="fullName" placeholder="Ingrese su Nombre y Apellido"
                   value="<%= locals.oldData ? oldData.fullName : null %>">
-                
-                  
 
                 <div class="text-danger">
                   <%= (locals.errors && errors.fullName) ? errors.fullName.msg : '' %>
                 </div>
-                
-            
 
               </div>
               <div class="form-group botton-margin">
