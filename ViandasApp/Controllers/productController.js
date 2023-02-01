@@ -2,6 +2,7 @@
 const path = require('path');
 const fs = require('fs');
 const { Op } = require("sequelize");
+const {validationResult} = require('express-validator');
 const db = require('../database/models');
 const Products = db.Products;
 
@@ -17,13 +18,22 @@ const renderProductAll = async (req, res,) => {
 
 // see a filter list of product
  const renderDetail= async (req, res,) => {
-        const productId = req.params.id;
-        const productFinded = await Products.findByPk(productId);
-        // const productToFind = productos.find((product) => product.id == productId);
+        console.log(req.query.searchText)
+        const productId = req.query.searchText;
+        let productFinded
+        if(isNaN(productId)){
+            productFinded = await Products.findOne({ where: { name: productId } });
+        }else{
+            productFinded = await Products.findByPk(productId);
+        }
+        console.log('entre a la llamada')
+        //const productToFind = Products.find((product) => product.id == productId);
         if (productFinded == undefined) {
-          return res.send("No existe el producto");
+            const productos = await Products.findAll();
+            return res.render('products/productAll',{jsProductos:productos})
         }
         return res.render('products/detail', {productToFind: productFinded});
+        
       }
 
 const renderProductCreate = (req, res) => {
@@ -31,6 +41,16 @@ const renderProductCreate = (req, res) => {
 }
 
 const renderProductRegistration = async (req, res) => {
+
+    const resultValidation = validationResult(req);
+    
+
+    if (!resultValidation.isEmpty()) {
+        return res.render('products/productManagement', {
+            errors: resultValidation.mapped(),
+            oldData: req.body   
+        });
+    }
 
     const camposDeNuevoProducto = req.body;
     camposDeNuevoProducto.image = '/img/productos/'+req.file.filename;
@@ -50,38 +70,56 @@ const renderProductEdit = async (req, res) => {
         return res.render('error')
         }
         
-        return res.render('products/productEdit', {productToEdit:productToEdit, req:req} )
+        return res.render('products/EditProduct', {productToEdit:productToEdit, req:req} )
 }
 
 const renderProductUpdate = async (req, res) => {
     
-    let id = req.params.id;
+    let productId = req.params.id;
     const dataToUpdate = req.body;
-    // dataToUpdate.tags = req.body.tags.trim().split(',') 
+    const productToEdit = await Products.findByPk(productId);
+
+   
+
+    const resultValidation = validationResult(req);
+
+
     
+    if (!resultValidation.isEmpty()) {
+        return res.render('products/Editproduct', {
+            errors: resultValidation.mapped(),
+            productToEdit: productToEdit,
+            
+        });
+    }
+
+
     // check if the user has uploaded a new image
     if (req.file != undefined) {
         dataToUpdate.image = '/img/productos/'+req.file.filename;
     }   
     // find the product in the database
-    let productToUpdate = await Products.findByPk(id);
+    let productToUpdate = await Products.findByPk(productId);
     // check if the product exists
     if (!productToUpdate) {
         return res.render('error');
     }
+
+    dataToUpdate.tags=dataToUpdate.tags.trim()
+    dataToUpdate.description=dataToUpdate.description.trim()
     // if exists then update the product
     productToUpdate = {
         ... productToUpdate,
         ... dataToUpdate,
     }
 
+
     const productUpdated = await Products.update(productToUpdate, {
         where: {
-            id: id
+            id: productId
         }
     });
     return res.redirect('/products');
-
      
 }
 

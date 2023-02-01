@@ -16,6 +16,24 @@
 }
 
 
+.search-bar form{
+    display:flex
+}
+
+.invalid{
+    border: solid 1px red;
+    font-size: 0.8em;
+    box-shadow: 0 0 5px red;
+  }
+  
+  .valid{
+    border: solid 1px green;
+    font-size: 0.8em;
+    box-shadow: 0 0 5px green;
+  }
+
+
+
 *{
     margin: 0px;
     padding: 0px;
@@ -28,7 +46,7 @@ body{
 
 
 .button-size{
-	width: 40%;
+	width: 100%;
 
 }
 /* ################# Section Header ##############*/
@@ -710,7 +728,7 @@ footer{
     width: 40%;
 }
 .form #img{
-    width: 55%;
+    width: 100%;
   
 }
 
@@ -989,7 +1007,7 @@ footer{
         width:90%
     }
     .search-buttom{
-        width:10%
+        width:15%
     }
     .articulos {
         box-shadow: 0px 0px 10px rgb(100, 100, 100);

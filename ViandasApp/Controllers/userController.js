@@ -103,6 +103,16 @@ const login = (req, res) => {
 
 const loginProcess = async (req, res) => {
 
+    const loginResultValidation=validationResult(req)
+
+    // check if there are errors
+    if(!loginResultValidation.isEmpty()){
+                return res.render('users/login', {
+                        errors: loginResultValidation.mapped(), 
+                        oldData: req.body,
+                        });
+                    }
+
     const bodyData = req.body;
 
     let userToLogin = await Users.findOne({
