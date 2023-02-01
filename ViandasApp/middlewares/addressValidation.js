@@ -10,7 +10,7 @@ const addressValidations = [
                     .notEmpty().withMessage('Debes completar el campo Calle').bail()
                     .isLength({ min: 2 }).withMessage('El nombre debe tener al menos 2 caracteres'),
     body('number')    
-                    .notEmpty().withMessage('Debes completar el campo Numero'),
+                    .notEmpty().withMessage('Debes completar el campo Altura de calle'),
 
     body('floor')    
                     .notEmpty().withMessage('Debes completar el campo Piso'),

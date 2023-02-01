@@ -246,3 +246,32 @@
 * Hacer menos: tomar tareas de otro
 * Dejar de hacer: no responder a los mensajes del grupo
  
+## Sprint 7
+
+### Jose Nardulli  
+* Comenzar a hacer: mejorar el proyecto constantemente
+* Hacer más: supervisar al equipo
+* Continuar haciendo: profundizar conocimientos
+* Hacer menos: colgar el proyecto  
+* Dejar de hacer: no responder a los mensajes del grupo
+
+### Victoria Aquino
+* Comenzar a hacer: Tomar las tareas lo más pronto posible. 
+* Hacer más: Comentarios en el Trello.
+* Continuar haciendo: Trabajar en equipo.
+* Hacer menos: Perder tiempo en resolver algo sola.
+* Dejar de hacer: Enojarme cuando algo se me complica.
+
+### Montaño Florencia
+* Comenzar a hacer: Probar cosas que puedan servir, aunque no sea una tarea obligatoria. 
+* Hacer más: Manos en el proyecto.
+* Continuar haciendo:  Participar de todas las reuniones.
+* Hacer menos: Mirar demasiada teoría.
+* Dejar de hacer: Preocuparme por arruinar algo en el proyecto. 
+
+### Ariel Limes
+* Comenzar a hacer: Más comentarios en el Trello.
+* Hacer más: Más dailys y weeklys meeting.
+* Continuar haciendo: Trabajar paralelamente con la ejercitación que plantea cada clase.
+* Hacer menos: Demorar en detalles menores.
+* Dejar de hacer: Intentar resolver solo sin ayuda de otros.

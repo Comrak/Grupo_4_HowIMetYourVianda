@@ -9,18 +9,19 @@
                             <h4>Ingreso</h4>
                             <div class="form-group botton-margin">
                                 <label for="email"> <b> Email Usuario</b> </label>
-                                <input class="controls" type="email" name="email" id="userEmail"
-                                    placeholder="Ingrese su Usuario">
+                                <input class="controls <%= locals.errors && errors.email ? 'is-invalid' : null %>"
+                                    type="email" name="email" id="userEmail" placeholder="Ingrese su Usuario">
                                 <div class="text-danger">
-                                    <%= (locals.errors && errors.userEmail) ? errors.userEmail.msg : '' %>
+                                    <%= (locals.errors && errors.email) ? errors.email.msg : '' %>
                                 </div>
                             </div>
                             <div class="form-group botton-margin">
                                 <label for="password"> <b> Contraseña </b></label>
-                                <input class="controls" type="password" name="password" id="userPassword"
+                                <input class="controls <%= locals.errors && errors.password ? 'is-invalid' : null %>"
+                                    type="password" name="password" id="userPassword"
                                     placeholder="Ingrese su Contraseña">
                                 <div class="text-danger">
-                                    <%= (locals.errors && errors.userPassword) ? errors.userPassword.msg : '' %>
+                                    <%= (locals.errors && errors.password) ? errors.password.msg : '' %>
                                 </div>
                             </div>
                             <p><a href="#">Olvidaste tu contraseña?</a></p>
@@ -37,11 +38,11 @@
                                 <div class="logoicon">
                                     <a href="#"><img width="45" height="45" src="/img/facebook.png"
                                             alt="Facebook Logo"></a>
-                                    <a href="#"><img width="45" height="45" src="/img/buscar.png"
-                                            alt="Google Logo"></a>
+                                    <a href="#"><img width="45" height="45" src="/img/buscar.png" alt="Google Logo"></a>
                                 </div>
                             </div>
                         </div>
+                        <script src='../scripts/loginValidation.js'></script>
                 </main>
             </main>
 

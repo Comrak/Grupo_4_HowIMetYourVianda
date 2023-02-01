@@ -5,13 +5,19 @@
 
     <%- include('../partials/header')%>
       <main class="main-body">
+        
 
         <main class="main-register">
+        
+          
           <form action="/users/register" method="POST" class="form" enctype="multipart/form-data">
             <div class="form-register">
+            
               <h4>Registro</h4>
               <div class="form-group botton-margin">
+  
                 <label for=" fullName"> <b>Nombre y Apellido</b></label>
+                
                 <input class="form-control <%= locals.errors && errors.fullName ? 'is-invalid' : null %>" type="text"
                   name="fullName" id="fullName" placeholder="Ingrese su Nombre y Apellido"
                   value="<%= locals.oldData ? oldData.fullName : null %>">
@@ -19,7 +25,6 @@
                 <div class="text-danger">
                   <%= (locals.errors && errors.fullName) ? errors.fullName.msg : '' %>
                 </div>
-
 
               </div>
               <div class="form-group botton-margin">
@@ -115,6 +120,7 @@
                 </div>
               </div>
           </form>
+          <script src='../scripts/registerValidation.js'></script>
         </main>
       </main>
   </body>
