@@ -20,6 +20,19 @@ nameField.addEventListener("blur", function(e){
 });
 
 
+// Validacion de Numero de telefono
+phoneField.addEventListener("blur", function(e){
+    const field = e.target;
+    const fieldValue = e.target.value;
+    if (fieldValue.length <= 2) {
+        field.nextElementSibling.classList.add("error");
+        field.nextElementSibling.innerText = "Debes escribir un Telefono";
+    } else {
+        field.nextElementSibling.classList.remove("error");
+        field.nextElementSibling.innerText = "";
+    }
+});
+
 //Validacion de Email
 //Expresiones Regulares https://www.w3schools.com/jsref/jsref_obj_regexp.asp       
 //https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-javascript
@@ -39,6 +52,19 @@ emailField.addEventListener("blur", function(e){
 
 //Validacion contraseña
 passwordField.addEventListener("blur", function(e){
+    const field = e.target;
+    const fieldValue = e.target.value;
+    if (fieldValue.length <= 7) {
+        field.nextElementSibling.classList.add("error");
+        field.nextElementSibling.innerText = "Debes tener al menos 8 caracteres";
+    } else {
+        field.nextElementSibling.classList.remove("error");
+        field.nextElementSibling.innerText = "";
+    }
+});
+
+//Validacion contraseña
+confirmPasswordField.addEventListener("blur", function(e){
     const field = e.target;
     const fieldValue = e.target.value;
     if (fieldValue.length <= 7) {
