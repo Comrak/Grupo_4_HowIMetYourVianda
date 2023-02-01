@@ -7,12 +7,17 @@ const descriptionField = document.querySelector("[name=description]");
 const imgField = document.querySelector("[name=img]");
 const tagsField = document.querySelector("[name=tags]");
 
-const setErrors = (field, isError=true) => {
+const setErrors = (field, isError=true, errorDesc=false) => {
     if (isError) {
         field.classList.add("invalid");
         field.classList.remove("valid");
         field.nextElementSibling.classList.add("error");
-        field.nextElementSibling.innerText = `${field.name} es un campo requerido`;
+        if(errorDesc){
+            field.nextElementSibling.innerText = `${field.name} debe tener mas de 20 caracteres`;
+        }
+        else{
+            field.nextElementSibling.innerText = `${field.name} es un campo requerido`;
+        }
     } else {
         field.classList.add("valid");
         field.classList.remove("invalid");
@@ -39,9 +44,19 @@ priceField.addEventListener("blur", function(e){
     const fieldValue = e.target.value;
     if ( fieldValue === '') {
         setErrors(field);
-    } else {
+    }
+    else {
         setErrors(field, false);
     }
+});
+
+//no permitimos nada que no sea un numero en price 
+priceField.addEventListener('keypress',function inpNum(e) {
+    e = e || window.event;
+    var charCode = (typeof e.which == "undefined") ? e.keyCode : e.which;
+    var charStr = String.fromCharCode(charCode);
+    if (!charStr.match(/^[0-9]+$/))
+      e.preventDefault();
 });
 
 // Validacion de Descripcion
@@ -49,7 +64,7 @@ descriptionField.addEventListener("blur", function(e){
     const field = e.target;
     const fieldValue = e.target.value;
     if (fieldValue.length < 20) {
-        setErrors(field);
+        setErrors(field, true, true);
     } else {
         setErrors(field, false);
     }
