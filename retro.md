@@ -249,11 +249,11 @@
 ## Sprint 7
 
 ### Jose Nardulli  
-* Comenzar a hacer:   
-* Hacer más: 
-* Continuar haciendo: 
-* Hacer menos: 
-* Dejar de hacer: 
+* Comenzar a hacer: mejorar el proyecto constantemente
+* Hacer más: supervisar al equipo
+* Continuar haciendo: profundizar conocimientos
+* Hacer menos: colgar el proyecto  
+* Dejar de hacer: no responder a los mensajes del grupo
 
 ### Victoria Aquino
 * Comenzar a hacer: Tomar las tareas lo más pronto posible. 
