@@ -6,6 +6,7 @@ const { body } = require('express-validator');
 const userController = require('../controllers/userController');
 const validations = require('../middlewares/uservalidations');
 const addressValidations = require('../middlewares/addressValidation');
+const loginValidations = require('../middlewares/loginValidations');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 
 
@@ -37,7 +38,7 @@ router.post('/register',upload.single('avatar'),validations, userController.proc
 router.get('/login', guestMiddleware,userController.login);
 
 // Procesar el login
-router.post('/login', userController.loginProcess);
+router.post('/login', loginValidations,userController.loginProcess);
 // Perfil de Usuario
 router.get('/profile', authMiddleware,userController.profile);
 

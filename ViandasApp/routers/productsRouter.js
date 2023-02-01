@@ -1,7 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const path = require('path')
+const path = require('path');
+const {body} = require ('express-validator');
 const productController = require('../controllers/productController');
+const validationsRegister = require ('../middlewares/validateProduct');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
 const multer = require("multer");
@@ -26,14 +28,14 @@ router.get('/', productController.renderProductAll);
 
 //Create a new Product
 router.get('/create',authMiddleware ,productController.renderProductCreate);
-router.post('/', upload.single("img"), productController.renderProductRegistration);
+router.post('/', upload.single("img"), validationsRegister, productController.renderProductRegistration);
 
 //Get a single Product with id
-router.get('/detail/:id', authMiddleware,productController.renderDetail);
+router.get('/detail', authMiddleware,productController.renderDetail);
 
 //Update a Product with id
 router.get('/:id', authMiddleware,productController.renderProductEdit)
-router.put('/:id',upload.single("img"),productController.renderProductUpdate);
+router.put('/:id',upload.single("img"),validationsRegister, productController.renderProductUpdate);
 
 // Delete a record
 router.delete('/delete/:id', authMiddleware,productController.renderProductDelete); 
