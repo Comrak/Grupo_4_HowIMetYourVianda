@@ -8,6 +8,9 @@ const routerUser = require('./routers/userRouter')
 const routerTransaction = require('./routers/transactionRouter')
 const session = require('express-session');
 const cookies = require('cookie-parser');
+const productsRoutes = require('./routers/api/productsRoutes');
+const usersRoutes = require('./routers/api/usersRoutes');
+
 // Settings post requirement in app
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
@@ -43,4 +46,6 @@ app.listen(numeroPuerto, ()=>{
 app.use('/', routerMain);
 app.use('/products', routerProduct);
 app.use('/users', routerUser);
+app.use('/api/products', productsRoutes);
+app.use('/api/users', usersRoutes)
 // app.use('/trans', routerTransaction);
