@@ -8,7 +8,9 @@ const Users = db.Users;
 
 const usersApiController = {
     list: async (req, res) => {
-        const usersList = await db.Users.findAll();
+        const usersList = await db.Users.findAll({
+			include: ['addresses']
+		});
 		const responseData = {
 			meta:{
 				status: 200,
