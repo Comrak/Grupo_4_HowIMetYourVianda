@@ -7,6 +7,7 @@ const { Op } = require("sequelize");
 const Products = db.Products;
 
 const productsApiController = {
+	
     list: async (req, res) => {
         const productsList = await db.Products.findAll();
 		const responseData = {
