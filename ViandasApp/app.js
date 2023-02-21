@@ -11,6 +11,9 @@ const cookies = require('cookie-parser');
 const productsRoutes = require('./routers/api/productsRoutes');
 const usersRoutes = require('./routers/api/usersRoutes');
 
+const cors = require("cors");
+app.use(cors());
+
 // Settings post requirement in app
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
