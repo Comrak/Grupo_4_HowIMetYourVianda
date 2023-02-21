@@ -126,19 +126,8 @@ const loginProcess = async (req, res) => {
 
 
       
-      // redirigir a la pagina del usuario
-      const userId = req.session.userLogged.id;
-      const addressList = await Address.findAll({
-        include: ["city"],
-        where: { user_id: userId },
-      });
-
-
-      // return res.send(addressList)
-      return res.render("users/usersProfile", {
-        user: req.session.userLogged,
-        addressList: addressList,
-      });
+       // redirigir a la pagina del usuario
+       return res.redirect('/users/profile')
     }
 
     return res.render("users/login", {
