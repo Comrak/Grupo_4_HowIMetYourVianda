@@ -24,14 +24,14 @@ const { response } = require("express");
 //const renderAbout = (req, res) => {
 //  return res.render('about')
 //}
-
+// ************************* User Create *************************
 const register = async (req, res) => {
   const countries = await Country.findAll();
   const userRoles = await UserRol.findAll();
 
   return res.render("users/register", { countries, userRoles });
 };
-
+// ************************* User Create Process *************************
 const processRegister = async (req, res) => {
   const countries = await Country.findAll();
   const userRoles = await UserRol.findAll();
@@ -89,7 +89,7 @@ const processRegister = async (req, res) => {
 const login = (req, res) => {
   return res.render("users/login");
 };
-
+// ******************* Login Process *******************
 const loginProcess = async (req, res) => {
   const loginResultValidation = validationResult(req);
 
@@ -111,27 +111,29 @@ const loginProcess = async (req, res) => {
   // ******************* check if user exists ************
   if (userToLogin) {
     // ****************** Check password *******************
-    let passwordOK = bcryptjs.compareSync(
-      req.body.password,
-      userToLogin.password
-    );
+    let passwordOK = bcryptjs.compareSync(req.body.password,userToLogin.password);
     if (passwordOK) {
       // elimino del objeto userToLogin la propiedad password
       delete userToLogin.password;
       delete userToLogin.confirmPassword;
       // mantener el usuario logeado en session
+     
       req.session.userLogged = userToLogin;
       // si el usuario eligió recordarme
       if (req.body.rememberMe) {
         res.cookie("userEmail", req.body.userEmail, { maxAge: 1000 * 60 * 10 });
       }
 
+
+      
       // redirigir a la pagina del usuario
       const userId = req.session.userLogged.id;
       const addressList = await Address.findAll({
         include: ["city"],
         where: { user_id: userId },
       });
+
+
       // return res.send(addressList)
       return res.render("users/usersProfile", {
         user: req.session.userLogged,
@@ -158,7 +160,7 @@ const loginProcess = async (req, res) => {
     });
   }
 };
-
+// ******************** Profile *******************
 const profile = async (req, res) => {
   const userId = req.session.userLogged.id;
   const addressList = await Address.findAll({
@@ -172,7 +174,7 @@ const profile = async (req, res) => {
     addressList: addressList,
   });
 };
-
+// ********************* Edit  **************************
 const userEdit = async (req, res) => {
   const countries = await Country.findAll();
   const userRoles = await UserRol.findAll();
@@ -183,7 +185,7 @@ const userEdit = async (req, res) => {
     user: req.session.userLogged,
   });
 };
-
+// ********************* Edit Process *******************
 const processEdit = async (req, res) => {
   let id = req.session.userLogged.id;
   const dataToUpdate = req.body;
@@ -238,7 +240,7 @@ const processEdit = async (req, res) => {
   });
   return res.redirect("login");
 };
-
+// ***************************** Delete User **************************
 const deleteUser = (req, res) => {
   let userToDelete = req.session.userLogged.id;
   Users.destroy({
@@ -248,28 +250,28 @@ const deleteUser = (req, res) => {
   });
   return res.render("users/login");
 };
-
+// ***************************** Logout **************************
 const logout = (req, res) => {
   res.clearCookie("userEmail");
   req.session.destroy();
   return res.redirect("/");
 };
-
+// ***************************** Carrito **************************
 const carrito = (req, res) => {
   return res.render("users/carritoCompras");
 };
-
+// ***************************** Process Carrito **************************
 const processCarrito = (req, res) => {
   return res.render("users/carritoCompras");
 };
-
+// ***************************** Address **************************
 const address = async (req, res) => {
   const countries = await Country.findAll();
   const cities = await City.findAll();
 
   return res.render("users/address", { countries, cities });
 };
-
+// ***************************** Process Address **************************
 const processAddress = async (req, res) => {
   const bodyInfo = req.body;
   const userId = req.session.userLogged.id;
@@ -310,7 +312,7 @@ const processAddress = async (req, res) => {
     addressList: addressList,
   });
 };
-
+// ***************************** Edit Address **************************
 const editAddress = async (req, res) => {
   const countries = await Country.findAll();
   const cities = await City.findAll();
@@ -318,7 +320,7 @@ const editAddress = async (req, res) => {
   const addressToEdit = await Address.findByPk(addressId);
   return res.render("users/editAddress", { addressToEdit, countries, cities });
 };
-
+// ***************************** Process Edit Address **************************
 const processEditAddress = async (req, res) => {
   const bodyInfo = req.body;
   const addressResultValidation = validationResult(req);
@@ -359,7 +361,7 @@ const processEditAddress = async (req, res) => {
     console.log(error);
   }
 };
-
+// ***************************** Delete Address **************************
 const deleteAddress = async (req, res) => {
   const userId = req.session.userLogged.id;
   const addressId = req.params.id;
@@ -389,7 +391,7 @@ const editProfile = async (req, res) => {
     countries,
   });
 };
-
+// ***************************** Process Edit Profile **************************
 const processEditProfile = async (req, res) => {
   const userId = req.session.userLogged.id;
   const countries = await Country.findAll();
