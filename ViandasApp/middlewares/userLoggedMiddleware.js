@@ -37,8 +37,8 @@ async function userLoggedMiddleware (req,res,next) {
         // pasar la info del usuario logeado a la variable locals
         res.locals.userLogged = req.session.userLogged;
     }
-    console.log(res.locals.userLogged);
-    console.log(res.locals.isLogged)
+    // console.log(res.locals.userLogged);
+    // console.log(res.locals.isLogged)
 
     next();
 }
