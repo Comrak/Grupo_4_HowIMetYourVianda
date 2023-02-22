@@ -33,6 +33,18 @@ const usersApiController = {
 		}
         return res.json(responseData)
     },
+	addressList: async (req, res) => {
+        const addressList = await db.Address.findAll();
+		const responseData = {
+			meta:{
+				status: 200,
+				total: addressList.length,
+				url: req.originalUrl
+			},
+			data: addressList
+		}
+        return res.json(responseData)
+	}
 }
 
 module.exports = usersApiController;
