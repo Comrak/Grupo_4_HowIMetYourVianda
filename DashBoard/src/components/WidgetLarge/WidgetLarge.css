@@ -1,0 +1,13 @@
+.widgetLarge{
+    flex:2;
+    box-shadow: 10px 10px 35px -8px rgba(0,0,0,0.61);
+    -webkit-box-shadow: 10px 10px 35px -8px rgba(0,0,0,0.61);
+    -moz-box-shadow: 10px 10px 35px -8px rgba(0,0,0,0.61);
+    padding: 20px;
+}
+
+.widgetLgTitle{
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}

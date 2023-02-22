@@ -275,3 +275,33 @@
 * Continuar haciendo: Trabajar paralelamente con la ejercitación que plantea cada clase.
 * Hacer menos: Demorar en detalles menores.
 * Dejar de hacer: Intentar resolver solo sin ayuda de otros.
+
+## Sprint 8
+
+### Jose Nardulli  
+* Comenzar a hacer: 
+* Hacer más: 
+* Continuar haciendo: 
+* Hacer menos: 
+* Dejar de hacer: 
+
+### Victoria Aquino
+* Comenzar a hacer: 
+* Hacer más: 
+* Continuar haciendo: 
+* Hacer menos: 
+* Dejar de hacer: 
+
+### Montaño Florencia
+* Comenzar a hacer: 
+* Hacer más: 
+* Continuar haciendo:  
+* Hacer menos: 
+* Dejar de hacer: 
+
+### Ariel Limes
+* Comenzar a hacer: 
+* Hacer más: M
+* Continuar haciendo: 
+* Hacer menos: 
+* Dejar de hacer: 
