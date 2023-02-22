@@ -19,7 +19,7 @@ export default function Home() {
       /> */}
       <div className="homeWidget">
         <WidgetSmall />
-        <WidgetLarge />
+        {/* <WidgetLarge /> */}
       </div>
     </div>
   );

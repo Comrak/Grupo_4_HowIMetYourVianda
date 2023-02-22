@@ -1,6 +1,6 @@
 module.exports ={
   "development": {
-    "username": "basic",
+    "username": "root",
     "password": '',
     "database": "HIMV",
     "host": "127.0.0.1",
