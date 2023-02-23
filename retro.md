@@ -279,29 +279,29 @@
 ## Sprint 8
 
 ### Jose Nardulli  
-* Comenzar a hacer: 
-* Hacer más: 
-* Continuar haciendo: 
-* Hacer menos: 
-* Dejar de hacer: 
+* Comenzar a hacer: Hacer pruebas para detectar posibles errores.
+* Hacer más: Revisar en conjunto los cambios hechos.
+* Continuar haciendo: Estar pendiente del estado del proyecto.
+* Hacer menos: Realizar cambios a la branch de main.
+* Dejar de hacer: Descuidar las asignaciones
 
 ### Victoria Aquino
-* Comenzar a hacer: 
-* Hacer más: 
-* Continuar haciendo: 
-* Hacer menos: 
-* Dejar de hacer: 
+* Comenzar a hacer: Desarrollar mis proyectos personales con los temas que vimos.
+* Hacer más: Comentarios en las tareas del Trello.
+* Continuar haciendo: Preguntar cuando algo no me sale.
+* Hacer menos: Expresar estres cuando no hay  avances
+* Dejar de hacer: Pensar en que todo debo saberlo a la perfección sino no sirve.
 
 ### Montaño Florencia
-* Comenzar a hacer: 
-* Hacer más: 
-* Continuar haciendo:  
-* Hacer menos: 
-* Dejar de hacer: 
+* Comenzar a hacer: Comentarios en el Trello.
+* Hacer más: Probar las funcionalidades.
+* Continuar haciendo: Trabajar en equipo.
+* Hacer menos: No trasladar lo de playground al proyecto.
+* Dejar de hacer: Tener miedo de cometer errores.
 
 ### Ariel Limes
-* Comenzar a hacer: 
-* Hacer más: M
-* Continuar haciendo: 
-* Hacer menos: 
-* Dejar de hacer: 
+* Comenzar a hacer: Probar la ejecución del código en busca de fallas.
+* Hacer más: Preguntar a los profesores cuando no podemos resolver los errores.
+* Continuar haciendo: Cumplir con los objetivos del sprint.
+* Hacer menos: Demorar en buscar las formas más actuales de cómo avanzar en cada tema.
+* Dejar de hacer: Enojarme cuando algo no sale o cuesta mucho tiempo.
