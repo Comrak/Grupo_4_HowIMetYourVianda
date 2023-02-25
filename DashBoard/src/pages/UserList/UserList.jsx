@@ -25,7 +25,7 @@ export default function UserList () {
   console.log(tableData)
 
   return (
-    <div style={{ height: 700, width: '100%' , marginLeft:'10px'}}>
+    <div style={{ height: 700, width: '100%' , marginLeft:'10px', marginTop:'2rem'}}>
       <Typography variant='h4' component='h3' sx={{marginBottom:'20px'}}> Lista de Usuarios </Typography>
       <DataGrid
         rows={tableData}

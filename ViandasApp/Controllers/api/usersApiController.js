@@ -15,7 +15,9 @@ const usersApiController = {
 			meta:{
 				status: 200,
 				total: usersList.length,
-				url: req.originalUrl
+				url: req.originalUrl,
+				hostname: req.hostname,
+				
 			},
 			data: usersList
 		}
