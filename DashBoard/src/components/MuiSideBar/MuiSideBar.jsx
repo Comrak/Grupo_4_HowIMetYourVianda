@@ -164,11 +164,6 @@ export default function MiniDrawer() {
               <AccountCircle />
             </IconButton>
             </Box>
-           
-
-
-
-
         </Toolbar>
       </AppBar>
       <Drawer variant="permanent" open={open}>
