@@ -26,9 +26,16 @@ import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import AccountCircle from '@mui/icons-material/AccountCircle';
+import { ThemeProvider, createTheme } from '@mui/material'
 
+const theme = createTheme({
+  palette: {
+    info: {
+      main: '#EFF6F5 ',
 
-
+    }
+  }
+  });
 
 const drawerWidth = 240;
 
@@ -123,6 +130,7 @@ export default function MiniDrawer() {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
+      <ThemeProvider theme={theme}>
       <AppBar position="fixed" open={open}>
         <Toolbar sx={{color:'white' , bgcolor:'info.main'}}>
           <IconButton
@@ -166,6 +174,7 @@ export default function MiniDrawer() {
             </Box>
         </Toolbar>
       </AppBar>
+      </ThemeProvider>
       <Drawer variant="permanent" open={open}>
         <DrawerHeader>
           <IconButton onClick={handleDrawerClose}>
