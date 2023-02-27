@@ -112,23 +112,24 @@ const loginProcess = async (req, res) => {
   // ******************* check if user exists ************
   if (userToLogin) {
     // ****************** Check password *******************
-    let passwordOK = bcryptjs.compareSync(req.body.password,userToLogin.password);
+    let passwordOK = bcryptjs.compareSync(
+      req.body.password,
+      userToLogin.password
+    );
     if (passwordOK) {
       // elimino del objeto userToLogin la propiedad password
       delete userToLogin.password;
       delete userToLogin.confirmPassword;
       // mantener el usuario logeado en session
-     
+
       req.session.userLogged = userToLogin;
       // si el usuario eligió recordarme
       if (req.body.rememberMe) {
         res.cookie("userEmail", req.body.userEmail, { maxAge: 1000 * 60 * 10 });
       }
 
-
-      
-       // redirigir a la pagina del usuario
-       return res.redirect('/users/profile')
+      // redirigir a la pagina del usuario
+      return res.redirect("/users/profile");
     }
 
     return res.render("users/login", {
@@ -300,6 +301,8 @@ const processAddress = async (req, res) => {
   const countries = await Country.findAll();
   const cities = await City.findAll();
 
+  
+
   if (!addressResultValidation.isEmpty()) {
     return res.render("users/address", {
       errors: addressResultValidation.mapped(), // los errores que contiene el objeto resultValidation
@@ -312,9 +315,11 @@ const processAddress = async (req, res) => {
   // capture the address data from body
 
   bodyInfo.user_id = userId;
-
+  bodyInfo.floor = bodyInfo.floor || null;
+  bodyInfo.apartment = bodyInfo.apartment || null;
   let addressToCreate = { ...bodyInfo };
 
+  
   try {
     // create address
     const addressCreated = await Address.create(addressToCreate);

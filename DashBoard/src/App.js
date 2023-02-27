@@ -5,6 +5,7 @@ import Home from "./pages/Home/Home";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import UserList from "./pages/UserList/UserList";
 import ProductList from "./pages/ProductList/ProductList";
+import MuiSideBar from "./components/MuiSideBar/MuiSideBar";
 
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
     <Router>
       <TopBar />
       <div className="container">
-        <SideBar />
+        {/* <SideBar /> */}
+        <MuiSideBar/>
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/users" element={<UserList />} />

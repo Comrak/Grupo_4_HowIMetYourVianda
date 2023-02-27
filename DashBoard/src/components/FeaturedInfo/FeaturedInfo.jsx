@@ -46,7 +46,7 @@ export default function FeaturedInfo() {
         <span className="featuredTitle">Cantidad Usuarios</span>
         <div className="featuredMoneyContainer">
           <span className="featuredMoney">{userCount}</span>
-          <span className="featuredMoneyRate">  -11.5 <ArrowDownwardIcon className='featureIcon negative'/> </span>
+          <span className="featuredMoneyRate">  11.5 <ArrowUpwardIcon className='featureIcon'/> </span>
         </div>
         <span className="featuredSub">Comparado con el mes anterior</span>
       </div>
@@ -62,7 +62,7 @@ export default function FeaturedInfo() {
         <span className="featuredTitle">Cantidad de Direcciones</span>
         <div className="featuredMoneyContainer">
           <span className="featuredMoney">{addressCount}</span>
-          <span className="featuredMoneyRate">  16.5 <ArrowUpwardIcon className='featureIcon'/> </span>
+          <span className="featuredMoneyRate">  5.5 <ArrowUpwardIcon className='featureIcon'/> </span>
         </div>
         <span className="featuredSub">Comparado con el mes anterior</span>
       </div>

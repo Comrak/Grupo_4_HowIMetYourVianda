@@ -12,11 +12,11 @@ const addressValidations = [
     body('number')    
                     .notEmpty().withMessage('Debes completar el campo Altura de calle'),
 
-    body('floor')    
-                    .notEmpty().withMessage('Debes completar el campo Piso'),
+    // body('floor')    
+    //                 .notEmpty().withMessage('Debes completar el campo Piso'),
 
-    body('dept')    
-                    .notEmpty().withMessage('Debes completar el campo depto'),
+    // body('dept')    
+    //                 .notEmpty().withMessage('Debes completar el campo depto'),
 
     body('zipCode')    
                     .notEmpty().withMessage('Debes completar el campo ZipCode'),
