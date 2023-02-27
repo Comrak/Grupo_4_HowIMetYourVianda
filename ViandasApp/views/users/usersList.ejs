@@ -1,0 +1,96 @@
+<%- include('../partials/head',{cssFile:'userStyles.css'})%>
+
+    <body>
+        <%- include('../partials/header')%>
+
+            <!-- Container -->
+            <main class="main-body">
+                <div class="container" style="margin-top: 40px;">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h2>Hola <%= user.fullName %>
+                            </h2>
+                            <img src="/img/users/<%=user.avatar%> ">
+                            <br>
+                            <br>
+                            <div class="alert alert-success"> Tu Usuario es: <b>
+                                    <%= user.email %>
+                                </b> </div>
+                            <div class="alert alert-success"> Tu tienes el Rol de: <b>
+                                    <%= user.userRole.role %>
+                                </b> </div>
+                            
+                          
+                    
+                        </div>
+                        <div class=" address-block-h">
+                            <div class="address-title">
+                              
+                                <h2>Usuarios Actuales</h2>
+                            </div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Nombre Completo</th>
+                                        <th scope="col">Usuario/Email</th>
+                                        <th scope="col">Role</th>
+                                        <th scope="col">Creado el</th>
+                                        <th scope="col">Actualizado el</th>
+                                        <th scope="col"> </th>
+                                        <th scope="col"> </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="vertical_align">
+                                        <% for( let user of userList ) { %>
+                                            <td>
+                                                <%= user.fullName %>
+                                            </td>
+                                            <td>
+                                                <%= user.email %>
+                                            </td>
+                                            <td>
+                                                <%= user.userRole.role %>
+                                            </td>
+                                            <td>
+                                                <%= user.createdAt %>
+                                            </td>
+                                            <td>
+                                                <%= user.updatedAt %>
+                                            </td>
+                                            <td>
+                                                <form action="/users/edit/<%= user.id %>" method="get"
+                                                    id="form-delete"">
+                                                    <button type=" Editar" id="btn-editar"
+                                                    class="btn btn-warning btn-sm"><i
+                                                        class="fa-solid fa-pen-to-square"></i></button>
+                                                </form>
+                                            </td>
+
+                                            <td>
+                                                <form action="/users/address/delete/<%= user.id %>" method="POST"
+                                                    id="form-address-delete">
+                                                    <button type="submit" id="btn-delete"
+                                                        class="btn btn-danger btn-sm"><i
+                                                            class="fa-solid fa-pen-to-square"></i></button>
+
+                                                </form>
+                                            </td>
+                                    </tr>
+                                    <% } %>
+
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                    </div>
+                </div>
+                <!-- //Container -->
+                </div>
+                <%- include('../partials/footer')%>
+
+                    <script src="/scripts/UserEvents.js"></script>
+    </body>
+
+    </html>

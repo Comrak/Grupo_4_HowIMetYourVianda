@@ -65,6 +65,9 @@ router.get('/logout', userController.logout);
 router.get('/carrito/:id', userController.carrito);
 router.get('/addCarrito/:userID/:productID', userController.addCarrito);
 
+// formulatio para listar usuarios
+router.get('/list', userController.userList);
+
 
 
 

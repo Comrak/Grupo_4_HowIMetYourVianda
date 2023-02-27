@@ -450,6 +450,7 @@ const processEditProfile = async (req, res) => {
       where: { user_id: userId },
     });
 
+
     // return res.send(addressList)
     return res.render("users/usersProfile", {
       user: req.session.userLogged,
@@ -459,7 +460,20 @@ const processEditProfile = async (req, res) => {
     console.log(error);
   }
 };
+// ******************** UserLists *******************
+const userList = async (req, res) => {
 
+  const userList = await Users.findAll({
+    include: ["userRole"]
+    
+  });
+ 
+  // return res.send(addressList)
+  return res.render("users/usersList", {
+    user: req.session.userLogged,
+    userList: userList,
+  });
+};
 
 
 module.exports = {
@@ -478,4 +492,5 @@ module.exports = {
   deleteAddress,
   editProfile,
   processEditProfile,
+  userList
 };
