@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import "./LastProduct.css";
 import VisibilityIcon from "@mui/icons-material/Visibility";
+import {Avatar} from "@mui/material";
+
 
 export default function WidgetSmall() {
 
@@ -21,8 +23,8 @@ export default function WidgetSmall() {
         <span className="widgetSmallTitle">Ultimo producto</span>
         <ul className="widgetSmallList">
           <li className="widgetSmallListItem">
-            <img
-              src="https://images.hola.com/imagenes/cocina/recetas/20220208204252/pizza-pepperoni-mozzarella/1-48-890/pepperoni-pizza-abob-t.jpg"
+          <Avatar
+              src={`http://localhost:3200/${lastProduct.image}`}
               alt=""
               className="WidgetSmallImage"
             />

@@ -1,8 +1,10 @@
 .home{
     flex:6;
+    margin-top: 2rem;
 }
 
 .homeWidget{
     display: flex;
     margin: 20px;
+    margin-top: 3rem;
 }
