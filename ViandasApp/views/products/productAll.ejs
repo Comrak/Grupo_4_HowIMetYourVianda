@@ -15,10 +15,42 @@
                                 <div class="art_principal">
                                     <div class="imagen-producto">
                                         <% if (locals.userLogged && locals.userLogged.role_id === 2 ) { %>
+                                            <script>
+                                                window.onload = (event) => {
+                                                    let articulos = document.getElementsByTagName('article')
+                                                    for (let articulo of articulos) {
+                                                        articulo.firstElementChild.addEventListener('click',function(){
+                                                            Swal.fire({
+                                                                title: articulo.children[0].id,
+                                                                text: articulo.innerText.replace('Agregar al carrito', ''),
+                                                                imageUrl: articulo.childNodes[1].children[0].lastElementChild.src,
+                                                                imageWidth: 400,
+                                                                imageHeight: 200,
+                                                            })
+                                                        })
+                                                    }
+                                                };
+                                            </script>
                                             <img src="<%= producto.image %>" id="<%= producto.name%>"></a>
                                         <% } else if (locals.userLogged && locals.userLogged.role_id===1 ) { %>
                                             <a href="/products/detail/<%= producto.id %>"><img src="<%= producto.image %>" id="<%= producto.name%>"></a>
                                         <% } else if (locals.userLogged==undefined) { %>
+                                            <script>
+                                                window.onload = (event) => {
+                                                    let articulos = document.getElementsByTagName('article')
+                                                    for (let articulo of articulos) {
+                                                        articulo.firstElementChild.addEventListener('click',function(){
+                                                            Swal.fire({
+                                                                title: articulo.children[0].id,
+                                                                text: articulo.innerText.replace('Agregar al carrito', ''),
+                                                                imageUrl: articulo.childNodes[1].children[0].lastElementChild.src,
+                                                                imageWidth: 400,
+                                                                imageHeight: 200,
+                                                            })
+                                                        })
+                                                    }
+                                                };
+                                            </script>
                                             <img src="<%= producto.image %>" id="<%= producto.name%>"></a>
                                         <% } %>
                                     </div>
