@@ -14,7 +14,7 @@ export default function WidgetSmall() {
 
   }, [])
 
-  const lastUser = userData.find(e => e.id = Math.max(...userData.map(elements => (elements.id))))
+  const lastUser = userData.find(e => e.id === Math.max(...userData.map(e => e.id)))
 
   if(lastUser != undefined){
     return (

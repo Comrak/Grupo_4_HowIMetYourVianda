@@ -15,7 +15,7 @@ export default function WidgetSmall() {
 
   }, [])
 
-  const lastProduct= productData.find(e => e.id = Math.max(...productData.map(elements => (elements.id))))
+  const lastProduct= productData.find(e => e.id === Math.max(...productData.map(e => e.id)))
   console.log(lastProduct)
   if(lastProduct !== undefined){
     return (
