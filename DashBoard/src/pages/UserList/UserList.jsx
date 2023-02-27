@@ -23,7 +23,7 @@ const columns = [
     },
   },
 
-  { field: "fullName", headerName: "fullName", width: 100 },
+  { field: "fullName", headerName: "fullName", width: 200 },
   { field: "email", headerName: "email", width: 300 },
   { field: "mobilePhone", headerName: "mobilePhone", width: 150 },
   { field: "birthDate", headerName: "birthDate", width: 100 },
@@ -54,7 +54,7 @@ export default function UserList() {
         {" "}
         Lista de Usuarios{" "}
       </Typography>
-      <DataGrid rows={row} columns={columns} pageSize={5}  />
+      <DataGrid rows={row} columns={columns} pageSize={20}  />
     </div>
   );
 }

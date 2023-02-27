@@ -21,7 +21,7 @@ const columns = [
       );
     },
   },
-  { field: 'name', headerName: 'name', width: 100 },
+  { field: 'name', headerName: 'name', width: 200 },
   { field: 'description', headerName: 'description', width: 300 },
   { field: 'tags', headerName: 'tags', width: 150 }
 
@@ -48,7 +48,7 @@ export default function ProductList () {
       <DataGrid
         rows={tableData}
         columns={columns}
-        pageSize={5}
+        pageSize={20}
       />
     
     </div>
