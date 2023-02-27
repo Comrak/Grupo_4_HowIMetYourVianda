@@ -18,8 +18,6 @@ const renderProductAll = async (req, res,) => {
 
 // see a filter list of product
  const renderDetail= async (req, res,) => {
-    console.log(req.params.searchText)
-    console.log(req.params.id)
     if(req.query.searchText != undefined || req.query.searchText != null){
         const productId = req.query.searchText;
         if(isNaN(productId)){
@@ -41,24 +39,6 @@ const renderProductAll = async (req, res,) => {
         }
         return res.render('products/detail', {productToFind: productFinded});
     }
-    //     console.log(req.query.searchText)
-    //     const productId = req.query.searchText;
-    //     let productFinded
-    //     if(isNaN(productId)){
-    //         productFinded = await Products.findOne({ where: { name: productId } });
-    //     }else{
-    //         productFinded = await Products.findByPk(productId);
-    //     }
-    //     console.log('entre a la llamada')
-    //     //const productToFind = Products.find((product) => product.id == productId);
-    //     if (productFinded == undefined) {
-    //         const productos = await Products.findAll();
-    //         return res.render('products/productAll',{jsProductos:productos})
-    //     }
-    //     return res.render('products/detail', {productToFind: productFinded});
-        
-    //  
-    
 }
 
 const renderProductCreate = (req, res) => {
