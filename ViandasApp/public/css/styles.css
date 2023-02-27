@@ -513,16 +513,33 @@ footer{
 
 .main-container{
     display: flex;
+    flex-direction: column;
     padding: 20px;
     justify-content: center;
     align-items: center;
     box-shadow: 0px 0px 10px rgb(207, 160, 160);
     /* margin-top: 25px; */
 }
+
+
+.marginRight{
+    margin-right: 10px;
+}
+
 .main-form .form-header{
     display: flex;
     justify-content: space-between;
 }
+
+.form-header-carrito{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
 
 .main-form{
     width: 100%;
@@ -625,14 +642,16 @@ align-items: center;
 
 .buttom-submit{
     width:45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .buttom-submit button{
     font-weight: bold;
     background-color: blue;
     color: white;
-    border-radius: 10%;
-    height: 30px;
-    width: 160px;
+    border-radius: 15%;
+    width: 100px;
 
 }
 /* ################## END Section Carrito de Compras ################# */
