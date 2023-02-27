@@ -62,8 +62,8 @@ router.post('/address/delete/:id',authMiddleware, userController.deleteAddress);
 router.get('/logout', userController.logout);
 
 // formulario de carrito de compras
-router.get('/carrito', userController.carrito);
-router.post('/carrito', userController.processCarrito);
+router.get('/carrito/:id', userController.carrito);
+router.get('/addCarrito/:userID/:productID', userController.addCarrito);
 
 
 

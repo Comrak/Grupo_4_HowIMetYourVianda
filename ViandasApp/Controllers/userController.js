@@ -11,7 +11,8 @@ const Country = db.Country;
 const UserRol = db.UserRol;
 const City = db.City;
 const Address = db.Address;
-
+const car = db.Carrito
+const Products = db.Products
 const { validationResult } = require("express-validator");
 const { userInfo } = require("os");
 const bcryptjs = require("bcryptjs");
@@ -246,12 +247,43 @@ const logout = (req, res) => {
   return res.redirect("/");
 };
 // ***************************** Carrito **************************
-const carrito = (req, res) => {
-  return res.render("users/carritoCompras");
+const carrito = async(req, res) => {
+    const userId = req.params.id;
+    const todosProductos = await Products.findAll()
+    const carContent = await car.findAll({
+      where: {
+        [Op.or]: [
+          { usuario: userId }
+        ]
+      }
+    });
+    let selectedproducts = []
+    todosProductos.forEach(p => {
+      carContent.forEach(r =>{
+        console.log(r)
+        if(r.producto == p.dataValues.id){
+          selectedproducts.push(p)
+        }
+      })
+    })
+    let totalPrice = 0
+    selectedproducts.forEach(e =>{
+      totalPrice += Number(e.price)
+    })
+    const userToEdit = await Users.findByPk(userId);
+    return res.render("users/carritoCompras", {
+      oldData: userToEdit,
+      jsProductos:selectedproducts,
+      price:Number(totalPrice)
+    });
 };
 // ***************************** Process Carrito **************************
-const processCarrito = (req, res) => {
-  return res.render("users/carritoCompras");
+const addCarrito = async (req, res) => {
+  const userID = req.params.userID;
+  const productID = req.params.productID;
+  const carritoToCreate = await car.create({activo:true,producto:productID,usuario:userID})
+  const productos = await Products.findAll();
+  return res.render('products/productAll',{jsProductos:productos})
 };
 // ***************************** Address **************************
 const address = async (req, res) => {
@@ -428,6 +460,8 @@ const processEditProfile = async (req, res) => {
   }
 };
 
+
+
 module.exports = {
   register,
   processRegister,
@@ -436,7 +470,7 @@ module.exports = {
   profile,
   logout,
   carrito,
-  processCarrito,
+  addCarrito,
   address,
   processAddress,
   editAddress,
