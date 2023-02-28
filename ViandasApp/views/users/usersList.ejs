@@ -20,6 +20,7 @@
                             <div class="address-title">
                                 <h2>Usuarios Actuales</h2>
                             </div>
+                           
                             <table class="table">
                                 <thead>
                                     <tr>
@@ -46,7 +47,23 @@
                                                 <%= user.email %>
                                             </td>
                                             <td>
-                                                <%= user.userRole.role %>
+                                            <div >
+                                                <form action="/users/UpdateRole/<%= user.id %>" method="post" id="form-delete" class="updateRole">
+                                                    <input type="hidden" name="id" value="<%= user.id %>">
+                                                    <select name="profile"
+                                                    class="form-control <%= locals.errors && errors.country ? 'is-invalid' : null %>" <option
+                                                    value="">Elegí un Perfil</option>
+                                                
+                                                    <% for (const profile of userRoles) { %>
+                                                        <option value="<%= profile.id %>" <%=locals.userList && (profile.id===user.role_id) ? 'selected' :null %>> <%= profile.role %> </option>
+                                                        <% } %>
+                                                </select>
+                                                
+                                                    <button type=" Editar" id="btn-editar" class="btn btn-warning btn-sm">
+                                                        <i class="fa-solid fa-pen-to-square"></i>
+                                                    </button>
+                                                </form>
+                                             </div>
                                             </td>
                                             <!-- <td>
                                                 <%= user.createdAt %>
@@ -55,12 +72,7 @@
                                                 <%= user.updatedAt %>
                                             </td> -->
                                             <td>
-                                                <form action="/users/edit/<%= user.id %>" method="get"
-                                                    id="form-delete"">
-                                                    <button type=" Editar" id="btn-editar"
-                                                    class="btn btn-warning btn-sm"><i
-                                                        class="fa-solid fa-pen-to-square"></i></button>
-                                                </form>
+                                            
                                             </td>
 
                                     </tr>
@@ -68,7 +80,7 @@
 
                                 </tbody>
                             </table>
-
+                        
                         </div>
 
                     </div>

@@ -68,6 +68,7 @@ router.get('/addCarrito/:userID/:productID', userController.addCarrito);
 
 // formulatio para listar usuarios
 router.get('/list', userController.userList);
+router.post('/UpdateRole/:id', userController.updateRole);
 
 
 

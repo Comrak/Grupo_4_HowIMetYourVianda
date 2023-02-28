@@ -472,6 +472,7 @@ const processEditProfile = async (req, res) => {
 // ******************** UserLists *******************
 const userList = async (req, res) => {
 
+  const userRoles = await UserRol.findAll();
   const userList = await Users.findAll({
     include: ["userRole"]
     
@@ -481,9 +482,41 @@ const userList = async (req, res) => {
   return res.render("users/usersList", {
     user: req.session.userLogged,
     userList: userList,
+    userRoles:userRoles
   });
 };
+const updateRole = async (req, res) => {
 
+
+  const userRoles = await UserRol.findAll();
+  const userId = req.body.id;
+  const role_id = req.body.profile;
+
+  let userToCreate = {
+    ...req.body,
+    role_id:role_id,
+ 
+  };
+
+  
+  try {
+    let userCreated = await Users.update(userToCreate, {
+      where: { id: userId },
+    });
+  } catch (error) {
+    console.log(error);
+  }
+
+  const userList = await Users.findAll({
+    include: ["userRole"]
+  });
+
+  return res.render("users/usersList", {
+    user: req.session.userLogged,
+    userList: userList,
+    userRoles:userRoles
+});
+};
 
 module.exports = {
   register,
@@ -502,5 +535,6 @@ module.exports = {
   editProfile,
   processEditProfile,
   userList,
+  updateRole
   
 };
