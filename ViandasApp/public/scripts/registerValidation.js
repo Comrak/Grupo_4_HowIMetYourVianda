@@ -13,8 +13,12 @@ nameField.addEventListener("blur", function(e){
     const fieldValue = e.target.value;
     if (fieldValue.length <= 2) {
         field.nextElementSibling.classList.add("error");
+        field.classList.add("invalid");
+        field.classList.remove("valid");
         field.nextElementSibling.innerText = "Debes escribir tu Nombre y Apellido";
     } else {
+        field.classList.remove("invalid");
+        field.classList.add("valid");
         field.nextElementSibling.classList.remove("error");
         field.nextElementSibling.innerText = "";
     }
@@ -27,9 +31,13 @@ phoneField.addEventListener("blur", function(e){
     const fieldValue = e.target.value;
     if (fieldValue.length <= 2) {
         field.nextElementSibling.classList.add("error");
+        field.classList.add("invalid");
+        field.classList.remove("valid");
         field.nextElementSibling.innerText = "Debes escribir un Telefono";
     } else {
         field.nextElementSibling.classList.remove("error");
+        field.classList.remove("invalid");
+        field.classList.add("valid");
         field.nextElementSibling.innerText = "";
     }
 });
@@ -38,9 +46,13 @@ birthDate.addEventListener("blur", function(e){
    const field = e.target;
     const fieldValue = e.target.value;
     if ( fieldValue === '') {
+        field.classList.add("invalid");
+        field.classList.remove("valid");
         field.nextElementSibling.classList.add("error");
         field.nextElementSibling.innerText = "Debes escribir una fecha";
     } else {
+        field.classList.remove("invalid");
+        field.classList.add("valid");
         field.nextElementSibling.classList.remove("error");
         field.nextElementSibling.innerText = "";
     }
@@ -56,10 +68,14 @@ emailField.addEventListener("blur", function(e){
        
     if (fieldValue.length <= 2 && (!reEmail.test(emailField.value))) { 
         field.nextElementSibling.classList.add("error");
+        field.classList.add("invalid");
+        field.classList.remove("valid");
         field.nextElementSibling.innerText = "Debes escribir un email valido";
     } else {
         field.nextElementSibling.classList.remove("error");
         field.nextElementSibling.innerText = "";
+        field.classList.remove("invalid");
+        field.classList.add("valid");
     }
 });
 
@@ -69,10 +85,14 @@ passwordField.addEventListener("blur", function(e){
     const fieldValue = e.target.value;
     if (fieldValue.length <= 7) {
         field.nextElementSibling.classList.add("error");
+        field.classList.add("invalid");
+        field.classList.remove("valid");
         field.nextElementSibling.innerText = "Debes tener al menos 8 caracteres";
     } else {
         field.nextElementSibling.classList.remove("error");
         field.nextElementSibling.innerText = "";
+        field.classList.remove("invalid");
+        field.classList.add("valid");
     }
 });
 
@@ -82,10 +102,14 @@ confirmPasswordField.addEventListener("blur", function(e){
     const fieldValue = e.target.value;
     if (fieldValue.length <= 7) {
         field.nextElementSibling.classList.add("error");
+        field.classList.add("invalid");
+        field.classList.remove("valid");
         field.nextElementSibling.innerText = "Debes tener al menos 8 caracteres";
     } else {
         field.nextElementSibling.classList.remove("error");
         field.nextElementSibling.innerText = "";
+        field.classList.remove("invalid");
+        field.classList.add("valid");
     }
 });
 
@@ -99,9 +123,13 @@ avatarField.addEventListener("blur", function(e){
      if ( fieldValue === '') {
          field.nextElementSibling.classList.add("error");
          field.nextElementSibling.innerText = "Debes subir una imágen";
+         field.classList.add("invalid");
+         field.classList.remove("valid");
      } else {
          field.nextElementSibling.classList.remove("error");
          field.nextElementSibling.innerText = "";
+         field.classList.remove("invalid");
+         field.classList.add("valid");
      }
  });
  
@@ -112,10 +140,14 @@ avatarField.addEventListener("change", function(e){
     const allowedExt = ["jpg", "jpeg", "png", "gif"];
     if (!allowedExt.includes(fileExtension)) {
         field.nextElementSibling.classList.add("error");
+        field.classList.add("invalid");
+        field.classList.remove("valid");
         field.nextElementSibling.innerText = `Las extensiones permitidas son ${allowedExt.join(", ")}`;
     } else {
         field.nextElementSibling.classList.remove("error");
         field.nextElementSibling.innerText = "";
+        field.classList.remove("invalid");
+        field.classList.add("valid");
     }
   });
 
