@@ -3,7 +3,6 @@ const { Op } = require("sequelize");
 
 const fetch = require("node-fetch");
 
-// const User = require('../models/User');
 
 const db = require("../database/models");
 const Users = db.Users;
@@ -18,13 +17,7 @@ const { userInfo } = require("os");
 const bcryptjs = require("bcryptjs");
 const { response } = require("express");
 
-//const renderHome = (req, res) => {
-//   return res.render('home')
-//}
 
-//const renderAbout = (req, res) => {
-//  return res.render('about')
-//}
 // ************************* User Create *************************
 const register = async (req, res) => {
   const countries = await Country.findAll();
@@ -35,7 +28,7 @@ const register = async (req, res) => {
 // ************************* User Create Process *************************
 const processRegister = async (req, res) => {
   const countries = await Country.findAll();
-  const userRoles = await UserRol.findAll();
+  // const userRoles = await UserRol.findAll();
 
   const resultValidation = validationResult(req);
   // check if there are errors
@@ -44,7 +37,7 @@ const processRegister = async (req, res) => {
       errors: resultValidation.mapped(), // los errores que contiene el objeto resultValidation
       oldData: req.body,
       countries,
-      userRoles,
+      // userRoles,
     });
   }
 
@@ -62,7 +55,7 @@ const processRegister = async (req, res) => {
       },
       oldData: req.body,
       countries: countries,
-      userRoles: userRoles,
+      // userRoles: userRoles,
     });
   }
 
@@ -73,7 +66,7 @@ const processRegister = async (req, res) => {
   let userToCreate = {
     ...req.body,
     country_id: req.body.country,
-    role_id: req.body.profile,
+    role_id: 2,  // siempre se crea un usuario con rol 2 (cliente)
     avatar: req.file.filename,
     password: hashedPassword,
     confirmPassword: hashedConfirmPassword,
@@ -94,6 +87,7 @@ const login = (req, res) => {
 const loginProcess = async (req, res) => {
   const loginResultValidation = validationResult(req);
 
+
   // check if there are errors
   if (!loginResultValidation.isEmpty()) {
     return res.render("users/login", {
@@ -109,6 +103,7 @@ const loginProcess = async (req, res) => {
     include: ["userCountry", "userRole"],
   });
 
+ 
   // ******************* check if user exists ************
   if (userToLogin) {
     // ****************** Check password *******************
@@ -140,9 +135,10 @@ const loginProcess = async (req, res) => {
       oldData: bodyData,
     });
   } else {
+    
     return res.render("users/login", {
       errors: {
-        userEmail: {
+        email: {
           msg: "Este email no está registrado",
         },
       },
@@ -313,8 +309,13 @@ const processAddress = async (req, res) => {
 
   bodyInfo.user_id = userId;
 
-  let addressToCreate = { ...bodyInfo };
-
+  const floor = bodyInfo.floor || null;
+  const dept = bodyInfo.dept || null;
+  let addressToCreate = { ...bodyInfo,
+    floor,
+    dept };
+  
+ 
   try {
     // create address
     const addressCreated = await Address.create(addressToCreate);
@@ -362,7 +363,11 @@ const processEditAddress = async (req, res) => {
   }
 
   bodyInfo.user_id = userId;
-  let addressToUpdate = { ...bodyInfo };
+  const floor = bodyInfo.floor || null;
+  const dept = bodyInfo.dept || null;
+  let addressToUpdate = { ...bodyInfo,
+    floor,
+    dept };
 
   try {
     // update address
@@ -399,7 +404,7 @@ const deleteAddress = async (req, res) => {
     addressList: addressList,
   });
 };
-
+// *****************************  Edit Profile **************************
 const editProfile = async (req, res) => {
   const userId = req.params.id;
   const countries = await Country.findAll();
@@ -414,12 +419,15 @@ const editProfile = async (req, res) => {
 };
 // ***************************** Process Edit Profile **************************
 const processEditProfile = async (req, res) => {
-  const userId = req.session.userLogged.id;
+
+  const userId = req.params.id;
   const countries = await Country.findAll();
   const userRoles = await UserRol.findAll();
 
   const resultValidation = validationResult(req);
   // check if there are errors
+
+  
   if (!resultValidation.isEmpty()) {
     return res.render("users/editUser", {
       errors: resultValidation.mapped(), // los errores que contiene el objeto resultValidation
@@ -441,7 +449,6 @@ const processEditProfile = async (req, res) => {
   };
 
 
-  return res.send(userToCreate)
   try {
     let userCreated = await Users.update(userToCreate, {
       where: { id: userId },
@@ -494,5 +501,6 @@ module.exports = {
   deleteAddress,
   editProfile,
   processEditProfile,
-  userList
+  userList,
+  
 };

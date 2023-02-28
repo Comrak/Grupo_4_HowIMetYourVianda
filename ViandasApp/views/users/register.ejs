@@ -68,21 +68,6 @@
                 </div>
 
                 <div class="form-group botton-margin">
-                  <label><b>Perfil:</b></label>
-                  <select name="profile"
-                    class="form-control <%= locals.errors && errors.country ? 'is-invalid' : null %>" <option
-                    value="">Elegí un Perfil</option>
-                  
-                      <% for (const profile of userRoles) { %>
-                        <option value="<%= profile.id %>" <%=locals.oldData && (profile.id===oldData.profile) ? 'selected' :null %>> <%= profile.role %> </option>
-                        <% } %>
-                  </select>
-                  <div class="text-danger">
-                    <%= (locals.errors && errors.profile) ? errors.profile.msg : '' %>
-                  </div>
-
-                </div>
-                <div class="form-group botton-margin">
                   <label for="userImage"> <b> Imagen De Usuario </b></label>
                   <input class="form-control <%= locals.errors && errors.avatar ? 'is-invalid' : null %>" type="file"
                     name="avatar" id="userImage" value="<%= locals.oldData ? oldData.avatar : null %>">

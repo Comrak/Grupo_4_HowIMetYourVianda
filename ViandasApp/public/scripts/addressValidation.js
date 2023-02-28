@@ -48,7 +48,7 @@ numberField.addEventListener("blur", function(e){
 zipCodeField.addEventListener("blur", function(e){
     const field = e.target;
     const fieldValue = e.target.value;
-    if (fieldValue.length <= 4) {
+    if (fieldValue.length < 4) {
         field.nextElementSibling.classList.add("error");
         field.nextElementSibling.innerText = "Debes colocar una Código Postal";
     } else {
