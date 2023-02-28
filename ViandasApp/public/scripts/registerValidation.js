@@ -1,5 +1,6 @@
 const nameField = document.querySelector("[name=fullName]");
 const emailField = document.querySelector("[name=email]");
+const birthDate = document.querySelector("[name=birthDate]");
 const phoneField = document.querySelector("[name=mobilePhone]");
 const avatarField = document.querySelector("[name=avatar]");
 const passwordField = document.querySelector("[name=password]");
@@ -27,6 +28,18 @@ phoneField.addEventListener("blur", function(e){
     if (fieldValue.length <= 2) {
         field.nextElementSibling.classList.add("error");
         field.nextElementSibling.innerText = "Debes escribir un Telefono";
+    } else {
+        field.nextElementSibling.classList.remove("error");
+        field.nextElementSibling.innerText = "";
+    }
+});
+
+birthDate.addEventListener("blur", function(e){
+   const field = e.target;
+    const fieldValue = e.target.value;
+    if ( fieldValue === '') {
+        field.nextElementSibling.classList.add("error");
+        field.nextElementSibling.innerText = "Debes escribir una fecha";
     } else {
         field.nextElementSibling.classList.remove("error");
         field.nextElementSibling.innerText = "";
