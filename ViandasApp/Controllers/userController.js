@@ -440,6 +440,8 @@ const processEditProfile = async (req, res) => {
     confirmPassword: hashedConfirmPassword,
   };
 
+
+  return res.send(userToCreate)
   try {
     let userCreated = await Users.update(userToCreate, {
       where: { id: userId },

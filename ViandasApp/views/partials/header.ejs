@@ -26,9 +26,10 @@
             <li> <i class="fa-solid fa-bowl-food"></i> <a href="/products">Viandas</a></li>
             <% if (locals.isLogged && locals.userLogged.role_id === 1) { %>
                 <li> <i class="fa-solid fa-gear"></i> <a href="/products/create">Manejo de productos</a></li>
+                <li> <i class="fa-solid fa-user-pen"> </i> <a href="/users/list">Editar Usuarios</a>  </li>  
                 <% } %>
                     
-                    <li> <i class="fa-solid fa-user-pen"> </i> <a href="/users/list">Editar Usuarios</a>  </li>  
+                    
         </ul>
         <ul class="right-navbar">
             <% if (!locals.isLogged) { %>
