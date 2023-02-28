@@ -91,6 +91,21 @@ confirmPasswordField.addEventListener("blur", function(e){
 
 
 //Validacion Imagen
+
+//Campo completo
+avatarField.addEventListener("blur", function(e){
+    const field = e.target;
+     const fieldValue = e.target.value;
+     if ( fieldValue === '') {
+         field.nextElementSibling.classList.add("error");
+         field.nextElementSibling.innerText = "Debes subir una imágen";
+     } else {
+         field.nextElementSibling.classList.remove("error");
+         field.nextElementSibling.innerText = "";
+     }
+ });
+ 
+//Tipo de archivos
 avatarField.addEventListener("change", function(e){
     const field = e.target;
     const fileExtension = e.target.files[0].name.split(".").pop().toLowerCase();
