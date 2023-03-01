@@ -124,6 +124,8 @@ passwordField.addEventListener("blur", function(e){
 });
 
 //Validacion contraseña
+
+//Cantidad de caracteres
 confirmPasswordField.addEventListener("blur", function(e){
     const field = e.target;
     const fieldValue = e.target.value;
