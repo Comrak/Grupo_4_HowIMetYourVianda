@@ -42,8 +42,10 @@
                     </li>
                     
                     <li> <a href="/users/logout">Cerrar Sesion</a> <i class="fas fa-sign-in-alt"></i> </li>  
-                          
-                    <li> <a href="/users/carrito/<%= locals.userLogged.id %>">Tu carrito</a> <i class="fas fa-shopping-basket"></i> </li>
+                    <% if (locals.isLogged && locals.userLogged.role_id !== 1) { %> 
+                        <li> <a href="/users/carrito/<%= locals.userLogged.id %>">Tu carrito</a> <i class="fas fa-shopping-basket"></i> </li>
+                        <% } %>          
+                    
         </ul>
         <% } %>
     </nav>
