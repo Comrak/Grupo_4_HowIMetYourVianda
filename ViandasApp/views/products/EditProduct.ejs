@@ -58,7 +58,7 @@
               <label for="img"> <b> Subir imagen: </b></label>
               <input class="form-control <%= locals.errors && errors.img ? 'is-invalid' : null %>"type="file" id="img" name="img" accept="image/*" 
               value="<%= locals.productToEdit ? productToEdit.img : null %>">
-              <span></span>
+              
               <div class="text-danger">
                 <%= (locals.errors && errors.img) ? errors.img.msg : '' %>
               </div>
@@ -67,7 +67,7 @@
            
           </div>
         </form>
-        <script src = "../scripts/productManagementValidation.js"></script>
+        <script src = "/scripts/productManagementValidation.js"></script>
       </main>
   </body>
   <%- include('../partials/footer')%>
