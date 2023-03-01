@@ -74,6 +74,18 @@ birthDate.addEventListener("blur", function(e){
     }
 });
 
+
+
+
+const validateFieldRequired = e => {
+    const field = e.target;
+    const fieldValue = e.target.value;
+    if (fieldValue.trim().length === 0) {
+        setErrors(field);
+    } else {
+        setErrors(field, false);
+    }
+}
 const validateEmailFormat = e => {
     const field = e.target;
     const fieldValue = e.target.value;
