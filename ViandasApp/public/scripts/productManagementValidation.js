@@ -84,20 +84,39 @@ tagsField.addEventListener("blur", function(e){
 
 
 //Validacion Imagen
+
+//Campo Completo
+imgField.addEventListener("blur", function(e){
+    const field = e.target;
+     const fieldValue = e.target.value;
+     if ( fieldValue === '') {
+         field.nextElementSibling.classList.add("error");
+         field.nextElementSibling.innerText = "Debes subir una imágen";
+         field.classList.add("invalid");
+         field.classList.remove("valid");
+     } else {
+         field.nextElementSibling.classList.remove("error");
+         field.nextElementSibling.innerText = "";
+     }
+ });
+ 
+//Tipo de archivos
 imgField.addEventListener("change", function(e){
     const field = e.target;
     const fileExtension = e.target.files[0].name.split(".").pop().toLowerCase();
     const allowedExt = ["jpg", "jpeg", "png", "gif"];
     if (!allowedExt.includes(fileExtension)) {
-        setErrors(field);
+        field.nextElementSibling.classList.add("error");        
+        field.classList.add("invalid");
+        field.classList.remove("valid");
+        field.nextElementSibling.innerText = `Las extensiones permitidas son ${allowedExt.join(", ")}`;
     } else {
-        setErrors(field, false);
+        field.nextElementSibling.classList.remove("error");
+        field.nextElementSibling.innerText = "";
+        field.classList.remove("invalid");
+        field.classList.add("valid");
     }
   });
-
-
-
-
 
 // VALIDACIONES FRONT 
 

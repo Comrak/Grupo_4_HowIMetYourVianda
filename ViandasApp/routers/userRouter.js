@@ -46,6 +46,7 @@ router.get('/profile', authMiddleware,userController.profile);
 router.get('/edit/:id',authMiddleware, userController.editProfile);
 // Procesar el formulario de edición
 router.post('/edit/:id',upload.single('avatar'),validations, userController.processEditProfile);
+// router.post('/userListedit/:id',upload.single('avatar'),validations, userController.processEditUsersList);
 
 // formulario para agregar direcciones
 router.get('/address',authMiddleware, userController.address);
@@ -62,8 +63,12 @@ router.post('/address/delete/:id',authMiddleware, userController.deleteAddress);
 router.get('/logout', userController.logout);
 
 // formulario de carrito de compras
-router.get('/carrito/:id', userController.carrito);
-router.get('/addCarrito/:userID/:productID', userController.addCarrito);
+router.get('/carrito/:id',authMiddleware, userController.carrito);
+router.get('/addCarrito/:userID/:productID', authMiddleware,userController.addCarrito);
+
+// formulatio para listar usuarios
+router.get('/list', authMiddleware,userController.userList);
+router.post('/UpdateRole/:id',authMiddleware, userController.updateRole);
 
 
 

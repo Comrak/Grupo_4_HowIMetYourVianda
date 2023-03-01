@@ -61,7 +61,8 @@
                 <div class="text-danger">
                   <%= (locals.errors && errors.country) ? errors.country.msg : '' %>
                 </div>
-
+              </div>
+              <% if (locals.isLogged && locals.userLogged.role_id === 1) { %>
                 <div class="form-group botton-margin">
                   <label><b>Perfil:</b></label>
                   <select name="profile"
@@ -75,8 +76,8 @@
                   <div class="text-danger">
                     <%= (locals.errors && errors.profile) ? errors.profile.msg : '' %>
                   </div>
-
                 </div>
+                <% } %>
                 <div class="form-group botton-margin">
                   <label for="userImage"> <b> Imagen De Usuario </b></label>
                   <input class="form-control <%= locals.errors && errors.avatar ? 'is-invalid' : null %>" type="file"
@@ -110,8 +111,10 @@
                 
               </div>
           </form>
+          <script src='/scripts/registerValidation.js'></script>
+
         </main>
       </main>
-      <script src='../scripts/registerValidation.js'></script>
+      
   </body>
   <%- include('../partials/footer')%>

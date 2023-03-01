@@ -25,8 +25,8 @@ const validations = [
     body('country').
                     notEmpty().withMessage('Debes completar el campo País'),
 
-    body('profile').
-                    notEmpty().withMessage('Debes completar el perfil de usuario'),
+    // body('profile').
+    //                 notEmpty().withMessage('Debes completar el perfil de usuario'),
     
     body('password')
                     .notEmpty().withMessage('Debes completar el campo Contraseña').bail()
