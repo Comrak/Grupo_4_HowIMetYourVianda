@@ -128,8 +128,6 @@ avatarField.addEventListener("blur", function(e){
      } else {
          field.nextElementSibling.classList.remove("error");
          field.nextElementSibling.innerText = "";
-         field.classList.remove("invalid");
-         field.classList.add("valid");
      }
  });
  
@@ -139,7 +137,7 @@ avatarField.addEventListener("change", function(e){
     const fileExtension = e.target.files[0].name.split(".").pop().toLowerCase();
     const allowedExt = ["jpg", "jpeg", "png", "gif"];
     if (!allowedExt.includes(fileExtension)) {
-        field.nextElementSibling.classList.add("error");
+        field.nextElementSibling.classList.add("error");        
         field.classList.add("invalid");
         field.classList.remove("valid");
         field.nextElementSibling.innerText = `Las extensiones permitidas son ${allowedExt.join(", ")}`;
