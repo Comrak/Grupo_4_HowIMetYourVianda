@@ -97,8 +97,6 @@ const validateEmailFormat = e => {
     }
 }
 
-
-
 //Validacion de Email
 //Expresiones Regulares https://www.w3schools.com/jsref/jsref_obj_regexp.asp       
 //https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-javascript
@@ -132,6 +130,11 @@ confirmPasswordField.addEventListener("blur", function(e){
         field.classList.add("invalid");
         field.classList.remove("valid");
         field.nextElementSibling.innerText = "Debes tener al menos 8 caracteres";
+    } else if (fieldValue !== passwordField.value) {
+        field.nextElementSibling.classList.add("error");
+        field.classList.add("invalid");
+        field.classList.remove("valid");
+        field.nextElementSibling.innerText = "Las contraseñas no coinciden";
     } else {
         field.nextElementSibling.classList.remove("error");
         field.nextElementSibling.innerText = "";
