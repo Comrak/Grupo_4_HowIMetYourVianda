@@ -308,14 +308,15 @@ article div.articulos{
 	width: 30%;
     background-color: #ebebeb;
 	padding: 12px;
-	margin: auto;
+	/* margin: auto; */
 	margin-top: 20px;
 	border-radius: 8px;
 	margin-bottom: 10px;
 	font-family: 'roboto';
 	font-size: 15px;
 	color: black;
-    box-shadow: 7px 10px 10px 7px #b3905d;;
+    /* box-shadow: 1px 10px 10px 7px #f5bd69; */
+
   }
 	
 
@@ -1152,7 +1153,13 @@ footer{
 
 
 /* ################## END Section Carrito de Compras ################# */
+.form-login , .form-register{
 
+    background-color: #ebebeb;
+    opacity:0.85
+
+
+  }
 
 
     /* ######################## FOOTER RESPONSIVE ###################### */
