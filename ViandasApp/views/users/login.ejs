@@ -1,50 +1,75 @@
 <%- include('../partials/head',{cssFile:'userStyles.css'})%>
 
-    <body>
-        <%- include('../partials/header')%>
-            <main class="main-body">
-                <main class="main-register">
-                    <form action="/users/login" method="POST" class="form">
-                        <div class="form-login">
-                            <h4>Ingreso</h4>
-                            <div class="form-group botton-margin">
-                                <label for="email"> <b> Email Usuario</b> </label>
-                                <input class="controls <%= locals.errors && errors.email ? 'is-invalid' : null %>"
-                                    type="email" name="email" id="userEmail" placeholder="Ingrese su Usuario">
-                                <div class="text-danger">
-                                    <%= (locals.errors && errors.email) ? errors.email.msg : '' %>
-                                </div>
-                            </div>
-                            <div class="form-group botton-margin">
-                                <label for="password"> <b> Contraseña </b></label>
-                                <input class="controls <%= locals.errors && errors.password ? 'is-invalid' : null %>"
-                                    type="password" name="password" id="userPassword"
-                                    placeholder="Ingrese su Contraseña">
-                                <div class="text-danger">
-                                    <%= (locals.errors && errors.password) ? errors.password.msg : '' %>
-                                </div>
-                            </div>
-                            <p><a href="#">Olvidaste tu contraseña?</a></p>
-                            <br>
-                            <p><input type="checkbox" name="rememberMe" value="on">
-                                <label>Recordar usuario</label>
-                            </p>
-                            <div class="botton-margin flex-center">
-                                <button class="btn btn-success button-size" type="submit">Ingresar</button>
-                            </div>
-                            <p><a href="/users/register">Aun no tengo una cuenta</a></p>
-                            <div class="login-google">
-                                <h4>Ingresá con</h4>
-                                <div class="logoicon">
-                                    <a href="#"><img width="45" height="45" src="/img/facebook.png"
-                                            alt="Facebook Logo"></a>
-                                    <a href="#"><img width="45" height="45" src="/img/buscar.png" alt="Google Logo"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <script src='../scripts/loginValidation.js'></script>
-                </main>
-            </main>
+<body>
+  <%- include('../partials/header')%>
+  <main class="main-body">
+    <main class="main-register">
+      <form action="/users/login" method="POST" class="form background-image-login">
+        <div class="form-login">
+          <h4>Ingreso</h4>
+          <div class="form-group botton-margin">
+            <label for="email"> <b> Email Usuario</b> </label>
+            <input
+              class="controls <%= locals.errors && errors.email ? 'is-invalid' : null %>"
+              type="email"
+              name="email"
+              id="userEmail"
+              placeholder="Ingrese su Usuario"
+            />
+            <div class="text-danger">
+              <%= (locals.errors && errors.email) ? errors.email.msg : '' %>
+            </div>
+          </div>
+          <div class="form-group botton-margin">
+            <label for="password"> <b> Contraseña </b></label>
+            <input
+              class="controls <%= locals.errors && errors.password ? 'is-invalid' : null %>"
+              type="password"
+              name="password"
+              id="userPassword"
+              placeholder="Ingrese su Contraseña"
+            />
+            <div class="text-danger">
+              <%= (locals.errors && errors.password) ? errors.password.msg : ''
+              %>
+            </div>
+          </div>
+          <p><a href="#">Olvidaste tu contraseña?</a></p>
+          <br />
+          <p>
+            <input type="checkbox" name="rememberMe" value="on" />
+            <label>Recordar usuario</label>
+          </p>
+          <div class="botton-margin flex-center">
+            <button class="btn btn-success button-size" type="submit">
+              Ingresar
+            </button>
+          </div>
+          <p><a href="/users/register">Aun no tengo una cuenta</a></p>
+          <div class="login-google">
+            <h4>Ingresá con</h4>
+            <div class="logoicon">
+              <a href="#"
+                ><img
+                  width="45"
+                  height="45"
+                  src="/img/facebook.png"
+                  alt="Facebook Logo"
+              /></a>
+              <a href="#"
+                ><img
+                  width="45"
+                  height="45"
+                  src="/img/buscar.png"
+                  alt="Google Logo"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </form>
+      <script src="../scripts/loginValidation.js"></script>
+    </main>
+  </main>
 
-            <%- include('../partials/footer')%>
-    </body>
+  <%- include('../partials/footer')%>
+</body>
