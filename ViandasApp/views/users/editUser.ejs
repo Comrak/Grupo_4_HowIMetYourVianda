@@ -12,7 +12,7 @@
               <h4>Edicion</h4>
               <div class="form-group botton-margin">
                 <label for=" fullName"> <b>Nombre y Apellido</b></label>
-                <input class="form-control <%= locals.errors && errors.fullName ? 'is-invalid' : null %>" type="text"
+                <input class="form-control border-color <%= locals.errors && errors.fullName ? 'is-invalid' : null %>" type="text"
                   name="fullName" id="fullName" placeholder="Ingrese su Nombre y Apellido"
                   value="<%= locals.oldData ? oldData.fullName : null %>">
 
@@ -24,7 +24,7 @@
               </div>
               <div class="form-group botton-margin">
                 <label for=" birthDate"> <b> Fecha de Nacimiento </b></label>
-                <input class="form-control <%= locals.errors && errors.birthDate ? 'is-invalid' : null %>" type="date"
+                <input class="form-control border-color <%= locals.errors && errors.birthDate ? 'is-invalid' : null %>" type="date"
                   name="birthDate" id="birthDate" value="<%= locals.oldData ? oldData.birthDate : null %>">
                 <div class="text-danger">
                   <%= (locals.errors && errors.birthDate) ? errors.birthDate.msg : '' %>
@@ -32,7 +32,7 @@
               </div>
               <div class="form-group botton-margin">
                 <label for=" email"> <b>Email</b> </label>
-                <input class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>" type="email"
+                <input class="form-control border-color <%= locals.errors && errors.email ? 'is-invalid' : null %>" type="email"
                   name="email" id="email" placeholder="Ingrese su Email"
                   value="<%= locals.oldData ? oldData.email : null %>">
                 <div class="text-danger">
@@ -41,7 +41,7 @@
               </div>
               <div class="form-group botton-margin">
                 <label for=" celular"><b>Celular</b> </label>
-                <input class="form-control <%= locals.errors && errors.mobilePhone ? 'is-invalid' : null %>" type="text"
+                <input class="form-control border-color <%= locals.errors && errors.mobilePhone ? 'is-invalid' : null %>" type="text"
                   name="mobilePhone" id="celular" placeholder="Ingrese su Celular"
                   value="<%= locals.oldData ? oldData.mobilePhone : null %>">
                 <div class="text-danger">
@@ -51,7 +51,7 @@
     
               <div class="form-group botton-margin">
                 <label><b>País de nacimiento:</b></label>
-                <select name="country" class="form-control <%= locals.errors && errors.country ? 'is-invalid' : null %>"
+                <select name="country" class="form-control border-color <%= locals.errors && errors.country ? 'is-invalid' : null %>"
                   <option value="">Elegí un país</option>
               
                     <% for (const oneCountry of countries) { %>
@@ -66,7 +66,7 @@
                 <div class="form-group botton-margin">
                   <label><b>Perfil:</b></label>
                   <select name="profile"
-                    class="form-control <%= locals.errors && errors.country ? 'is-invalid' : null %>" <option
+                    class="form-control border-color <%= locals.errors && errors.country ? 'is-invalid' : null %>" <option
                     value="">Elegí un Perfil</option>
                   
                       <% for (const profile of userRoles) { %>
@@ -80,7 +80,7 @@
                 <% } %>
                 <div class="form-group botton-margin">
                   <label for="userImage"> <b> Imagen De Usuario </b></label>
-                  <input class="form-control <%= locals.errors && errors.avatar ? 'is-invalid' : null %>" type="file"
+                  <input class="form-control border-color <%= locals.errors && errors.avatar ? 'is-invalid' : null %>" type="file"
                     name="avatar" id="userImage" value="<%= locals.oldData ? oldData.avatar : null %>">
                   <div class="text-danger">
                     <%= (locals.errors && errors.avatar) ? errors.avatar.msg : '' %>
@@ -88,7 +88,7 @@
                 </div>
                 <div class="form-group botton-margin">
                   <label for="password"> <b>Contraseña</b> </label>
-                  <input class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
+                  <input class="form-control border-color <%= locals.errors && errors.password ? 'is-invalid' : null %>"
                     type="password" name="password" id="password" placeholder="Ingrese su Contraseña">
                   <div class="text-danger">
                     <%= (locals.errors && errors.password) ? errors.password.msg : '' %>
@@ -96,7 +96,7 @@
                 </div>
                 <div class="form-group botton-margin">
                   <label for="confirmPassword"> <b>Confirmar Contraseña</b> </label>
-                  <input class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
+                  <input class="form-control border-color <%= locals.errors && errors.password ? 'is-invalid' : null %>"
                     type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirme su Contraseña">
                   <div class="text-danger">
                     <%= (locals.errors && errors.confirmPassword) ? errors.confirmPassword.msg : '' %>

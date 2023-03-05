@@ -26,6 +26,10 @@
     text-decoration: none;
 }
 
+.border-color{
+  border: 1px solid #777508;
+}
+
 .container img{
   width: 100%;
 }
@@ -95,7 +99,7 @@ vertical-align: middle;
   background-blend-mode: multiply;
   background-color:#998c2a;
   height: 100%;
-  width: 90%;
+  width: 70%;
   display: flex;
 
   justify-content: end;
@@ -113,7 +117,7 @@ vertical-align: middle;
   background-blend-mode: multiply;
   background-color:#998c2a;
   height: 100%;
-  width: 80%;
+  width: 70%;
   display: flex;
 
   justify-content: end;
@@ -131,7 +135,7 @@ vertical-align: middle;
   background-blend-mode: multiply;
   background-color:#998c2a;
   height: 100%;
-  width: 90%;
+  width: 70%;
   display: flex;
 
   justify-content: center;
@@ -149,7 +153,7 @@ vertical-align: middle;
   background-blend-mode: multiply;
   background-color:#998c2a;
   height: 100%;
-  width: 90%;
+  width: 70%;
   display: flex;
 
   justify-content: start;

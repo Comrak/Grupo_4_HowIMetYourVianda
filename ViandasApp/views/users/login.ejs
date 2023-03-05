@@ -10,7 +10,7 @@
           <div class="form-group botton-margin">
             <label for="email"> <b> Email Usuario</b> </label>
             <input
-              class="controls <%= locals.errors && errors.email ? 'is-invalid' : null %>"
+              class="form-control border-color <%= locals.errors && errors.email ? 'is-invalid' : null %>"
               type="email"
               name="email"
               id="userEmail"
@@ -23,7 +23,7 @@
           <div class="form-group botton-margin">
             <label for="password"> <b> Contraseña </b></label>
             <input
-              class="controls <%= locals.errors && errors.password ? 'is-invalid' : null %>"
+              class="form-control border-color <%= locals.errors && errors.password ? 'is-invalid' : null %>"
               type="password"
               name="password"
               id="userPassword"

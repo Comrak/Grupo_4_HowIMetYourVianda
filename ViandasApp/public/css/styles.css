@@ -305,13 +305,13 @@ article div.articulos{
 
 .form-login , .form-register{
 	position: relative;
-	width: 40%;
+	width: 50%;
     background-color: #ebebeb;
-	padding: 12px;
+	padding: 4rem;
 	/* margin: auto; */
-	margin-top: 20px;
-	border-radius: 8px;
-	margin-bottom: 10px;
+	/* margin-top: 20px; */
+	/* border-radius: 8px; */
+	/* margin-bottom: 10px; */
 	font-family: 'roboto';
 	font-size: 15px;
 	color: black;
