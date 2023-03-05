@@ -74,19 +74,19 @@
                                             <button class="btn btn-primary ">Agregar al carrito</button>
                                         </a>
                                     </div>
-                                    <% } else if (locals.userLogged && locals.userLogged.role_id===1 ) { %>
-                                        <div class="add-carrito btn-bottom ">
-                                            <a href="/products/<%=producto.id%>">
-                                                <button class="btn btn-primary ">Acceder a Edicion</button>
-                                            </a>
-                                        </div>
-                                        <% } else if (locals.userLogged==undefined) { %>
-                                            <div class="add-carrito btn-bottom">
-                                                <a href="/users/login">
-                                                    <button class="btn btn-primary ">Agregar al carrito</button>
-                                                </a>
-                                            </div>
-                                            <% } %>
+                                <% } else if (locals.userLogged && locals.userLogged.role_id===1 ) { %>
+                                    <div class="add-carrito btn-bottom ">
+                                        <a href="/products/<%=producto.id%>">
+                                            <button class="btn btn-primary ">Acceder a Edicion</button>
+                                        </a>
+                                    </div>
+                                <% } else if (locals.userLogged==undefined) { %>
+                                    <div class="add-carrito btn-bottom">
+                                        <a href="/users/login">
+                                            <button class="btn btn-primary ">Agregar al carrito</button>
+                                        </a>
+                                    </div>
+                                <% } %>
 
                             </article>
                             <% }); %>

@@ -1,0 +1,80 @@
+<%- include('../partials/head')%>
+
+    <body>
+        <%- include('../partials/header')%>
+            <main class="main-body">
+                <main class="main-container">
+                    <div class="form-header-carrito">
+                        <i class="fa-solid fa-cart-shopping marginRight"></i>
+                        <h2 class="form-title">Carrito de Compras</h2>
+                    </div>
+                    <% if (jsProductos.length > 0 ) { %>
+                        <div class="product-detail">
+                            <div class="title">
+                                <h4 class="product">PRODUCTOS</h4>
+                            </div>
+                            <div class="productos">
+                                <% jsProductos.forEach(function(producto) { %>
+                                    <article class="product-list">
+                                        <div class="art_principal">
+                                            <div class="imagen-producto">
+                                                <a href="/products/detail/<%= producto.id %>"><img src="<%= producto.image %>" id="<%= producto.name%>" height="150" width="150"></a>
+                                            </div>
+                                            <div class="product-price-name">
+                                                <p class="prices">$<%= producto.price %>
+                                                </p>
+                                                <p class="discount">
+                                                    <%= producto.name %>
+                                                </p>
+                                            </div>
+                                            <p class="description">
+                                                <%= producto.description %>
+                                            </p>
+                                        </div>
+                                        <div class="add-carrito btn-bottom">
+                                            <a href="/users/delCarrito/<%= locals.userLogged.id %>/<%=producto.id%>">
+                                                <button class="btn btn-primary ">Sacar del carrito</button>
+                                            </a>
+                                        </div>
+                                    </article>
+                                <% }); %>
+                            </div>
+                            <div class="bottom-subtotal">
+                                <H4 class="subtotal">SUBTOTAL(Sin envio)</H4>
+                                <p class="subtotal-price"><%= price %> $</p>
+                            </div>
+                            <div class="bottom-total">
+                                <H4 class="total">Costo Total</H4>
+                                <h4 class="total-price"><%= price + 150 %> $</h4>
+                            </div>
+                            <div class="buttom-submit">
+                                <button id="btnCompra">Confirmar Compra</button>
+                            </div>
+                        </div>
+                    <% } else{ %>
+                        <div class="title">
+                            <h4 class="product">TU CARRITO ESTA VACIO</h4>
+                        </div>
+                        
+                        <a href="/products">Ver viandas</a>
+                    <% } %>
+                </main>
+            </main>
+
+
+
+    </body>
+
+    <script>
+        window.onload = (event) => {
+            let accionBoton = document.getElementById('btnCompra')
+            accionBoton.addEventListener('click',function(){
+                Swal.fire(
+                    'Felicidades!',
+                    'Su pedido esta en camino',
+                    'success'
+                )
+            })
+        }
+    </script>
+    <%- include('../partials/footer')%>

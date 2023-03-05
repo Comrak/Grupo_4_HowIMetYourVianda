@@ -65,6 +65,7 @@ router.get('/logout', userController.logout);
 // formulario de carrito de compras
 router.get('/carrito/:id',authMiddleware, userController.carrito);
 router.get('/addCarrito/:userID/:productID', authMiddleware,userController.addCarrito);
+router.get('/delCarrito/:userID/:productID', authMiddleware,userController.delCarrito);
 
 // formulatio para listar usuarios
 router.get('/list', authMiddleware,userController.userList);

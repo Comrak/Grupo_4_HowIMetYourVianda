@@ -1,70 +1,181 @@
 <%- include('../partials/head')%>
+<body>
+    <%- include('../partials/header')%>
+    <main class="main-body">
+            <section class="h-100 h-custom" style="background-color: #eee;">
+                <% if (jsProductos.length > 0 ) { %>
+                    <div class="container py-5 h-100">
+                    <div class="row d-flex justify-content-center align-items-center h-100">
+                        <div class="col">
+                        <div class="card">
+                            <div class="card-body p-4">
+                
+                            <div class="row">
+                
+                                <div class="col-lg-7">
+                                <h5 class="mb-3"><a href="/products" class="text-body"><i
+                                        class="fas fa-long-arrow-alt-left me-2"></i>Volver al las viandas</a></h5>
+                                <hr>
+                
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <div>
+                                    <p class="mb-1">Tu carrito</p>
+                                    <p class="mb-0">tienes <%= jsProductos.length %> viandas en tu carrito</p>
+                                    </div>
+                                </div>
 
-    <body>
-        <%- include('../partials/header')%>
-            <main class="main-body">
-                <main class="main-container">
-                    <div class="form-header-carrito">
-                        <i class="fa-solid fa-cart-shopping marginRight"></i>
-                        <h2 class="form-title">Carrito de Compras</h2>
-                    </div>
-                    <div class="product-detail">
-                        <div class="title">
-                            <h4 class="product">PRODUCTO</h4>
-
-                        </div>
-                            <div class="productos">
                                 <% jsProductos.forEach(function(producto) { %>
-        
-                                    <article class="product-list">
-                                        <div class="art_principal">
-                                            <div class="imagen-producto">
-                                                <a href="/products/detail/<%= producto.id %>"><img src="<%= producto.image %>" id="<%= producto.name%>" height="150" width="150"></a>
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                        <div class="d-flex justify-content-between">
+                                            <div class="d-flex flex-row align-items-center">
+                                            <div>
+                                                <img
+                                                src="<%= producto.image %>"
+                                                class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
                                             </div>
-        
-                                            <div class="product-price-name">
-                                                <p class="prices">$<%= producto.price %>
-                                                </p>
-                                                <p class="discount">
-                                                    <%= producto.name %>
-                                                </p>
+                                            <div class="ms-3">
+                                                <h5><%= producto.name %></h5>
+                                                <p class="small mb-0"><%= producto.description %></p>
                                             </div>
-                                            <p class="description">
-                                                <%= producto.description %>
-                                            </p>
+                                            </div>
+                                            <div class="d-flex flex-row align-items-center">
+                                            <div style="width: 80px;">
+                                                <h5 class="mb-0"><%= producto.price %>$</h5>
+                                            </div>
+                                            <a href="/users/delCarrito/<%= locals.userLogged.id %>/<%=producto.id%>" style="color: #cecece;"><i class="fas fa-trash-alt"></i></a>
+                                            </div>
                                         </div>
-                                    </article>
-                                    <% }); %>
+                                        </div>
+                                    </div>
+                                <% }); %>
+                                
+                
+                                </div>
+                                <div class="col-lg-5">
+                
+                                <div class="card bg-primary text-white rounded-3">
+                                    <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center mb-4">
+                                        <h5 class="mb-0">Detalles de tu tarjeta</h5>
+                                        <img src="/img/users/<%=locals.userLogged.avatar%>"
+                                        class="img-fluid rounded-3" style="width: 120px;" alt="Avatar">
+                                    </div>
+                
+                                    <p class="small mb-2">Tipo de tarjeta</p>
+                                        <input type="radio" class="text-white" name="cardType">
+                                            <i class="fab fa-cc-mastercard fa-2x me-2"></i>
+                                        <input type="radio" class="text-white" name="cardType">
+                                            <i class="fab fa-cc-visa fa-2x me-2"></i>
+                                        <input type="radio" class="text-white" name="cardType">
+                                            <i class="fab fa-cc-amex fa-2x me-2"></i>
+                                        <input type="radio" class="text-white" name="cardType">
+                                            <i class="fab fa-cc-paypal fa-2x"></i>
+
+                                    <form class="mt-4">
+                                        <div class="form-outline form-white mb-4">
+                                        <input type="text" id="typeName" class="form-control form-control-lg" siez="17"
+                                            placeholder="Tu nombre..." />
+                                        <label class="form-label" for="typeName">Nombre de tarjetahabiente</label>
+                                        </div>
+                
+                                        <div class="form-outline form-white mb-4">
+                                        <input type="text" id="typeText" class="form-control form-control-lg" siez="17"
+                                            placeholder="1234 5678 9012 3457" minlength="19" maxlength="19" />
+                                        <label class="form-label" for="typeText">Numero de tarjeta</label>
+                                        </div>
+                
+                                        <div class="row mb-4">
+                                        <div class="col-md-6">
+                                            <div class="form-outline form-white">
+                                            <input type="date" id="typeExp" class="form-control form-control-lg"
+                                                placeholder="MM/YYYY" size="7" id="exp" minlength="7" maxlength="7"/>
+                                            <label class="form-label" for="typeExp">Fecha de expiracion</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-outline form-white">
+                                            <input type="password" id="cardCode" class="form-control form-control-lg"
+                                                placeholder="&#9679;&#9679;&#9679;" size="1" minlength="3" maxlength="3"  />
+                                            <label class="form-label" for="cardCode">Cvv</label>
+                                            </div>
+                                        </div>
+                                        </div>
+                
+                                    </form>
+                
+                                    <hr class="my-4">
+                
+                                    <div class="d-flex justify-content-between">
+                                        <p class="mb-2">Subtotal</p>
+                                        <p class="mb-2"><%= price %> $</p>
+                                    </div>
+                
+                                    <div class="d-flex justify-content-between">
+                                        <p class="mb-2">Costo de envio</p>
+                                        <p class="mb-2">500.00 $</p>
+                                    </div>
+                
+                                    <div class="d-flex justify-content-between mb-4">
+                                        <p class="mb-2">Total</p>
+                                        <p class="mb-2"><%= price + 500 %> $</p>
+                                    </div>
+                
+                                    <button type="button" class="btn btn-info btn-block btn-lg">
+                                        <div class="d-flex justify-content-between">
+                                        <span><%= price + 500 %> $</span>
+                                        <span id="btnCompra">Comprar <i class="fas fa-long-arrow-alt-right ms-2" id="btnCompra"></i></span>
+                                        </div>
+                                    </button>
+                
+                                    </div>
+                                </div>
+                                </div>
                             </div>
-                        <div class="bottom-subtotal">
-                            <H4 class="subtotal">SUBTOTAL(Sin envio)</H4>
-                            <p class="subtotal-price"><%= price %> $</p>
+                            </div>
                         </div>
-                        <div class="bottom-total">
-                            <H4 class="total">Costo Total</H4>
-                            <h4 class="total-price"><%= price + 150 %> $</h4>
                         </div>
                     </div>
-                    <div class="buttom-submit">
-                        <button id="btnCompra">Confirmar Compra</button>
                     </div>
-                </main>
-            </main>
+                <% } else{ %>
+                    <div class="title">
+                        <h4 class="product">TU CARRITO ESTA VACIO</h4>
+                    </div>
+                    
+                    <a href="/products">Ver viandas</a>
+                <% } %>
+            </section>
+    </main>
+</body>
 
-
-
-    </body>
-
-    <script>
-        window.onload = (event) => {
-            let accionBoton = document.getElementById('btnCompra')
-            accionBoton.addEventListener('click',function(){
+<script>
+    window.onload = (event) => {
+        let accionBoton = document.getElementById('btnCompra')
+        accionBoton.addEventListener('click',function(){           
+            let cardHolderName = document.getElementById('typeName').value
+            let cardNumber = document.getElementById('typeText').value
+            let cardExp = document.getElementById('typeExp').value
+            let cardCode = document.getElementById('cardCode').value
+            if(cardHolderName == '' ||
+               cardNumber == '' ||
+               cardExp == '' ||
+               cardCode == '')
+            {
+                Swal.fire(
+                    'Oh No',
+                    'Faltan datos en tu informacion de pago',
+                    'error'
+                )
+            }
+            else
+            {
                 Swal.fire(
                     'Felicidades!',
                     'Su pedido esta en camino',
                     'success'
                 )
-            })
-        }
-    </script>
-    <%- include('../partials/footer')%>
+            }
+        })
+    }
+</script>
+<%- include('../partials/footer')%>

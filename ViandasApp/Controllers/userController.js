@@ -243,44 +243,63 @@ const logout = (req, res) => {
   return res.redirect("/");
 };
 // ***************************** Carrito **************************
-const carrito = async(req, res) => {
-    const userId = req.params.id;
-    const todosProductos = await Products.findAll()
-    const carContent = await car.findAll({
-      where: {
-        [Op.or]: [
-          { usuario: userId }
-        ]
+
+//funcion para renderizar carrito con sus items
+const loadCarrito = async (userID,) =>{
+  const todosProductos = await Products.findAll()
+  const carContent = await car.findAll({
+    where: {
+      [Op.or]: [
+        { usuario: userID }
+      ]
+    }
+  });
+  let selectedproducts = []
+  todosProductos.forEach(p => {
+    carContent.forEach(r =>{
+      if(r.producto == p.dataValues.id){
+        selectedproducts.push(p)
       }
-    });
-    let selectedproducts = []
-    todosProductos.forEach(p => {
-      carContent.forEach(r =>{
-        console.log(r)
-        if(r.producto == p.dataValues.id){
-          selectedproducts.push(p)
-        }
-      })
     })
-    let totalPrice = 0
-    selectedproducts.forEach(e =>{
-      totalPrice += Number(e.price)
-    })
-    const userToEdit = await Users.findByPk(userId);
-    return res.render("users/carritoCompras", {
-      oldData: userToEdit,
-      jsProductos:selectedproducts,
-      price:Number(totalPrice)
-    });
+  })
+  let totalPrice = 0
+  selectedproducts.forEach(e =>{
+    totalPrice += Number(e.price)
+  })
+  return [totalPrice, selectedproducts]
+}
+const carrito = async (req, res) => {
+  const userId = req.params.id;
+  let datosCarrito = await loadCarrito(userId)
+  return res.render("users/carritoCompras", {
+    oldData: userId,
+    jsProductos:datosCarrito[1],
+    price:Number(datosCarrito[0])
+  });
 };
 // ***************************** Process Carrito **************************
 const addCarrito = async (req, res) => {
   const userID = req.params.userID;
   const productID = req.params.productID;
-  const carritoToCreate = await car.create({activo:true,producto:productID,usuario:userID})
+  await car.create({activo:true,producto:productID,usuario:userID})
   const productos = await Products.findAll();
   return res.render('products/productAll',{jsProductos:productos})
 };
+
+const delCarrito = async(req, res) =>{
+  const userId = req.params.userID;
+  const productID = req.params.productID;
+  console.log('esste debertia ser el usuario y el producto'+userId,productID)
+  await car.destroy({
+    where: {producto:productID,usuario:userId},
+  });
+  let datosCarrito = await loadCarrito(userId)
+  return res.render("users/carritoCompras", {
+    oldData: userId,
+    jsProductos:datosCarrito[1],
+    price:Number(datosCarrito[0])
+  });
+}
 // ***************************** Address **************************
 const address = async (req, res) => {
   const countries = await Country.findAll();
@@ -535,6 +554,6 @@ module.exports = {
   editProfile,
   processEditProfile,
   userList,
-  updateRole
-  
+  updateRole,
+  delCarrito
 };
