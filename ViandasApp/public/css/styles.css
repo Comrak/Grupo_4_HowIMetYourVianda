@@ -306,6 +306,7 @@ article div.articulos{
 .form-login , .form-register{
 	position: relative;
 	width: 50%;
+    min-width: 450px;
     background-color: #ebebeb;
 	padding: 4rem;
 	/* margin: auto; */
@@ -1023,6 +1024,27 @@ footer{
         
     }
  
+    .form-login , .form-register{
+        position: relative;
+        width: 50%;
+        background-color: #ebebeb;
+        padding: 4rem;
+        /* margin: auto; */
+        /* margin-top: 20px; */
+        /* border-radius: 8px; */
+        /* margin-bottom: 10px; */
+        font-family: 'roboto';
+        font-size: 15px;
+        color: black;
+        /* box-shadow: 1px 10px 10px 7px #f5bd69; */
+    
+      }
+
+
+
+
+
+
     .buscador{
         width:90%
     }

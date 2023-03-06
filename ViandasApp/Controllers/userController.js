@@ -3,20 +3,18 @@ const { Op } = require("sequelize");
 
 const fetch = require("node-fetch");
 
-
 const db = require("../database/models");
 const Users = db.Users;
 const Country = db.Country;
 const UserRol = db.UserRol;
 const City = db.City;
 const Address = db.Address;
-const car = db.Carrito
-const Products = db.Products
+const car = db.Carrito;
+const Products = db.Products;
 const { validationResult } = require("express-validator");
 const { userInfo } = require("os");
 const bcryptjs = require("bcryptjs");
 const { response } = require("express");
-
 
 // ************************* User Create *************************
 const register = async (req, res) => {
@@ -66,7 +64,7 @@ const processRegister = async (req, res) => {
   let userToCreate = {
     ...req.body,
     country_id: req.body.country,
-    role_id: 2,  // siempre se crea un usuario con rol 2 (cliente)
+    role_id: 2, // siempre se crea un usuario con rol 2 (cliente)
     avatar: req.file.filename,
     password: hashedPassword,
     confirmPassword: hashedConfirmPassword,
@@ -87,7 +85,6 @@ const login = (req, res) => {
 const loginProcess = async (req, res) => {
   const loginResultValidation = validationResult(req);
 
-
   // check if there are errors
   if (!loginResultValidation.isEmpty()) {
     return res.render("users/login", {
@@ -103,39 +100,38 @@ const loginProcess = async (req, res) => {
     include: ["userCountry", "userRole"],
   });
 
- 
   // ******************* check if user exists ************
   if (userToLogin) {
     // ****************** Check password *******************
-    let passwordOK = bcryptjs.compareSync(req.body.password,userToLogin.password);
+    let passwordOK = bcryptjs.compareSync(
+      req.body.password,
+      userToLogin.password
+    );
     if (passwordOK) {
       // elimino del objeto userToLogin la propiedad password
       delete userToLogin.password;
       delete userToLogin.confirmPassword;
       // mantener el usuario logeado en session
-     
+
       req.session.userLogged = userToLogin;
       // si el usuario eligió recordarme
       if (req.body.rememberMe) {
         res.cookie("userEmail", req.body.userEmail, { maxAge: 1000 * 60 * 10 });
       }
 
-
-      
-       // redirigir a la pagina del usuario
-       return res.redirect('/users/profile')
+      // redirigir a la pagina del usuario
+      return res.redirect("/users/profile");
     }
 
     return res.render("users/login", {
       errors: {
-        userPassword: {
+        password: {
           msg: "Esta Contraseña es incorrecta",
         },
       },
       oldData: bodyData,
     });
   } else {
-    
     return res.render("users/login", {
       errors: {
         email: {
@@ -245,61 +241,62 @@ const logout = (req, res) => {
 // ***************************** Carrito **************************
 
 //funcion para renderizar carrito con sus items
-const loadCarrito = async (userID,) =>{
-  const todosProductos = await Products.findAll()
+const loadCarrito = async (userID) => {
+  const todosProductos = await Products.findAll();
   const carContent = await car.findAll({
     where: {
-      [Op.or]: [
-        { usuario: userID }
-      ]
-    }
+      [Op.or]: [{ usuario: userID }],
+    },
   });
-  let selectedproducts = []
-  todosProductos.forEach(p => {
-    carContent.forEach(r =>{
-      if(r.producto == p.dataValues.id){
-        selectedproducts.push(p)
+  let selectedproducts = [];
+  todosProductos.forEach((p) => {
+    carContent.forEach((r) => {
+      if (r.producto == p.dataValues.id) {
+        selectedproducts.push(p);
       }
-    })
-  })
-  let totalPrice = 0
-  selectedproducts.forEach(e =>{
-    totalPrice += Number(e.price)
-  })
-  return [totalPrice, selectedproducts]
-}
+    });
+  });
+  let totalPrice = 0;
+  selectedproducts.forEach((e) => {
+    totalPrice += Number(e.price);
+  });
+  return [totalPrice, selectedproducts];
+};
 const carrito = async (req, res) => {
   const userId = req.params.id;
-  let datosCarrito = await loadCarrito(userId)
+  let datosCarrito = await loadCarrito(userId);
   return res.render("users/carritoCompras", {
     oldData: userId,
-    jsProductos:datosCarrito[1],
-    price:Number(datosCarrito[0])
+    jsProductos: datosCarrito[1],
+    price: Number(datosCarrito[0]),
   });
 };
 // ***************************** Process Carrito **************************
 const addCarrito = async (req, res) => {
   const userID = req.params.userID;
   const productID = req.params.productID;
-  await car.create({activo:true,producto:productID,usuario:userID})
+  await car.create({ activo: true, producto: productID, usuario: userID });
   const productos = await Products.findAll();
-  return res.render('products/productAll',{jsProductos:productos})
+  return res.render("products/productAll", { jsProductos: productos });
 };
 
-const delCarrito = async(req, res) =>{
+const delCarrito = async (req, res) => {
   const userId = req.params.userID;
   const productID = req.params.productID;
-  console.log('esste debertia ser el usuario y el producto'+userId,productID)
+  console.log(
+    "esste debertia ser el usuario y el producto" + userId,
+    productID
+  );
   await car.destroy({
-    where: {producto:productID,usuario:userId},
+    where: { producto: productID, usuario: userId },
   });
-  let datosCarrito = await loadCarrito(userId)
+  let datosCarrito = await loadCarrito(userId);
   return res.render("users/carritoCompras", {
     oldData: userId,
-    jsProductos:datosCarrito[1],
-    price:Number(datosCarrito[0])
+    jsProductos: datosCarrito[1],
+    price: Number(datosCarrito[0]),
   });
-}
+};
 // ***************************** Address **************************
 const address = async (req, res) => {
   const countries = await Country.findAll();
@@ -330,11 +327,8 @@ const processAddress = async (req, res) => {
 
   const floor = bodyInfo.floor || null;
   const dept = bodyInfo.dept || null;
-  let addressToCreate = { ...bodyInfo,
-    floor,
-    dept };
-  
- 
+  let addressToCreate = { ...bodyInfo, floor, dept };
+
   try {
     // create address
     const addressCreated = await Address.create(addressToCreate);
@@ -384,9 +378,7 @@ const processEditAddress = async (req, res) => {
   bodyInfo.user_id = userId;
   const floor = bodyInfo.floor || null;
   const dept = bodyInfo.dept || null;
-  let addressToUpdate = { ...bodyInfo,
-    floor,
-    dept };
+  let addressToUpdate = { ...bodyInfo, floor, dept };
 
   try {
     // update address
@@ -438,7 +430,6 @@ const editProfile = async (req, res) => {
 };
 // ***************************** Process Edit Profile **************************
 const processEditProfile = async (req, res) => {
-
   const userId = req.params.id;
   const countries = await Country.findAll();
   const userRoles = await UserRol.findAll();
@@ -446,7 +437,6 @@ const processEditProfile = async (req, res) => {
   const resultValidation = validationResult(req);
   // check if there are errors
 
-  
   if (!resultValidation.isEmpty()) {
     return res.render("users/editUser", {
       errors: resultValidation.mapped(), // los errores que contiene el objeto resultValidation
@@ -467,7 +457,6 @@ const processEditProfile = async (req, res) => {
     confirmPassword: hashedConfirmPassword,
   };
 
-
   try {
     let userCreated = await Users.update(userToCreate, {
       where: { id: userId },
@@ -477,7 +466,6 @@ const processEditProfile = async (req, res) => {
       include: ["city"],
       where: { user_id: userId },
     });
-
 
     // return res.send(addressList)
     return res.render("users/usersProfile", {
@@ -490,34 +478,28 @@ const processEditProfile = async (req, res) => {
 };
 // ******************** UserLists *******************
 const userList = async (req, res) => {
-
   const userRoles = await UserRol.findAll();
   const userList = await Users.findAll({
-    include: ["userRole"]
-    
+    include: ["userRole"],
   });
- 
+
   // return res.send(addressList)
   return res.render("users/usersList", {
     user: req.session.userLogged,
     userList: userList,
-    userRoles:userRoles
+    userRoles: userRoles,
   });
 };
 const updateRole = async (req, res) => {
-
-
   const userRoles = await UserRol.findAll();
   const userId = req.body.id;
   const role_id = req.body.profile;
 
   let userToCreate = {
     ...req.body,
-    role_id:role_id,
- 
+    role_id: role_id,
   };
 
-  
   try {
     let userCreated = await Users.update(userToCreate, {
       where: { id: userId },
@@ -527,14 +509,14 @@ const updateRole = async (req, res) => {
   }
 
   const userList = await Users.findAll({
-    include: ["userRole"]
+    include: ["userRole"],
   });
 
   return res.render("users/usersList", {
     user: req.session.userLogged,
     userList: userList,
-    userRoles:userRoles
-});
+    userRoles: userRoles,
+  });
 };
 
 module.exports = {
@@ -555,5 +537,5 @@ module.exports = {
   processEditProfile,
   userList,
   updateRole,
-  delCarrito
+  delCarrito,
 };

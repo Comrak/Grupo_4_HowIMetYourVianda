@@ -121,7 +121,7 @@ emailField.addEventListener("blur", validateFieldRequired);
 passwordField.addEventListener("blur", function (e) {
   const field = e.target;
   const fieldValue = e.target.value;
-  if (fieldValue.length <= 7) {
+  if (fieldValue.trim().length <= 7) {
     field.nextElementSibling.classList.add("error");
     field.classList.add("invalid");
     field.classList.remove("valid");

@@ -8,8 +8,8 @@
     </section> -->
             <main class="main-body">
                 <section class="ult_visita">
-                    <h4 class="headlines">Has Seleccionado el producto: <%=productToFind.name %>
-                    </h4>
+                    <h3 class="headlines">Has Seleccionado el producto: <strong><%=productToFind.name %> </strong>
+                    </h3>
 
                     <div class="product-wrapper-2">
                         <% productToFind.name %>
@@ -34,12 +34,13 @@
                                 <form action="/products/edit/<%=productToFind.id%>">
                                     <button type="submit" class="button-edit">Editar</button>
                                 </form>
-                               <form action="/products/delete/<%=productToFind.id%>?_method=DELETE" method="POST"> 
+                               <form action="/products/delete/<%=productToFind.id%>?_method=DELETE" method="POST" id="form-product-delete"> 
                                     <button type="submit" class="button-delete">Eliminar</button>
                                 </form>
                             </div>
                             <% } %>
                     </div>
                 </section>
+                <script src = "../scripts/productDelete.js"></script>
             </main>
             <%- include('../partials/footer')%>
