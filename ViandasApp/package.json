@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npm run dev"
+    "dev": "npm run dev",
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "",
